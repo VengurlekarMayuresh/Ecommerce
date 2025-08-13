@@ -37,22 +37,28 @@ export const loginUser = createAsyncThunk("/auth/login", async (formData) => {
   }
 });
 
-export const checkAuth = createAsyncThunk("/auth/checkAuth", async (formData) => {
-  try {
-    const response = await axios.post(
-      "http://localhost:5000/api/auth/check-auth",
+export const checkAuth = createAsyncThunk(
+  "/auth/checkAuth",
+  async (formData) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/auth/check-auth",
 
-      formData,
-      { withCredentials: true,
-        headers:{
-        'Cache-Control': 'no-cache,no-store, mustRevalidate,proxy-revalidate'
-      } }
-    );
-    return response.data;
-  } catch (error) {
-    console.log(error);
+        formData,
+        {
+          withCredentials: true,
+          headers: {
+            "Cache-Control":
+              "no-cache,no-store, mustRevalidate,proxy-revalidate",
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
   }
-});
+);
 
 const authSlice = createSlice({
   name: "auth",
@@ -91,7 +97,7 @@ const authSlice = createSlice({
         state.user = null;
         state.isAuththenticated = false;
       })
-       .addCase(checkAuth.pending, (state) => {
+      .addCase(checkAuth.pending, (state) => {
         state.isLoading = true;
       })
       .addCase(checkAuth.fulfilled, (state, action) => {
@@ -102,9 +108,8 @@ const authSlice = createSlice({
       .addCase(checkAuth.rejected, (state) => {
         state.isLoading = false;
         state.user = null;
-        state.isAuththenticated = false;
-      })
-      
+        state.isAuthenticated = false; // ✅ fixed typo
+      });
   },
 });
 
