@@ -87,12 +87,12 @@ const authMiddleware = async (req, res, next) => {
     console.log('token',token);
     const decoded = jwt.verify(token, process.env.SECRET_KEY);
     req.user = decoded;
-    next();
+   return next();
   } catch (error) {
     console.log(error);
-    res.status(401).json({
+    return res.status(401).json({
       success: false,
-      message: "Unauthorized User",
+      message: "Unauthorized User ",
     } )
   }
 };
