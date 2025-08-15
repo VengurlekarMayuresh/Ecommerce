@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     dispatch(checkAuth());
   }, [dispatch]);
-  if(true) return (
+  if(isLoading) return (
   <Skeleton className="h-[100vh] bg-black w-[600px]" />
   )
   return (
