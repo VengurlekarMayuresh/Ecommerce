@@ -19,7 +19,7 @@ import UnAuthPage from "./pages/un-auth-page/UnAuthPage";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { checkAuth } from "@/store/auth-slice";
-import { Skeleton } from "@/components/ui/skeleton" 
+import { Skeleton } from "@/components/ui/skeleton";
 
 function App() {
   const { isAuthenticated, user, isLoading } = useSelector(
@@ -29,9 +29,8 @@ function App() {
   useEffect(() => {
     dispatch(checkAuth());
   }, [dispatch]);
-  if(isLoading) return (
-  <Skeleton className="h-[100vh] bg-black w-[600px]" />
-  )
+
+  if (isLoading) return <Skeleton className="h-[100vh] bg-black w-[600px]" />;
   return (
     <div className="flex flex-col overflow-hidden bg-white">
       {/*Auth Routes */}
@@ -79,8 +78,8 @@ function App() {
         </Route>
 
         {/*Page Note Found */}
+        <Route path="/unAuthPage" element={<UnAuthPage />} />
         <Route path="*" element={<PageNotFound />} />
-        <Route path="/un-auth-page" element={<UnAuthPage />} />
       </Routes>
     </div>
   );

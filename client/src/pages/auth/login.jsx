@@ -20,7 +20,7 @@ const navigate = useNavigate();
   function onSubmit(event) {
     event.preventDefault();
     dispatch(loginUser(formData)).then((data) => {
-      if(data.payload?.success){
+      if(data?.payload?.success){
         toast.success(data?.payload?.message);
         navigate("/shop/home");
       }else{
