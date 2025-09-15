@@ -6,7 +6,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { addProductFormControls } from "@/config";
 import ProductImageUpload from "@/components/admin-view/image-uplaod";
 import { useDispatch, useSelector } from "react-redux";
-import { addNewProduct, editProduct, fetchProducts } from "@/store/admin/products-slice";
+import { addNewProduct, deleteProduct, editProduct, fetchProducts } from "@/store/admin/products-slice";
 import { toast } from "sonner";
 import AdminProductTile from "@/components/admin-view/product-tile";
 
@@ -57,6 +57,21 @@ export default function AdminProducts() {
       }
     );
   }
+
+function isFormDataValid() {
+  return Object.values(formData).every(value => value !== null && value !== '');
+}
+
+function handleDelete(getCurrentId) {
+  dispatch(deleteProduct(getCurrentId)).then((data)=>{
+    if(data.payload.success){
+      dispatch(fetchProducts());
+      toast.success("Product deleted successfully");
+    }
+  })
+  
+}
+
   console.log(products);
   useEffect(() => {
     dispatch(fetchProducts());
@@ -77,6 +92,7 @@ export default function AdminProducts() {
                 setOpenCreateProduct={setOpenCreateProduct}
                 key={product._id}
                 product={product}
+                handleDelete={handleDelete}
               />
             ))
           : " No Products Found"}
@@ -111,6 +127,7 @@ export default function AdminProducts() {
               setFormData={setFormData}
               buttonText="Add Product"
               onSubmit={onSubmit}
+              isBtnDisabled={!isFormDataValid() || imageLoading}
             />
           </div>
         </SheetContent>
