@@ -38,23 +38,31 @@ export default function CommonForm({
         break;
 
       case "select":
-        element = (
-          <Select onValueChange = {(value)=>setFormData({...formData,[control.name]:value})} value={value}>
-            <SelectTrigger className="w-full">
-              <SelectValue placeholder={control.placeholder} />
-            </SelectTrigger>
-            <SelectContent>
-              {control.options && control.options.length > 0
-                ? control.options.map((optionItem) => (
-                    <SelectItem key={optionItem.id}>
-                      {optionItem.label}
-                    </SelectItem>
-                  ))
-                : null}
-            </SelectContent>
-          </Select>
-        );
-        break;
+  element = (
+    <Select
+      value={formData[control.name] || ""}
+      onValueChange={(val) =>
+        setFormData({ ...formData, [control.name]: val })
+      }
+    >
+      <SelectTrigger className="w-full text-black">
+        <SelectValue placeholder={control.placeholder} />
+      </SelectTrigger>
+      <SelectContent>
+        {control.options?.map((optionItem) => (
+          <SelectItem
+            key={optionItem.id}
+            value={optionItem.label}   // must exactly match stored value
+            className="text-black"
+          >
+            {optionItem.label}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+  );
+  break;
+
       case "textarea":
         element = (
           <Textarea

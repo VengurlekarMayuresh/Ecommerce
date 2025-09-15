@@ -6,7 +6,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { addProductFormControls } from "@/config";
 import ProductImageUpload from "@/components/admin-view/image-uplaod";
 import { useDispatch, useSelector } from "react-redux";
-import { addNewProduct, fetchProducts } from "@/store/admin/products-slice";
+import { addNewProduct, editProduct, fetchProducts } from "@/store/admin/products-slice";
 import { toast } from "sonner";
 import AdminProductTile from "@/components/admin-view/product-tile";
 
@@ -23,7 +23,7 @@ const initialFormData = {
 
 export default function AdminProducts() {
   const [openCreateProduct, setOpenCreateProduct] = useState(false);
-  const [formdata, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState(initialFormData);
   const [imageFile, setImageFile] = useState(null);
   const [uploadedImageUrl, setUploadedimageUrl] = useState("");
   const [imageLoading, setImageLoading] = useState(false);
@@ -33,7 +33,18 @@ export default function AdminProducts() {
 
   function onSubmit(event) {
     event.preventDefault();
-    dispatch(addNewProduct({ ...formdata, image: uploadedImageUrl })).then(
+
+    currentEditedId !== null ? dispatch(editProduct({id:currentEditedId,formData})).then((data)=>{
+      console.log(data);
+      if(data.payload.success){
+        dispatch(fetchProducts());
+        setCurrentEditedId(null);
+        setFormData(initialFormData);
+        setOpenCreateProduct(false);
+        toast.success("Product edited successfully");
+      }
+    }): 
+    dispatch(addNewProduct({ ...formData, image: uploadedImageUrl })).then(
       (data) => {
         if (data.payload.success) {
           dispatch(fetchProducts());
@@ -58,18 +69,31 @@ export default function AdminProducts() {
         </Button>
       </div>
       <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {products && products.length > 0 ? 
-          products.map((product) => (
-            <AdminProductTile key={product._id} product={product} />
-          )): " No Products Found"}
+        {products && products.length > 0
+          ? products.map((product) => (
+              <AdminProductTile
+                setFormData={setFormData}
+                setCurrentEditedId={setCurrentEditedId}
+                setOpenCreateProduct={setOpenCreateProduct}
+                key={product._id}
+                product={product}
+              />
+            ))
+          : " No Products Found"}
       </div>
       <Sheet
         open={openCreateProduct}
-        onOpenChange={() => setOpenCreateProduct(false)}
+        onOpenChange={() => {
+          setOpenCreateProduct(false);
+          setCurrentEditedId(null)
+          setFormData(initialFormData);
+        }}
       >
         <SheetContent side="right" className="overflow-auto">
           <SheetHeader className="pb-0">
-            <SheetTitle>Add New Product</SheetTitle>
+            <SheetTitle>{
+              currentEditedId !== null ? "Edit Product" : "Add New Product"
+            }</SheetTitle>
           </SheetHeader>
           <ProductImageUpload
             file={imageFile}
@@ -78,11 +102,12 @@ export default function AdminProducts() {
             setUploadedImageUrl={setUploadedimageUrl}
             setImageLoading={setImageLoading}
             imageLoading={imageLoading}
+            currentEditedId={currentEditedId}
           />
           <div className="py-5 px-5">
             <CommonForm
               formControls={addProductFormControls}
-              formData={formdata}
+              formData={formData}
               setFormData={setFormData}
               buttonText="Add Product"
               onSubmit={onSubmit}
