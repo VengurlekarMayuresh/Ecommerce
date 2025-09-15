@@ -1,10 +1,10 @@
+require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const authRouter = require("./routes/auth/auth-routes");
-require("dotenv").config();
-
+const adminProductRouter = require("./routes/admin/products-routes");
 const app = express();
 
 // ✅ Middlewares should come first
@@ -28,7 +28,11 @@ app.use(express.json());
 
 // ✅ Routes after middleware
 app.use("/api/auth", authRouter);
+app.use("/api/admin/products", adminProductRouter);
 
+
+
+// ✅ Database connection after routes
 mongoose
   .connect(process.env.MONGO_DBURL)
   .then(() => {
