@@ -48,6 +48,7 @@ const loginUser = async (req, res) => {
       email: user.email,
       id: user._id,
       role: user.role,
+      userName: user.userName,
     };
     const token = jwt.sign(payLoad, process.env.SECRET_KEY, {
       expiresIn: 3600,
@@ -60,6 +61,7 @@ const loginUser = async (req, res) => {
         userName: user.userName,
         email: user.email,
         role: user.role,
+        username: user.userName,
       },
     });
   } catch (error) {

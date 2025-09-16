@@ -38,9 +38,9 @@ export const loginUser = createAsyncThunk("/auth/login", async (formData) => {
   }
 });
 
-export const logOutUser = createAsyncThunk("/auth/logout", async () => {
+export const logOutUser = createAsyncThunk("/auth/logout",async () => {
   try {
-    const response = await axios.post("http://localhost:5000/api/auth/logout", {
+    const response = await axios.post("http://localhost:5000/api/auth/logout",{}, {
       withCredentials: true,
     });
     return response.data;
@@ -49,7 +49,7 @@ export const logOutUser = createAsyncThunk("/auth/logout", async () => {
   }
 });
 
-export const checkAuth = createAsyncThunk("/auth/checkauth",{}, async () => {
+export const checkAuth = createAsyncThunk("/auth/checkauth", async () => {
   try {
     const response = await axios.get(
       "http://localhost:5000/api/auth/check-auth",
