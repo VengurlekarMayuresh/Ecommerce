@@ -138,30 +138,48 @@ export const shoppingMenuItems = [
   },
 ];
 
+export const categoryOptions = [
+  {
+    'men': "Men",
+    'women': "Women",
+    'kids': "Kids",
+    'footwear': "Footwear",
+    'accessories': "Accessories",
+  },
+];
+
+export const brandOptions = [
+  { 'nike': "Nike" },
+  { 'adidas': "Adidas" },
+  { 'puma': "Puma" },
+  { 'levi': "Levi" },
+  { 'zara': "Zara" },
+  { 'h&m': "H&M" },
+];
 
 export const filterOptions = {
-  category:[
-    {id:'men',label:'Men'},
-    {id:'women',label:'Women'},
-    {id:'kids',label:'Kids'},
-    {id:'accessories',label:'Accessories'},
-    {id:'footwear',label:'Footwear'},
+  category: [
+    { id: "men", label: "Men" },
+    { id: "women", label: "Women" },
+    { id: "kids", label: "Kids" },
+    { id: "accessories", label: "Accessories" },
+    { id: "footwear", label: "Footwear" },
   ],
-  brand:[
-    {id:'nike',label:'Nike'},
-    {id:'adidas',label:'Adidas'},
-    {id:'puma',label:'Puma'},
-    {id:'levi',label:'Levi'},
-    {id:'zara',label:'Zara'},
-    {id:'h&m',label:'H&M'},
-  ]
-} 
+  brand: [
+    { id: "nike", label: "Nike" },
+    { id: "adidas", label: "Adidas" },
+    { id: "puma", label: "Puma" },
+    { id: "levi", label: "Levi" },
+    { id: "zara", label: "Zara" },
+    { id: "h&m", label: "H&M" },
+  ],
+};
 
 export const sortOptions = [
-  {id:'price-low-to-high',label:'Price: Low to High'},
-  {id:'price-high-to-low',label:'Price: High to Low'},
-  {id:'title-a-to-z',label:'Title: A to Z'},
-  {id:'title-z-to-a',label:'Title: Z to A'},
-  {id:'newest-first',label:'Newest First'},
-  {id:'oldest-first',label:'Oldest First'},
-]
+  { id: "price-low-to-high", label: "Price: Low to High" },
+  { id: "price-high-to-low", label: "Price: High to Low" },
+  { id: "title-a-to-z", label: "Title: A to Z" },
+  { id: "title-z-to-a", label: "Title: Z to A" },
+  { id: "newest-first", label: "Newest First" },
+  { id: "oldest-first", label: "Oldest First" },
+];

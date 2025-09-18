@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { brandOptions, categoryOptions } from "@/config";
 import React from "react";
 
 export default function ShoppingProductTile({ product }) {
@@ -23,10 +24,10 @@ export default function ShoppingProductTile({ product }) {
           <h2 className="text-xl font-bold mb-2">{product.title}</h2>
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-muted-foreground">
-              {product?.category}
+              {product.category}
             </span>
             <span className="text-sm text-muted-foreground">
-              {product?.brand}
+              {product.brand}
             </span>
           </div>
           <div className="flex items-center justify-between mb-2">
@@ -35,11 +36,11 @@ export default function ShoppingProductTile({ product }) {
                 product?.salesPrice > 0 ? "line-through" : ""
               } text-lg font-semibold text-primary`}
             >
-              {product?.price}
+              ${product?.price}
             </span>
             {product?.salesPrice > 0 ? (
               <span className="text-lg font-semibold text-primary">
-                {product?.salesPrice}
+                ${product?.salesPrice}
               </span>
             ) : null}
           </div>
