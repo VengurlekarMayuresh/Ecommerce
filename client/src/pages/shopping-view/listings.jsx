@@ -8,22 +8,23 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { sortOptions } from "@/config";
-import { fetchProducts } from "@/store/admin/products-slice";
-import { fetchAllFilteredProducts } from "@/store/shop/products-slice";
-import { ArrowUpDown, ArrowUpDownIcon } from "lucide-react";
+import { fetchAllFilteredProducts, fetchProductDetails } from "@/store/shop/products-slice";
+import {  ArrowUpDownIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import ShoppingProductTile from "./product-tile";
-import { createSearchParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
+import ProductDetails from "@/components/shopping-view/product-details";
+
 
 export default function ShoppingListings() {
   const dispatch = useDispatch();
   const [filters, setFilters] = useState({});
   const [sort, setSort] = useState(null);
-  const { products, isLoading } = useSelector((state) => state.shoppingProducts);
+  const { products, productDetails } = useSelector((state) => state.shoppingProducts);
   const [searchParams, setSearchParams] = useSearchParams();
-
+  const [open, setOpen] = useState(false);
 function handleSortChange(value) {
   console.log("Selected sort:", value);
   setSort(value);
@@ -40,24 +41,31 @@ function createSearchParams(filters) {
 }}
 
 function handleFilter(getSectionId,getCurrentOption){
-  console.log("Selected filter:", getSectionId,getCurrentOption);
-  let cpyFilters = {...filters};
-  const indexOfCurrentSection = Object.keys(cpyFilters).indexOf(getSectionId);
-  if(indexOfCurrentSection ===-1){
-    cpyFilters = {...cpyFilters,[getSectionId]:[getCurrentOption]}
-  }else{
-    const indexOfCurrentOption = cpyFilters[getSectionId].indexOf(getCurrentOption);
-    if(indexOfCurrentOption === -1){
-      cpyFilters[getSectionId].push(getCurrentOption);
+    console.log("Selected filter:", getSectionId,getCurrentOption);
+    let cpyFilters = {...filters};
+    // console.log("Current filters before update:", cpyFilters);
+    const indexOfCurrentSection = Object.keys(cpyFilters).indexOf(getSectionId);
+    if(indexOfCurrentSection ===-1){
+      cpyFilters = {...cpyFilters,[getSectionId]:[getCurrentOption]}
     }else{
-      cpyFilters[getSectionId].splice(indexOfCurrentOption,1);
-      // if(cpyFilters[getSectionId].length === 0){
-      //   delete cpyFilters[getSectionId];
-      // }
-    }
-}
-  setFilters(cpyFilters);
-  sessionStorage.setItem("productFilters",JSON.stringify(cpyFilters));
+      const indexOfCurrentOption = cpyFilters[getSectionId].indexOf(getCurrentOption);
+      if(indexOfCurrentOption === -1){
+        cpyFilters[getSectionId].push(getCurrentOption);
+      }else{
+        cpyFilters[getSectionId].splice(indexOfCurrentOption,1);
+        // if(cpyFilters[getSectionId].length === 0){
+        //   delete cpyFilters[getSectionId];
+        // }
+      }
+  }
+    setFilters(cpyFilters);
+    console.log("Updated filters:", cpyFilters);
+    sessionStorage.setItem("productFilters",JSON.stringify(cpyFilters));
+  }
+
+function handleGetProductDetails(productId){
+  console.log("Get product details for:", productId);
+  dispatch(fetchProductDetails(productId));
 }
 
 useEffect(()=>{
@@ -72,10 +80,20 @@ useEffect(()=>{
   }
 },[filters])
 
-  useEffect(() => {
-    dispatch(fetchAllFilteredProducts());
-  }, [dispatch]);
- 
+useEffect(() => {
+  dispatch(
+    fetchAllFilteredProducts({
+      filterParams: filters || {},
+      sortParams: sort || "price-low-to-high",
+    })
+  );
+}, [dispatch,filters, sort]);
+
+useEffect(()=>{
+  if(productDetails !== null){
+    setOpen(true);
+  }
+},[productDetails])
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 p-4 md:p-6">
@@ -110,14 +128,15 @@ useEffect(()=>{
             </DropdownMenu>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
           {products && products.length > 0
             ? products.map((product) => (
-                <ShoppingProductTile key={product._id} product={product} />
+                <ShoppingProductTile key={product._id} product={product} handleGetProductDetails={handleGetProductDetails}/>
               ))
             : null}
         </div>
       </div>
+      <ProductDetails open={open} setOpen={setOpen} ProductDetails={productDetails}/>
     </div>
   );
 }
