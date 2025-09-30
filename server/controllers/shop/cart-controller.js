@@ -33,9 +33,10 @@ const addToCart = async (req, res) => {
       } else {
         cart.items.push({ productId, quantity });
       }
+  
       await cart.save();
     }
-    res.status(200).json({ message: "Item added to cart", success: true });
+    res.status(200).json({ message: "Item added to cart", data: userId, success: true });
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Internal server error", success: false });
@@ -74,6 +75,8 @@ const fetchCartItems = async (req, res) => {
       image: item.productId.image,
       quantity: item.quantity,
     }));
+    console.log('Successfully fetched cart items for user:');
+    
     res
       .status(200)
       .json({ data: { ...cart._doc, items: populatedItems }, success: true });

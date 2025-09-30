@@ -5,7 +5,7 @@ import {
   ShoppingCart,
   UserRoundCog,
 } from "lucide-react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
@@ -20,7 +20,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "../ui/avatar";
-
+import { fetchCartItems } from "@/store/shop/cart-slice";
 import { logOutUser } from "@/store/auth-slice";
 import UserCartWrapper from "./cart-wrapper.jsx";
 
@@ -30,16 +30,27 @@ function HeaderRightContent() {
     dispatch(logOutUser());
   }
   const { user } = useSelector((state) => state.auth);
+  const { cartItems } = useSelector((state) => state.shoppingCart);
   const [openCartSheet, setOpenCartSheet] = useState(false);
   const navigate = useNavigate();
+  // console.log(cartItems, "cart items in header");
+  useEffect(() => {
+    dispatch(fetchCartItems(user?.id ));
+  }, [dispatch]); 
   return (
     <div className="flex lg:items-center lg:flex-row flex-col gap-4">
-      <Sheet open={openCartSheet} onOpenChange={()=>setOpenCartSheet(false)}>
-      <Button onClick={()=>{setOpenCartSheet(true)}} variant="outline" size="icon">
-        <ShoppingCart className="h-6 w-6" />
-        <span className="sr-only">User Cart</span>
-      </Button>
-      <UserCartWrapper/>
+      <Sheet open={openCartSheet} onOpenChange={() => setOpenCartSheet(false)}>
+        <Button
+          onClick={() => {
+            setOpenCartSheet(true);
+          }}
+          variant="outline"
+          size="icon"
+        >
+          <ShoppingCart className="h-6 w-6" />
+          <span className="sr-only">User Cart</span>
+        </Button>
+        <UserCartWrapper cartItems={cartItems} />
       </Sheet>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
@@ -79,6 +90,7 @@ function MenuItems() {
 }
 
 export default function ShoppingHeader() {
+  const dispatch = useDispatch();
   const { isAuthenticated, user } = useSelector((state) => state.auth);
 
   return (
@@ -97,17 +109,16 @@ export default function ShoppingHeader() {
           </SheetTrigger>
           <SheetContent side="left" className="w-full max-w-xs">
             <MenuItems />
-            <HeaderRightContent/>
+            <HeaderRightContent />
           </SheetContent>
         </Sheet>
         <div className="hidden lg:block">
           <MenuItems />
         </div>
-       
-          <div className=" hidden lg:block">
-            <HeaderRightContent />
-          </div>
-      
+
+        <div className=" hidden lg:block">
+          <HeaderRightContent />
+        </div>
       </div>
     </header>
   );

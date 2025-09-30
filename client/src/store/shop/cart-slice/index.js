@@ -20,9 +20,9 @@ export const addToCart = createAsyncThunk(
 
 export const fetchCartItems = createAsyncThunk(
   "cart/fetchCartItems",
-  async ({ userId }) => {
+  async ( userId ) => {
     const response = await axios.get(
-      `http://localhost:5000/api/shop/cart/${userId}`
+      `http://localhost:5000/api/shop/cart/get/${userId}`
     );
     return response.data;
   }
@@ -59,7 +59,7 @@ const cartSlice = createSlice({
     });
     builder.addCase(addToCart.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.cartItems = action.payload.data.items;
+      state.cartItems = action.payload.data;
     });
     builder.addCase(addToCart.rejected, (state) => {
       state.isLoading = false;

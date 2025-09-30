@@ -8,7 +8,7 @@ const store = configureStore({
         auth:authReducer,
         adminProducts:AdminProductSlice,
         shoppingProducts: shoppingProductSlice,
-        cart: cartSlice
+        shoppingCart: cartSlice
     }
 })
 
