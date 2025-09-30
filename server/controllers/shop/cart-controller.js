@@ -75,7 +75,6 @@ const fetchCartItems = async (req, res) => {
       image: item.productId.image,
       quantity: item.quantity,
     }));
-    console.log('Successfully fetched cart items for user:');
     
     res
       .status(200)
@@ -125,7 +124,6 @@ const updateCartItems = async (req, res) => {
       path: "items.productId",
       select: "title price salesPrice image",
     });
-    res.status(200).json({ data: cart, success: true });
 
     const populatedItems = cart.items.map((item) => ({
       productId: item.productId ? item.productId._id : null,

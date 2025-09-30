@@ -33,7 +33,7 @@ function HeaderRightContent() {
   const { cartItems } = useSelector((state) => state.shoppingCart);
   const [openCartSheet, setOpenCartSheet] = useState(false);
   const navigate = useNavigate();
-  // console.log(cartItems, "cart items in header");
+  console.log(cartItems, "cart items in header");
   useEffect(() => {
     dispatch(fetchCartItems(user?.id ));
   }, [dispatch]); 
@@ -81,8 +81,8 @@ function MenuItems() {
   return (
     <nav className="flex flex-col mb-3 lg:mb-0 lg:items-center gap-6 lg:flex-row">
       {shoppingMenuItems.map((item) => (
-        <Link className="text-sm font-medium" key={item.id} to={item.href}>
-          {item.label}
+        <Link className="text-sm font-medium "  key={item.id} to={item.href}>
+         <span className="text-black"> {item.label}</span>
         </Link>
       ))}
     </nav>
@@ -97,8 +97,8 @@ export default function ShoppingHeader() {
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <Link className="flex items-center gap-2" to="/shop/home">
-          <HousePlug className="h-6 w-6" />
-          <span className="font-bold">ECommerce</span>
+          <HousePlug className="h-6 w-6 text-black" />
+          <span className="font-bold text-black">ECommerce</span>
         </Link>
         <Sheet>
           <SheetTrigger>

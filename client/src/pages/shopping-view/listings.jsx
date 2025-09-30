@@ -18,6 +18,9 @@ import ShoppingProductTile from "./product-tile";
 import { useSearchParams } from "react-router-dom";
 import ProductDetails from "@/components/shopping-view/product-details";
 import { addToCart, fetchCartItems } from "../../store/shop/cart-slice";
+import { Toaster } from "sonner";
+import { toast } from "sonner"
+
 
 export default function ShoppingListings() {
   const { user } = useSelector((state) => state.auth);
@@ -31,6 +34,7 @@ export default function ShoppingListings() {
   );
   const [searchParams, setSearchParams] = useSearchParams();
   const [open, setOpen] = useState(false);
+
   function handleSortChange(value) {
     console.log("Selected sort:", value);
     setSort(value);
@@ -84,6 +88,7 @@ export default function ShoppingListings() {
       .then((data) => {
         if(data?.payload.success){
           dispatch(fetchCartItems(user?.id));
+          toast.success("Item added to cart");
         }
       })
       .catch((err) => console.error("Add to cart error:", err));
