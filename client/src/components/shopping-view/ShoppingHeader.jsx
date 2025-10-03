@@ -23,6 +23,7 @@ import { Avatar, AvatarFallback } from "../ui/avatar";
 import { fetchCartItems } from "@/store/shop/cart-slice";
 import { logOutUser } from "@/store/auth-slice";
 import UserCartWrapper from "./cart-wrapper.jsx";
+import { Label } from "../ui/label";
 
 function HeaderRightContent() {
   const dispatch = useDispatch();
@@ -35,8 +36,8 @@ function HeaderRightContent() {
   const navigate = useNavigate();
   console.log(cartItems, "cart items in header");
   useEffect(() => {
-    dispatch(fetchCartItems(user?.id ));
-  }, [dispatch]); 
+    dispatch(fetchCartItems(user?.id));
+  }, [dispatch]);
   return (
     <div className="flex lg:items-center lg:flex-row flex-col gap-4">
       <Sheet open={openCartSheet} onOpenChange={() => setOpenCartSheet(false)}>
@@ -78,12 +79,30 @@ function HeaderRightContent() {
 }
 
 function MenuItems() {
+  const navigate = useNavigate();
+  function handleNavigate(item) {
+    sessionStorage.removeItem("productFilters");
+    const currentFilter =
+      item.id !== "home"
+        ? {
+            category: [item.id],
+          }
+        : null;
+    sessionStorage.setItem("productFilters", JSON.stringify(currentFilter));
+    console.log("Navigating to:", item, "with filters:", currentFilter);
+    navigate(item.href);
+  }
   return (
     <nav className="flex flex-col mb-3 lg:mb-0 lg:items-center gap-6 lg:flex-row">
       {shoppingMenuItems.map((item) => (
-        <Link className="text-sm font-medium "  key={item.id} to={item.href}>
-         <span className="text-black"> {item.label}</span>
-        </Link>
+        <Label
+          onClick={() => handleNavigate(item)}
+          className="text-sm font-medium "
+          key={item.id}
+          to={item.href}
+        >
+          <span className="text-black"> {item.label}</span>
+        </Label>
       ))}
     </nav>
   );

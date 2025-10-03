@@ -7,6 +7,7 @@ const authRouter = require("./routes/auth/auth-routes");
 const adminProductRouter = require("./routes/admin/products-routes");
 const shopProductRouter = require("./routes/shop/products-routes");
 const cartRouter = require("./routes/shop/cart-routes");
+const shopAddressRouter = require("./routes/shop/address-routes");
 const app = express();
 
 // ✅ Middlewares should come first
@@ -33,7 +34,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/admin/products", adminProductRouter);
 app.use("/api/shop/products", shopProductRouter);
 app.use("/api/shop/cart", cartRouter);
-
+app.use("/api/shop/address", shopAddressRouter);
 
 
 // ✅ Database connection after routes
