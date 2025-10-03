@@ -67,25 +67,34 @@ const deleteAddress = async (req, res) => {
 
 const fetchAllAddress = async (req, res) => {
   try {
-    const { userId } = req.params;
+    const { userId } = req.params; // or req.query depending on your route
+
     if (!userId) {
-      return res
-        .status(400)
-        .json({ message: "UserId is required", success: false });
-    }
-    const addressList = await Address.find({ userId });
-    res
-      .status(200)
-      .json({
-        message: "Addresses fetched successfully",
-        success: true,
-        data: addressList,
+      return res.status(400).json({
+        success: false,
+        message: "UserId is required",
+        data: [],
       });
+    }
+
+   const addressList = await Address.find({ userId: String(userId) }).lean();
+
+
+    return res.status(200).json({
+      success: true,
+      message: "Addresses fetched successfully",
+      data: addressList,
+    });
   } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: "Internal Server Error", success: false });
+    console.error("Error fetching addresses:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+      data: [],
+    });
   }
 };
+
 
 module.exports = {
   addAddress,

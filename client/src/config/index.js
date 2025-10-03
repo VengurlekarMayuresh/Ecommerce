@@ -184,3 +184,37 @@ export const sortOptions = [
   { id: "newest-first", label: "Newest First" },
   { id: "oldest-first", label: "Oldest First" },
 ];
+
+export const AddressFormControls = [
+  {
+    label:'Address',
+    name:'address',
+    componentType:'input',
+    type:'text',
+    placeholder:'Enter your Address'
+  },{
+    label:'City',
+    name:'city',
+    componentType:'input',
+    type:'text',
+    placeholder:'Enter your City'
+  },{
+    label:'Pincode',
+    name:'pincode',
+    componentType:'input',
+    type:'number',
+    placeholder:'Enter your Pincode'
+  },{
+    label:'Phone',
+    name:'phone',
+    componentType:'input',
+    type:'number',
+    placeholder:'Enter your Phone Number'
+  },{
+    label:'Notes',
+    name:'notes',
+    componentType:'textarea',
+    type:'text',
+    placeholder:'Enter any additional Notes'
+  }
+]
