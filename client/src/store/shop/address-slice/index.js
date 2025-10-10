@@ -22,7 +22,6 @@ export const fetchAllAddress = createAsyncThunk(
     const response = await axios.get(
       `http://localhost:5000/api/shop/address/get/${userId}`
     );
-    console.log(response.data,'response');
     return response.data;
   }
 );
@@ -39,6 +38,7 @@ export const editAddress = createAsyncThunk(
 export const deleteAddress = createAsyncThunk(
   "/addresses/deleteAddress",
   async ({ userId, addressId }) => {
+    console.log(userId,addressId,'userId,addressId');
     const response = await axios.delete(
       `http://localhost:5000/api/shop/address/delete/${userId}/${addressId}`
     );

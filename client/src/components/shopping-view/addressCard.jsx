@@ -2,7 +2,8 @@ import { Button } from "../ui/button";
 import { Card, CardContent, CardFooter } from "../ui/card";
 import { Label } from "../ui/label";
 
-export default function AddressCard({addressInfo}) {
+export default function AddressCard({addressInfo,handleDelete,handleEditAddress}) {
+     
     return (
         <Card>
             <CardContent className='grid p-4 gap-4'>
@@ -13,8 +14,8 @@ export default function AddressCard({addressInfo}) {
                 <Label>Notes : {addressInfo?.notes}</Label>   
             </CardContent>
             <CardFooter className='flex justify-between gap-2'>
-                <Button className="m-2">Edit</Button>
-                <Button variant="destructive">Delete</Button>
+                <Button className="m-2" onClick={() => handleEditAddress(addressInfo)}>Edit</Button>
+                <Button variant="destructive" onClick={() => handleDelete(addressInfo)}>Delete</Button>
             </CardFooter>
         </Card>
     )
