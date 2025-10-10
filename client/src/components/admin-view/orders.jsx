@@ -2,15 +2,22 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Dialog } from "../ui/dialog";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table";
-import ShoppingOrderDetailsView from "./order-details";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "../ui/table";
+import AdminOrdersDetailsView from "./order-details";
 
-export default function ShoppingOrders() {
-  const [openDetailsDialog, setOpenDetailsDialog] = useState(false);
+function AdminOrdersView() {
+    const [openDetailsDialog, setOpenDetailsDialog] = useState(false);
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Order History</CardTitle>
+        <CardTitle>All Orders </CardTitle>
       </CardHeader>
 
       <CardContent>
@@ -18,9 +25,15 @@ export default function ShoppingOrders() {
           <TableHeader>
             <TableRow>
               <TableHead className="align-middle text-left">Order ID</TableHead>
-              <TableHead className="align-middle text-left">Order Date</TableHead>
-              <TableHead className="align-middle text-left">Order Status</TableHead>
-              <TableHead className="align-middle text-left">Order Price</TableHead>
+              <TableHead className="align-middle text-left">
+                Order Date
+              </TableHead>
+              <TableHead className="align-middle text-left">
+                Order Status
+              </TableHead>
+              <TableHead className="align-middle text-left">
+                Order Price
+              </TableHead>
               <TableHead className="align-middle text-center">
                 <span className="sr-only">Action</span>
               </TableHead>
@@ -35,12 +48,10 @@ export default function ShoppingOrders() {
               <TableCell className=" text-left">$99.99</TableCell>
               <TableCell className=" text-center">
                 <Dialog open={openDetailsDialog} onOpenChange={setOpenDetailsDialog}>
-                    <Button variant="outline" size="sm" onClick={() => setOpenDetailsDialog(true)}>
-                  View Details
-                </Button>
-                <ShoppingOrderDetailsView />
+                  <Button variant="outline" size="sm" onClick={() => setOpenDetailsDialog(true)}>View Details</Button>
+                <AdminOrdersDetailsView/>
                 </Dialog>
-              
+           
               </TableCell>
             </TableRow>
           </TableBody>
@@ -49,3 +60,5 @@ export default function ShoppingOrders() {
     </Card>
   );
 }
+
+export default AdminOrdersView;
