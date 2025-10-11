@@ -22,6 +22,7 @@ import { checkAuth } from "@/store/auth-slice";
 import { Skeleton } from "@/components/ui/skeleton";
 import PayPalReturnPage from "./pages/shopping-view/paypal-return";
 import PaymentSuccessPage from "./pages/shopping-view/payment-success";
+import { Toaster } from "sonner";
 
 function App() {
   const { isAuthenticated, user, isLoading } = useSelector(
@@ -34,7 +35,9 @@ function App() {
 
   if (isLoading) return <Skeleton className="h-[100vh] bg-black w-[600px]" />;
   return (
+    
     <div className="flex flex-col overflow-hidden bg-white">
+      <Toaster richColors/>
       {/*Auth Routes */}
       <Routes>
         <Route

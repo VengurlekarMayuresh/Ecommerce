@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import UserCartItemContent from "@/components/shopping-view/cart-items-content";
 import { Button } from "@/components/ui/button";
 import { createNewOrder } from "@/store/shop/order-slice";
-
+import { toast } from "sonner";
+import { Toaster } from "sonner";
 
 export default function ShoppingCheckoutPage() {
   const { cartItems } = useSelector((state) => state.shoppingCart);
@@ -25,7 +26,17 @@ export default function ShoppingCheckoutPage() {
         }, 0)
       : 0;
   function handleInitiatePayment() {
-    console.log(currentAddress, "currentAddress");
+    if (!currentAddress) {
+      toast.error("Please select an address");
+            <Toaster richColors/>
+
+      return;
+    }
+    if(cartItems.length === 0){
+      toast.error("Your cart is empty. Please add items to proceed.");
+            <Toaster richColors/>
+      return;
+    }
     const orderData = {
       userId: user?.id,
       cartId: cartId,

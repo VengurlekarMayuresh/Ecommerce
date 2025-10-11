@@ -12,7 +12,7 @@ const store = configureStore({
         shoppingProducts: shoppingProductSlice,
         shoppingCart: cartSlice,
         shopAddress: shopAddressSlice,
-        shopOrder: shopOrderSlice
+        shoppingOrder: shopOrderSlice
     }
 })
 

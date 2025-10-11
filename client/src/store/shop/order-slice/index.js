@@ -6,6 +6,8 @@ const initialState = {
   approvalURL: null,
   isLoading: false,
   orderId: null,
+  orderList: [],
+  orderDetails: null,
 };
 
 export const createNewOrder = createAsyncThunk(
@@ -25,6 +27,23 @@ export const capturePayment = createAsyncThunk(
     const response = await axios.post(
       "http://localhost:5000/api/shop/order/capture",
       { paymentId, payerId, orderId }
+    );
+    return response.data;
+  }
+);
+
+export const getAllOrders = createAsyncThunk("/all/orders", async (userId) => {
+  const response = await axios.get(
+    `http://localhost:5000/api/shop/order/list/${userId}`
+  );
+  return response.data;
+});
+
+export const getOrderDetails = createAsyncThunk(
+  "/order/details",
+  async (id) => {
+    const response = await axios.get(
+      `http://localhost:5000/api/shop/order/details/${id}`
     );
     return response.data;
   }
@@ -51,6 +70,28 @@ const shoppingOrderSlice = createSlice({
       state.isLoading = false;
       state.approvalURL = null;
       state.orderId = null;
+    });
+    builder.addCase(getAllOrders.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(getAllOrders.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.orderList = action.payload.data;
+    });
+    builder.addCase(getAllOrders.rejected, (state) => {
+      state.isLoading = false;
+      state.orderList = [];
+    });
+    builder.addCase(getOrderDetails.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(getOrderDetails.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.orderDetails = action.payload.data;
+    });
+    builder.addCase(getOrderDetails.rejected, (state) => {
+      state.isLoading = false;
+      state.orderDetails = null;
     });
   },
 });
