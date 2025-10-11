@@ -4,11 +4,12 @@ import { useDispatch } from "react-redux";
 import { deleteCartItems, updateCartItems } from "@/store/shop/cart-slice";
 import { useSelector } from "react-redux";
 import { toast } from "sonner";
+import { data } from "react-router-dom";
 
 export default function UserCartItemContent({cartItem} ) {
     const dispatch = useDispatch();
     const {user} = useSelector((state) => state.auth);
-
+    
 
     function handleCartItemDelete(cartItemId){
         dispatch(deleteCartItems({ userId : user.id , productId :cartItemId})).then(() => {
@@ -24,6 +25,9 @@ export default function UserCartItemContent({cartItem} ) {
     }
     function handleIncreaseQuantity(cartItemId){
         dispatch(updateCartItems({ userId : user.id , productId :cartItemId, quantity: cartItem.quantity + 1})).then(() => {
+            // if(data?.payload?.success){
+            //     console.log(data, "Mayu");
+            // }
             toast.success("Cart item updated successfully");
         });
     }

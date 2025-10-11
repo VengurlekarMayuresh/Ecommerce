@@ -15,9 +15,10 @@ export default function ProductDetails({ open, setOpen, ProductDetails }) {
     const userId = user?.id;
     function handleAddToCart(productId) {
         // console.log("Add to cart clicked");
-        dispatch(addToCart({ userId, productId, quantity: 1 }))
+        dispatch(addToCart({ userId, productId, quantity: 1 })).then
           .then((data) => {
             if(data?.payload.success){
+             
               dispatch(fetchCartItems(user?.id));
               toast.success("Item added to cart");
             }

@@ -5,6 +5,7 @@ import axios from "axios";
 const initialState = {
   cartItems: [],
   isLoading: false,
+  cartId: null,
 };
 
 export const addToCart = createAsyncThunk(
@@ -62,6 +63,7 @@ const cartSlice = createSlice({
     builder.addCase(addToCart.fulfilled, (state, action) => {
       state.isLoading = false;
       state.cartItems = action.payload.data.items;
+      state.cartId = action.payload.cart._id;
     });
     builder.addCase(addToCart.rejected, (state) => {
       state.isLoading = false;
@@ -72,6 +74,7 @@ const cartSlice = createSlice({
     builder.addCase(fetchCartItems.fulfilled, (state, action) => {
       state.isLoading = false;
       state.cartItems = action.payload.data.items || [];
+      state.cartId = action.payload.cart._id;
     });
     builder.addCase(fetchCartItems.rejected, (state) => {
       state.isLoading = false;

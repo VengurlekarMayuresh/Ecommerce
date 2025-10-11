@@ -36,7 +36,7 @@ const addToCart = async (req, res) => {
   
       await cart.save();
     }
-    res.status(200).json({ message: "Item added to cart", data: userId, success: true });
+    res.status(200).json({ message: "Item added to cart", data: userId, success: true ,cart : cart});
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Internal server error", success: false });
@@ -78,7 +78,7 @@ const fetchCartItems = async (req, res) => {
     
     res
       .status(200)
-      .json({ data: { ...cart._doc, items: populatedItems }, success: true });
+      .json({ data: { ...cart._doc, items: populatedItems }, cart: cart, success: true });
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Internal server error", success: false });

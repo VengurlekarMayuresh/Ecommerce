@@ -18,7 +18,7 @@ const initialFormData = {
   phone: "",
   notes: "",
 };
-export default function Address() {
+export default function Address({ setCurrentAddress }) {
   const dispatch = useDispatch();
   const [formData, setFormData] = useState(initialFormData);
   const { user } = useSelector((state) => state.auth);
@@ -102,12 +102,13 @@ export default function Address() {
     <Card>
       <div className="mb-5 p-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
         {addressList && addressList.length > 0 ? (
-          addressList.map((address) => (
+          addressList.map((address) => (    
             <AddressCard
               handleDelete={handleDelete}
               handleEditAddress={handleEditAddress}
               addressInfo={address}
               key={address.id}
+              setCurrentAddress={setCurrentAddress}
             />
           ))
         ) : (
