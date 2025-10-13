@@ -6,7 +6,7 @@ import {
   UserRoundCog,
 } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Button } from "../ui/button";
 import { useDispatch, useSelector } from "react-redux";
@@ -34,7 +34,6 @@ function HeaderRightContent() {
   const { cartItems } = useSelector((state) => state.shoppingCart);
   const [openCartSheet, setOpenCartSheet] = useState(false);
   const navigate = useNavigate();
-  console.log(cartItems, "cart items in header");
   useEffect(() => {
     dispatch(fetchCartItems(user?.id));
   }, [dispatch]);
@@ -80,16 +79,19 @@ function HeaderRightContent() {
 
 function MenuItems() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
   function handleNavigate(item) {
     sessionStorage.removeItem("productFilters");
     const currentFilter =
-      item.id !== "home"
+      item.id !== "home" && item.id !== "products"
         ? {
             category: [item.id],
           }
         : null;
     sessionStorage.setItem("productFilters", JSON.stringify(currentFilter));
     console.log("Navigating to:", item, "with filters:", currentFilter);
+    location.pathname.includes('listings') && currentFilter !==null ?  setSearchParams(new URLSearchParams(`?category=${item.id}`)) : 
     navigate(item.href);
   }
   return (

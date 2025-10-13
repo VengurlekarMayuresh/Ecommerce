@@ -68,6 +68,7 @@ export const addProductFormControls = [
     name: "category",
     componentType: "select",
     options: [
+      
       { id: "men", label: "Men" },
       { id: "women", label: "Women" },
       { id: "kids", label: "Kids" },
@@ -110,6 +111,11 @@ export const shoppingMenuItems = [
     id: "home",
     label: "Home",
     href: "/shop/home",
+  },
+  {
+    id:'products',
+    label: "Products",
+    href: "/shop/listings",
   },
   {
     id: "men",

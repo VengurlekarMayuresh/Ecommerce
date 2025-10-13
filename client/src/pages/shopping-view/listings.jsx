@@ -34,6 +34,7 @@ export default function ShoppingListings() {
   );
   const [searchParams, setSearchParams] = useSearchParams();
   const [open, setOpen] = useState(false);
+  const categorySearchParam = searchParams.get("category");
 
   function handleSortChange(value) {
     console.log("Selected sort:", value);
@@ -98,7 +99,7 @@ export default function ShoppingListings() {
   useEffect(() => {
     setSort("price-low-to-high");
     setFilters(JSON.parse(sessionStorage.getItem("productFilters")) || {});
-  }, []);
+  }, [categorySearchParam]);
 
   useEffect(() => {
     if (filters && Object.keys(filters).length > 0) {
