@@ -9,7 +9,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { sortOptions } from "@/config";
 import {
-  fetchAllFilteredProducts,fetchProductDetails,} from "@/store/shop/products-slice";
+  fetchAllFilteredProducts,
+  fetchProductDetails,
+} from "@/store/shop/products-slice";
 import { ArrowUpDownIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -19,16 +21,17 @@ import { useSearchParams } from "react-router-dom";
 import ProductDetails from "@/components/shopping-view/product-details";
 import { addToCart, fetchCartItems } from "../../store/shop/cart-slice";
 import { Toaster } from "sonner";
-import { toast } from "sonner"
-
+import { toast } from "sonner";
 
 export default function ShoppingListings() {
   const { user } = useSelector((state) => state.auth);
   const userId = user?.id;
-  const {cartItems} = useSelector((state) => state.shoppingCart);
+  const { cartItems } = useSelector((state) => state.shoppingCart);
   const dispatch = useDispatch();
   const [filters, setFilters] = useState({});
   const [sort, setSort] = useState(null);
+  <Toaster />
+
   const { products, productDetails } = useSelector(
     (state) => state.shoppingProducts
   );
@@ -81,14 +84,23 @@ export default function ShoppingListings() {
     dispatch(fetchProductDetails(productId));
   }
 
-  function handleAddToCart(productId) {
-    console.log("Add to cart for:", productId);
-    console.log("User ID:", userId);
-    // console.log("Add to cart clicked");
+  function handleAddToCart(productId,getTotalStock) {
+    let getCartItems = cartItems || [];
+    if (getCartItems.length) {
+      const indexOfCurrentItem = getCartItems.findIndex(
+        (item) => item.productId === productId
+      );
+      if (indexOfCurrentItem > -1) {
+        const getQuantity = getCartItems[indexOfCurrentItem]?.quantity;
+        if (getQuantity + 1 > getTotalStock) {
+          return toast.error(`Only ${getTotalStock} items in stock`);
+        }
+      }
+    }
     dispatch(addToCart({ userId, productId, quantity: 1 }))
       .then((data) => {
-        if(data?.payload.success){
-           console.log(data, "Mayu");
+        if (data?.payload.success) {
+          console.log(data, "Mayu");
           dispatch(fetchCartItems(user?.id));
           toast.success("Item added to cart");
         }
@@ -122,7 +134,6 @@ export default function ShoppingListings() {
       setOpen(true);
     }
   }, [productDetails]);
-
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 p-4 md:p-6">

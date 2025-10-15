@@ -4,11 +4,14 @@ import { useDispatch } from "react-redux";
 import { deleteCartItems, updateCartItems } from "@/store/shop/cart-slice";
 import { useSelector } from "react-redux";
 import { toast } from "sonner";
-import { data } from "react-router-dom";
+
 
 export default function UserCartItemContent({cartItem} ) {
+
     const dispatch = useDispatch();
     const {user} = useSelector((state) => state.auth);
+    const {products} = useSelector((state) => state.shoppingProducts);
+    const {cartItems} = useSelector((state) => state.shoppingCart);
     
 
     function handleCartItemDelete(cartItemId){
@@ -18,16 +21,32 @@ export default function UserCartItemContent({cartItem} ) {
    
     }
     
-    function handleDecreaseQuantity(cartItemId){
+     function handleDecreaseQuantity(cartItemId){
+
         dispatch(updateCartItems({ userId : user.id , productId :cartItemId, quantity: cartItem.quantity - 1})).then(() => {
             toast.success("Cart item updated successfully");
         });
     }
-    function handleIncreaseQuantity(cartItemId){
+    function handleIncreaseQuantity(cartItemId, getTotalStock){
+         let getCartItems = cartItems || [];
+            if (getCartItems.length) {
+               const indexOfCurrentItem = getCartItems.findIndex(
+                (item) => item.productId === cartItemId
+              );
+              console.log(products,'products');
+              const getproduct =  products.find(prod => prod._id === cartItemId) 
+          
+              const getCurrentStock = getproduct?.totalStock || 0;
+              
+              console.log("getCurrentStock", getCurrentStock);
+              if (indexOfCurrentItem > -1) {
+                const getQuantity = getCartItems[indexOfCurrentItem]?.quantity;
+                if (getQuantity + 1 > getCurrentStock) {
+                  return toast.error(`Only ${getCurrentStock} items in stock`);
+                }
+              }
+            }
         dispatch(updateCartItems({ userId : user.id , productId :cartItemId, quantity: cartItem.quantity + 1})).then(() => {
-            // if(data?.payload?.success){
-            //     console.log(data, "Mayu");
-            // }
             toast.success("Cart item updated successfully");
         });
     }

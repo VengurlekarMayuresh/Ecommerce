@@ -28,13 +28,12 @@ export default function ShoppingCheckoutPage() {
   function handleInitiatePayment() {
     if (!currentAddress) {
       toast.error("Please select an address");
-            <Toaster richColors/>
+            
 
       return;
     }
     if(cartItems.length === 0){
       toast.error("Your cart is empty. Please add items to proceed.");
-            <Toaster richColors/>
       return;
     }
     const orderData = {
