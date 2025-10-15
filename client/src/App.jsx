@@ -22,6 +22,7 @@ import { checkAuth } from "@/store/auth-slice";
 import { Skeleton } from "@/components/ui/skeleton";
 import PayPalReturnPage from "./pages/shopping-view/paypal-return";
 import PaymentSuccessPage from "./pages/shopping-view/payment-success";
+import SearchPage from "./pages/shopping-view/search";
 import { Toaster } from "sonner";
 
 function App() {
@@ -82,6 +83,7 @@ function App() {
           <Route path="listings" element={<ShoppingListings />} />
           <Route path="paypal-return" element={<PayPalReturnPage />} />
           <Route path="payment-success" element={<PaymentSuccessPage />} />
+          <Route path="search" element={<SearchPage/>}/>
         </Route>
 
         {/*Page Note Found */}

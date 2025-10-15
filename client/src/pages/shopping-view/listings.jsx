@@ -30,8 +30,6 @@ export default function ShoppingListings() {
   const dispatch = useDispatch();
   const [filters, setFilters] = useState({});
   const [sort, setSort] = useState(null);
-  <Toaster />
-
   const { products, productDetails } = useSelector(
     (state) => state.shoppingProducts
   );
@@ -80,7 +78,6 @@ export default function ShoppingListings() {
   }
 
   function handleGetProductDetails(productId) {
-    console.log("Get product details for:", productId);
     dispatch(fetchProductDetails(productId));
   }
 

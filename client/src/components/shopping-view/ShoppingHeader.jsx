@@ -24,6 +24,7 @@ import { fetchCartItems } from "@/store/shop/cart-slice";
 import { logOutUser } from "@/store/auth-slice";
 import UserCartWrapper from "./cart-wrapper.jsx";
 import { Label } from "../ui/label";
+import { Search } from "lucide-react";
 
 function HeaderRightContent() {
   const dispatch = useDispatch();
@@ -84,7 +85,7 @@ function MenuItems() {
   function handleNavigate(item) {
     sessionStorage.removeItem("productFilters");
     const currentFilter =
-      item.id !== "home" && item.id !== "products"
+      item.id !== "home" && item.id !== "products" && item.id !== "search"
         ? {
             category: [item.id],
           }
@@ -103,7 +104,10 @@ function MenuItems() {
           key={item.id}
           to={item.href}
         >
-          <span className="text-black"> {item.label}</span>
+          {
+            item.label === 'Search' ? <Search className="h-4 w-4 ml-4"/> : <span className="text-black"> {item.label}</span>
+            }
+       
         </Label>
       ))}
     </nav>

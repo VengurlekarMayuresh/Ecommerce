@@ -1,5 +1,6 @@
 import { Label } from "@radix-ui/react-label";
 
+
 export const registerFormControls = [
   {
     name: "userName",
@@ -142,6 +143,11 @@ export const shoppingMenuItems = [
     label: "Accessories",
     href: "/shop/listings",
   },
+  {
+    id:"search",
+    label: 'Search',
+    href: "/shop/search",
+  }
 ];
 
 export const categoryOptions = [

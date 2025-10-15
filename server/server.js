@@ -10,6 +10,7 @@ const cartRouter = require("./routes/shop/cart-routes");
 const shopAddressRouter = require("./routes/shop/address-routes");
 const shopOrderRouter = require("./routes/shop/order-routes");
 const adminOrderRouter = require("./routes/admin/order-routes");
+const shopSearchRouter = require("./routes/shop/search-routes");
 const app = express();
 
 // ✅ Middlewares should come first
@@ -39,6 +40,7 @@ app.use("/api/shop/products", shopProductRouter);
 app.use("/api/shop/cart", cartRouter);
 app.use("/api/shop/address", shopAddressRouter);
 app.use('/api/shop/order', shopOrderRouter);
+app.use('/api/shop/search', shopSearchRouter);
 
 
 

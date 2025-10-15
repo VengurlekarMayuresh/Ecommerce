@@ -13,16 +13,18 @@ import { setProductDetails } from "@/store/shop/products-slice";
 export default function ProductDetails({ open, setOpen, ProductDetails }) {
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.shoppingCart);
+  const { products } = useSelector((state) => state.shoppingProducts);
   const { user } = useSelector((state) => state.auth);
   const userId = user?.id;
 
   function handleAddToCart(productId, getTotalStock) {
-    // console.log("Add to cart clicked");
-     let getCartItems = cartItems || [];
+    const getCartItems = cartItems || [];
+
         if (getCartItems.length) {
           const indexOfCurrentItem = getCartItems.findIndex(
             (item) => item.productId === productId
           );
+          
           if (indexOfCurrentItem > -1) {
             const getQuantity = getCartItems[indexOfCurrentItem]?.quantity;
             if (getQuantity + 1 > getTotalStock) {
@@ -31,7 +33,7 @@ export default function ProductDetails({ open, setOpen, ProductDetails }) {
           }
         }
     dispatch(addToCart({ userId, productId, quantity: 1 }))
-      .then.then((data) => {
+      .then((data) => {
         if (data?.payload.success) {
           dispatch(fetchCartItems(user?.id));
           toast.success("Item added to cart");
