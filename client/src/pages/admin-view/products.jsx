@@ -127,7 +127,7 @@ function handleDelete(getCurrentId) {
               setFormData={setFormData}
               buttonText="Add Product"
               onSubmit={onSubmit}
-              isBtnDisabled={!isFormDataValid}
+              isBtnDisabled={!isFormDataValid }
             />
           </div>
         </SheetContent>

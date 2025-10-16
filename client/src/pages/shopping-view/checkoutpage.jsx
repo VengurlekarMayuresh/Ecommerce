@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import img from "../../assets/image.png";
 import Address from "@/components/shopping-view/address";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,7 +6,7 @@ import UserCartItemContent from "@/components/shopping-view/cart-items-content";
 import { Button } from "@/components/ui/button";
 import { createNewOrder } from "@/store/shop/order-slice";
 import { toast } from "sonner";
-import { Toaster } from "sonner";
+
 
 export default function ShoppingCheckoutPage() {
   const { cartItems } = useSelector((state) => state.shoppingCart);
@@ -16,7 +16,6 @@ export default function ShoppingCheckoutPage() {
   const [isPaymentStart, setIsPaymentStart] = useState(false);
   const dispatch = useDispatch();
   const{cartId} = useSelector((state) => state.shoppingCart);
-  console.log(cartId, "cartId");
 
 
   const totalAmount = cartItems && cartItems.length > 0
@@ -64,7 +63,7 @@ export default function ShoppingCheckoutPage() {
       paymentId: "",
       payerId: "",
     };
-    console.log(orderData, "orderData");
+
     dispatch(createNewOrder(orderData)).then((data) => {
       if (data?.payload?.success) {
         console.log(data, "Mayu");
@@ -74,8 +73,7 @@ export default function ShoppingCheckoutPage() {
 // if(approvalURL){
 //     window.location.href = approvalURL;
 // }
-
-
+console.log("currentAddress",currentAddress)
   return (
     <div className="flex flex-col">
       <div className="relative h-[300px] w-full overflow-hidden">
@@ -86,7 +84,7 @@ export default function ShoppingCheckoutPage() {
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5  mt-5 p-5 ">
-        <Address setCurrentAddress={setCurrentAddress} />
+        <Address selectedId={currentAddress} setCurrentAddress={setCurrentAddress} />
         <div className="flex flex-col gap-3">
           {cartItems ? (
             cartItems.map((item) => (
@@ -104,7 +102,9 @@ export default function ShoppingCheckoutPage() {
           </div>
           <div className="mt-4 w-full">
             <Button onClick={handleInitiatePayment} className="w-full">
-              CheckOut with PayPal
+             {
+              isPaymentStart ? "Processing..." : "Checkout with PayPal"
+             }
             </Button>
           </div>
         </div>

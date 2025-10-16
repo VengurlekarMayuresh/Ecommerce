@@ -5,6 +5,17 @@ export default function CheckAuth({ isAuthenticated, user, children }) {
   const location = useLocation();
   const path = location.pathname;
 
+  
+  if(location.pathname === "/") {
+    if(!isAuthenticated) {
+      return <Navigate to="/auth/login" replace />;
+    }else{
+         return user?.role === "admin"
+      ? <Navigate to="/admin/dashboard" replace />
+      : <Navigate to="/shop/home" replace />;
+
+    }
+  }
   // 🔒 Not logged in → block everything except login/register
   if (!isAuthenticated && !path.includes("/login") && !path.includes("/register")) {
     return <Navigate to="/auth/login" replace />;

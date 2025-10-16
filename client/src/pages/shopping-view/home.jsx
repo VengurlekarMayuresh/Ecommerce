@@ -22,7 +22,7 @@ import { fetchProductDetails } from "@/store/shop/products-slice";
 import { addToCart, fetchCartItems } from "@/store/shop/cart-slice";
 import ProductDetails from "@/components/shopping-view/product-details";
 import { toast } from "sonner";
-
+import { getFeatureImages } from "@/store/commonSlice";
 const categories = [
   { id: "men", label: "Men", icon: men },
   { id: "women", label: "Women", icon: women },
@@ -41,9 +41,8 @@ const brands = [
 
 export default function ShoppingHome() {
   // const userId = useSelector((state) => state.auth.user?.id);
-  const {productDetails } = useSelector(
-    (state) => state.shoppingProducts
-  );
+  const { productDetails } = useSelector((state) => state.shoppingProducts);
+  const { featureImages } = useSelector((state) => state.commonFeature);
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const slides = [bannerone, bannertwo];
@@ -54,9 +53,8 @@ export default function ShoppingHome() {
     dispatch(fetchProductDetails(productId));
   }
 
+  console.log("Feature Images:", featureImages);
   function handleAddToCart(productId) {
-    console.log("Add to cart for:", productId);
-    console.log("User ID:", userId);
     // console.log("Add to cart clicked");
     dispatch(addToCart({ userId, productId, quantity: 1 }))
       .then((data) => {
@@ -69,12 +67,10 @@ export default function ShoppingHome() {
   }
 
   const shopProducts = useSelector((state) => state.shoppingProducts.products);
-  console.log("Shop Products:", shopProducts);
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate();
 
   function handleIconClick(getCurrentItem, section) {
-    console.log("Clicked item:", getCurrentItem, section);
     sessionStorage.removeItem("productFilters");
     const currentFilter = {
       [section]: [getCurrentItem.id],
@@ -100,6 +96,10 @@ export default function ShoppingHome() {
   }, [dispatch]);
 
   useEffect(() => {
+    dispatch(getFeatureImages());
+  }, [dispatch, featureImages.length]);
+
+  useEffect(() => {
     if (productDetails !== null) {
       setOpen(true);
     }
@@ -108,22 +108,24 @@ export default function ShoppingHome() {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="relative w-full h-[600px] overflow-hidden">
-        {slides.map((slide, index) => (
-          <img
-            src={slide}
-            key={index}
-            className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-              currentSlide === index ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
+        {featureImages && featureImages.length > 0
+          ? featureImages.map((slide, index) => (
+              <img
+                src={slide.image}
+                key={index}
+                className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                  currentSlide === index ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))
+          : null}
         <Button
           variant="outline"
           size="icon"
           className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 hover:bg-white"
           onClick={() =>
             setCurrentSlide((prev) =>
-              prev === 0 ? slides.length - 1 : prev - 1
+              prev === 0 ? featureImages.length - 1 : prev - 1
             )
           }
         >
@@ -135,7 +137,7 @@ export default function ShoppingHome() {
           className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 hover:bg-white"
           onClick={() =>
             setCurrentSlide((prev) =>
-              prev === slides.length - 1 ? 0 : prev + 1
+              prev === featureImages.length - 1 ? 0 : prev + 1
             )
           }
         >

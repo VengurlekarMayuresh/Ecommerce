@@ -13,6 +13,7 @@ export default function ProductImageUpload({
   setUploadedImageUrl,
   setImageLoading,
   imageLoading,
+  isCustom = false,
 }) {
   const inputRef = useRef(null);
   function handleImageFileChange(event) {
@@ -57,7 +58,7 @@ export default function ProductImageUpload({
     if (file !== null) uploadImageToCloudinary();
   }, [file]);
   return (
-    <div className="w-full max-w-md mx-5">
+    <div className={`w-full mt-4 ${isCustom ? "" : " max-w-md mx-auto"}`}>
       <Label className="text-lg font-semibold mb-2 block">Upload Image</Label>
       <div
         onDragOver={handleDragOver}

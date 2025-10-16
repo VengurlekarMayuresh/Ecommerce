@@ -18,7 +18,7 @@ const initialFormData = {
   phone: "",
   notes: "",
 };
-export default function Address({ setCurrentAddress }) {
+export default function Address({ setCurrentAddress,selectedId }) {
   const dispatch = useDispatch();
   const [formData, setFormData] = useState(initialFormData);
   const { user } = useSelector((state) => state.auth);
@@ -97,13 +97,14 @@ export default function Address({ setCurrentAddress }) {
     dispatch(fetchAllAddress(user?.id));
   }, [dispatch]);
 
-  console.log("addressList", addressList);
+
   return (
     <Card>
       <div className="mb-5 p-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
         {addressList && addressList.length > 0 ? (
           addressList.map((address) => (    
             <AddressCard
+              selectedId={selectedId}
               handleDelete={handleDelete}
               handleEditAddress={handleEditAddress}
               addressInfo={address}

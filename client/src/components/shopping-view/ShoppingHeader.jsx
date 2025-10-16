@@ -47,8 +47,10 @@ function HeaderRightContent() {
           }}
           variant="outline"
           size="icon"
+          className='relative p-5'
         >
           <ShoppingCart className="h-6 w-6" />
+          <span className="absolute top-[-0px] right-[5px] text-sm ">{cartItems?.length || 0} </span>
           <span className="sr-only">User Cart</span>
         </Button>
         <UserCartWrapper cartItems={cartItems} setOpenCartSheet={setOpenCartSheet} />

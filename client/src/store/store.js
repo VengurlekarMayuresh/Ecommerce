@@ -8,11 +8,13 @@ import shopOrderSlice from "./shop/order-slice/index"
 import adminOrderSlice from "./admin/order-slice/index"
 import shopSearchSlice from "./shop/search-slice/index"
 import shopReviewSlice from "./shop/review-slice/index"
+import commonFeatureSlice from "./commonSlice/index"
 const store = configureStore({
     reducer:{
         auth:authReducer,
         adminProducts:AdminProductSlice,
         adminOrder: adminOrderSlice,
+        commonFeature: commonFeatureSlice,
         shoppingProducts: shoppingProductSlice,
         shoppingCart: shoppingCart,
         shopAddress: shopAddressSlice,

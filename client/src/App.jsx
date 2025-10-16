@@ -39,6 +39,9 @@ function App() {
     
     <div className="flex flex-col overflow-hidden bg-white">
       <Toaster richColors/>
+      <Routes>
+        <Route path="/" element={<CheckAuth isAuthenticated={isAuthenticated} user={user}><ShoppingLayout/></CheckAuth>}/>
+      </Routes>
       {/*Auth Routes */}
       <Routes>
         <Route
