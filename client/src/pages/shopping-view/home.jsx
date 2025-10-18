@@ -23,6 +23,8 @@ import { addToCart, fetchCartItems } from "@/store/shop/cart-slice";
 import ProductDetails from "@/components/shopping-view/product-details";
 import { toast } from "sonner";
 import { getFeatureImages } from "@/store/commonSlice";
+
+
 const categories = [
   { id: "men", label: "Men", icon: men },
   { id: "women", label: "Women", icon: women },
@@ -80,11 +82,19 @@ export default function ShoppingHome() {
   }
 
   useEffect(() => {
+    const slidesCount = (featureImages && featureImages.length) || 2; // fallback
+    if (!slidesCount) return;
+
+    // ensure currentSlide in range when slidesCount changes
+    setCurrentSlide((prev) => prev % slidesCount);
+
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      setCurrentSlide((prev) => (prev + 1) % slidesCount);
     }, 4000);
+
     return () => clearInterval(timer);
-  }, []);
+  }, [featureImages]);
+
 
   useEffect(() => {
     dispatch(
@@ -97,7 +107,7 @@ export default function ShoppingHome() {
 
   useEffect(() => {
     dispatch(getFeatureImages());
-  }, [dispatch, featureImages.length]);
+  }, [dispatch]);
 
   useEffect(() => {
     if (productDetails !== null) {
