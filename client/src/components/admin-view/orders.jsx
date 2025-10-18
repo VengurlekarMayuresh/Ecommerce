@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Dialog } from "../ui/dialog";
 import { Badge } from "../ui/badge";
-
 import {
   Table,
   TableBody,
@@ -13,7 +13,6 @@ import {
   TableRow,
 } from "../ui/table";
 import AdminOrdersDetailsView from "./order-details";
-import { useDispatch, useSelector } from "react-redux";
 import {
   getAllOrdersForAdmin,
   getOrderDetailsForAdmin,
@@ -22,12 +21,19 @@ import {
 
 function AdminOrdersView() {
   const [openDetailsDialog, setOpenDetailsDialog] = useState(false);
-  const { orderDetails, orderList } = useSelector((state) => state.adminOrder);
+  const [selectedOrderId, setSelectedOrderId] = useState(null);
+
   const dispatch = useDispatch();
+  const { orderDetails, orderList } = useSelector((state) => state.adminOrder);
 
   function handleFetchOrderDetails(orderId) {
+    setSelectedOrderId(orderId);
     dispatch(getOrderDetailsForAdmin(orderId));
   }
+
+  useEffect(() => {
+    dispatch(getAllOrdersForAdmin());
+  }, [dispatch]);
 
   useEffect(() => {
     if (orderDetails) {
@@ -35,49 +41,46 @@ function AdminOrdersView() {
     }
   }, [orderDetails]);
 
-  useEffect(() => {
-    dispatch(getAllOrdersForAdmin());
-  }, [dispatch]);
+  function closeDialog() {
+    setOpenDetailsDialog(false);
+    setSelectedOrderId(null);
+    dispatch(resetOrderDetails());
+  }
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle>All Orders </CardTitle>
+        <CardTitle>All Orders</CardTitle>
       </CardHeader>
 
       <CardContent>
         <Table className="w-full border-collapse">
           <TableHeader>
             <TableRow>
-              <TableHead className="align-middle text-left">Order ID</TableHead>
-              <TableHead className="align-middle text-left">
-                Order Date
-              </TableHead>
-              <TableHead className="align-middle text-left">
-                Order Status
-              </TableHead>
-              <TableHead className="align-middle text-left">
-                Order Price
-              </TableHead>
-              <TableHead className="align-middle text-center">
+              <TableHead className="text-left">Order ID</TableHead>
+              <TableHead className="text-left">Order Date</TableHead>
+              <TableHead className="text-left">Order Status</TableHead>
+              <TableHead className="text-left">Order Price</TableHead>
+              <TableHead className="text-center">
                 <span className="sr-only">Action</span>
               </TableHead>
             </TableRow>
           </TableHeader>
+
           <TableBody>
             {orderList && orderList.length > 0 ? (
               orderList.map((orderItem) => (
                 <TableRow key={orderItem._id}>
                   <TableCell className="text-left">{orderItem._id}</TableCell>
-                  <TableCell className=" text-left">
+                  <TableCell className="text-left">
                     {orderItem.orderDate.split("T")[0]}
                   </TableCell>
-                  <TableCell className=" text-left">
+                  <TableCell className="text-left">
                     <Badge
                       className={`py-1 px-3 ${
-                        orderDetails?.orderStatus == "confirmed"
+                        orderItem.orderStatus.toLowerCase() === "confirmed"
                           ? "bg-green-500"
-                          : orderDetails?.orderStatus == "rejected"
+                          : orderItem.orderStatus.toLowerCase() === "rejected"
                           ? "bg-red-500"
                           : "bg-black"
                       }`}
@@ -85,26 +88,15 @@ function AdminOrdersView() {
                       {orderItem.orderStatus}
                     </Badge>
                   </TableCell>
-                  <TableCell className=" text-left">
-                    ${orderItem.totalAmount}
-                  </TableCell>
-                  <TableCell className=" text-center">
-                    <Dialog
-                      open={openDetailsDialog}
-                      onOpenChange={() => {
-                        setOpenDetailsDialog(false);
-                        dispatch(resetOrderDetails());
-                      }}
+                  <TableCell className="text-left">${orderItem.totalAmount}</TableCell>
+                  <TableCell className="text-center">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleFetchOrderDetails(orderItem._id)}
                     >
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => handleFetchOrderDetails(orderItem._id)}
-                      >
-                        View Details
-                      </Button>
-                      <AdminOrdersDetailsView orderDetails={orderDetails} />
-                    </Dialog>
+                      View Details
+                    </Button>
                   </TableCell>
                 </TableRow>
               ))
@@ -118,6 +110,11 @@ function AdminOrdersView() {
           </TableBody>
         </Table>
       </CardContent>
+
+      {/* ✅ Dialog placed outside the map and controlled via state */}
+      <Dialog open={openDetailsDialog} onOpenChange={closeDialog}>
+        {orderDetails && <AdminOrdersDetailsView orderDetails={orderDetails} />}
+      </Dialog>
     </Card>
   );
 }

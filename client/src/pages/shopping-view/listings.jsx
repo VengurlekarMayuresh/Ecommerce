@@ -97,7 +97,6 @@ export default function ShoppingListings() {
     dispatch(addToCart({ userId, productId, quantity: 1 }))
       .then((data) => {
         if (data?.payload.success) {
-          console.log(data, "Mayu");
           dispatch(fetchCartItems(user?.id));
           toast.success("Item added to cart");
         }

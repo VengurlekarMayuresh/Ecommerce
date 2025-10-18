@@ -94,6 +94,53 @@ const createOrder = async (req, res) => {
   }
 };
 
+const postOrder = async (req, res) => {
+  try {
+    const { orderData } = req.body;
+    if (!orderData) {
+      return res
+        .status(400)
+        .json({ message: "Order data is required", success: false });
+    }
+    const {
+      userId,
+      cartId,
+      cartItems,
+      addressInfo,
+      orderStatus,
+      paymentMethod,
+      paymentStatus,
+      totalAmount,
+      orderDate,
+      orderUpdateDate,
+      paymentId,
+      payerId,
+    } = orderData;
+
+   const newOrder = new Order({
+          userId,
+          cartId,
+          cartItems,
+          addressInfo,
+          orderStatus,
+          paymentMethod,
+          paymentStatus,
+          totalAmount,
+          orderDate,
+          orderUpdateDate,
+          paymentId,
+          payerId,
+        });
+    await newOrder.save();
+    res
+      .status(200)
+      .json({ message: "Order data received", data: newOrder, success: true });
+  } catch (error) {
+    console.error("Error posting order:", error);
+    res.status(500).json({ message: "Internal server error", success: false });
+  }
+};
+
 const capturePayment = async (req, res) => {
   try {
     const { paymentId, payerId, orderId } = req.body;
@@ -111,8 +158,13 @@ const capturePayment = async (req, res) => {
     // Decrease product stock based on cart items
     for (const item of order.cartItems) {
       const product = await Product.findById(item.productId);
-      if(!product){
-        res.status(404).json({message: `Not enough stock for this product ${item.title}`, success: false});
+      if (!product) {
+        res
+          .status(404)
+          .json({
+            message: `Not enough stock for this product ${item.title}`,
+            success: false,
+          });
         return;
       }
       if (product) {
@@ -136,8 +188,8 @@ const capturePayment = async (req, res) => {
 
 const getAllOrders = async (req, res) => {
   try {
-    const {userId} = req.params;
-    const orders = await Order.find({userId});
+    const { userId } = req.params;
+    const orders = await Order.find({ userId });
     if (!orders) {
       return res
         .status(404)
@@ -146,12 +198,11 @@ const getAllOrders = async (req, res) => {
     res
       .status(200)
       .json({ message: "Orders fetched", data: orders, success: true });
-
   } catch (error) {
     console.error("Error fetching orders:", error);
     res.status(500).json({ message: "Internal server error", success: false });
   }
-}
+};
 
 const getOrderDetails = async (req, res) => {
   try {
@@ -169,10 +220,11 @@ const getOrderDetails = async (req, res) => {
     console.error("Error fetching order:", error);
     res.status(500).json({ message: "Internal server error", success: false });
   }
-}
+};
 module.exports = {
   createOrder,
   capturePayment,
   getAllOrders,
-  getOrderDetails
+  getOrderDetails,
+  postOrder,
 };

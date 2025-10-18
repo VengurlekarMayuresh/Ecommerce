@@ -6,7 +6,9 @@ import UserCartItemContent from "@/components/shopping-view/cart-items-content";
 import { Button } from "@/components/ui/button";
 import { createNewOrder } from "@/store/shop/order-slice";
 import { toast } from "sonner";
-
+import PaypalPayment from "./paypal-payment";
+import { useNavigate } from "react-router-dom";
+import { setOrderData } from "@/store/shop/order-slice/index";
 
 export default function ShoppingCheckoutPage() {
   const { cartItems } = useSelector((state) => state.shoppingCart);
@@ -15,10 +17,11 @@ export default function ShoppingCheckoutPage() {
   const [currentAddress, setCurrentAddress] = useState(null);
   const [isPaymentStart, setIsPaymentStart] = useState(false);
   const dispatch = useDispatch();
-  const{cartId} = useSelector((state) => state.shoppingCart);
+  const { cartId } = useSelector((state) => state.shoppingCart);
+  const navigate = useNavigate();
 
-
-  const totalAmount = cartItems && cartItems.length > 0
+  const totalAmount =
+    cartItems && cartItems.length > 0
       ? cartItems.reduce((total, item) => {
           const itemPrice = item.salesPrice > 0 ? item.salesPrice : item.price;
           return total + itemPrice * item.quantity;
@@ -27,11 +30,9 @@ export default function ShoppingCheckoutPage() {
   function handleInitiatePayment() {
     if (!currentAddress) {
       toast.error("Please select an address");
-            
-
       return;
     }
-    if(cartItems.length === 0){
+    if (cartItems.length === 0) {
       toast.error("Your cart is empty. Please add items to proceed.");
       return;
     }
@@ -64,16 +65,18 @@ export default function ShoppingCheckoutPage() {
       payerId: "",
     };
 
-    dispatch(createNewOrder(orderData)).then((data) => {
-      if (data?.payload?.success) {
-        console.log(data, "Mayu");
-      }
-    });
+    // dispatch(createNewOrder(orderData)).then((data) => {
+    //   if (data?.payload?.success) {
+    //     console.log(data, "Mayu");
+    //   }
+    // });
+    dispatch(setOrderData(orderData));
+    navigate("/shop/paypal-payment");
   }
-// if(approvalURL){
-//     window.location.href = approvalURL;
-// }
-console.log("currentAddress",currentAddress)
+  // if(approvalURL){
+  //     window.location.href = approvalURL;
+  // }
+  console.log("currentAddress", currentAddress);
   return (
     <div className="flex flex-col">
       <div className="relative h-[300px] w-full overflow-hidden">
@@ -84,7 +87,10 @@ console.log("currentAddress",currentAddress)
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5  mt-5 p-5 ">
-        <Address selectedId={currentAddress} setCurrentAddress={setCurrentAddress} />
+        <Address
+          selectedId={currentAddress}
+          setCurrentAddress={setCurrentAddress}
+        />
         <div className="flex flex-col gap-3">
           {cartItems ? (
             cartItems.map((item) => (
@@ -102,9 +108,7 @@ console.log("currentAddress",currentAddress)
           </div>
           <div className="mt-4 w-full">
             <Button onClick={handleInitiatePayment} className="w-full">
-             {
-              isPaymentStart ? "Processing..." : "Checkout with PayPal"
-             }
+              CheckOut
             </Button>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { Badge } from "../ui/badge";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function ShoppingOrderDetailsView({ orderDetails }) {
+  console.log(orderDetails, "orderdetails in orderdetailsview");
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   return (

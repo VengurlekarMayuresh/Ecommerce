@@ -46,6 +46,7 @@ export default function ShoppingHome() {
   const { productDetails } = useSelector((state) => state.shoppingProducts);
   const { featureImages } = useSelector((state) => state.commonFeature);
   const [open, setOpen] = useState(false);
+  const { cartItems } = useSelector((state) => state.shoppingCart);
   const dispatch = useDispatch();
   const slides = [bannerone, bannertwo];
   const { user } = useSelector((state) => state.auth);
@@ -56,8 +57,20 @@ export default function ShoppingHome() {
   }
 
   console.log("Feature Images:", featureImages);
-  function handleAddToCart(productId) {
-    // console.log("Add to cart clicked");
+
+function handleAddToCart(productId,getTotalStock) {
+    let getCartItems = cartItems || [];
+    if (getCartItems.length) {
+      const indexOfCurrentItem = getCartItems.findIndex(
+        (item) => item.productId === productId
+      );
+      if (indexOfCurrentItem > -1) {
+        const getQuantity = getCartItems[indexOfCurrentItem]?.quantity;
+        if (getQuantity + 1 > getTotalStock) {
+          return toast.error(`Only ${getTotalStock} items in stock`);
+        }
+      }
+    }
     dispatch(addToCart({ userId, productId, quantity: 1 }))
       .then((data) => {
         if (data?.payload.success) {

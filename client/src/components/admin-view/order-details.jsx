@@ -7,14 +7,17 @@ import { Badge } from "../ui/badge";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "sonner";
 import { getOrderDetailsForAdmin } from "@/store/admin/order-slice";
+import { getAllOrdersForAdmin } from "@/store/admin/order-slice";
+import { updateOrderStatusForAdmin } from "@/store/admin/order-slice";
 
 export default function AdminOrdersDetailsView({ orderDetails }) {
+    const initialFormData = {
+    status: "",
+  }; 
     const [formData, setFormData] = useState(initialFormData);
     const {user} = useSelector((state) => state.auth);
     const dispatch = useDispatch();  
-  const initialFormData = {
-    status: "",
-  };
+
   
   const handleOrderStatus = (e) => {
     e.preventDefault();

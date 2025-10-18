@@ -3,12 +3,23 @@ import axios from "axios";
 
 // const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
+// Try to load orderData from localStorage
+const persistedOrderData = (() => {
+  try {
+    const data = localStorage.getItem("orderData");
+    return data ? JSON.parse(data) : null;
+  } catch (e) {
+    return null;
+  }
+})();
+
 const initialState = {
   approvalURL: null,
   isLoading: false,
   orderId: null,
   orderList: [],
   orderDetails: null,
+  orderData: persistedOrderData,
 };
 
 export const createNewOrder = createAsyncThunk(
@@ -18,6 +29,18 @@ export const createNewOrder = createAsyncThunk(
       "http://localhost:5000/api/shop/order/create",
       orderData
     );
+    return response.data;
+  }
+);
+
+export const postPayment = createAsyncThunk(
+  "payment/postPayment",
+  async (orderData, thunkAPI) => {
+    const response = await axios.post(
+      "http://localhost:5000/api/shop/order/post",
+      { orderData }
+    )
+    console.log(response.data);
     return response.data;
   }
 );
@@ -56,7 +79,19 @@ const shoppingOrderSlice = createSlice({
   reducers: {
     resetOrderDetails(state) {
       state.orderDetails = null;
-    }
+    },
+    setOrderData: (state, action) => {
+      state.orderData = action.payload;
+      try {
+        localStorage.setItem("orderData", JSON.stringify(action.payload)); // persist
+      } catch (e) {}
+    },
+    clearOrderData: (state) => {
+      state.orderData = null;
+      try {
+        localStorage.removeItem("orderData"); // remove on clear
+      } catch (e) {}
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(createNewOrder.pending, (state) => {
@@ -98,8 +133,30 @@ const shoppingOrderSlice = createSlice({
       state.isLoading = false;
       state.orderDetails = null;
     });
+    builder.addCase(postPayment.pending, (state) => {
+      state.isLoading = true;
+    });
+   builder.addCase(postPayment.fulfilled, (state, action) => {
+  state.isLoading = false;
+  const order = action.payload.data;
+  console.log(order);
+  state.orderId = order._id;
+  console.log(state.orderId, "orderid in postpayment fulfilled");
+  state.approvalURL = null; // Not applicable for postPayment
+
+  sessionStorage.setItem("currentOrderId", JSON.stringify(order._id));
+  state.orderData = order;
+  try {
+    localStorage.setItem("orderData", JSON.stringify(order));
+  } catch (e) {}
+});
+    builder.addCase(postPayment.rejected, (state) => {
+      state.isLoading = false;
+      state.approvalURL = null;
+      state.orderId = null;
+    });
   },
 });
 
-export const { resetOrderDetails } = shoppingOrderSlice.actions;
+export const { resetOrderDetails, setOrderData, clearOrderData} = shoppingOrderSlice.actions;
 export default shoppingOrderSlice.reducer;

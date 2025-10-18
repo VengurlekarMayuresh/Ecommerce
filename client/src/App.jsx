@@ -23,6 +23,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import PayPalReturnPage from "./pages/shopping-view/paypal-return";
 import PaymentSuccessPage from "./pages/shopping-view/payment-success";
 import SearchPage from "./pages/shopping-view/search";
+import PaypalPayment from "./pages/shopping-view/paypal-payment";
 import { Toaster } from "sonner";
 
 function App() {
@@ -87,6 +88,7 @@ function App() {
           <Route path="paypal-return" element={<PayPalReturnPage />} />
           <Route path="payment-success" element={<PaymentSuccessPage />} />
           <Route path="search" element={<SearchPage/>}/>
+          <Route path="paypal-payment" element={<PaypalPayment />} />
         </Route>
 
         {/*Page Note Found */}
