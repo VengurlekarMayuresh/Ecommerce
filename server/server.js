@@ -3,6 +3,7 @@ const cookieParser = require("cookie-parser");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const { initializeBlobStorage, ensureContainerExists } = require("./config/azure-storage");
 const authRouter = require("./routes/auth/auth-routes");
 const adminProductRouter = require("./routes/admin/products-routes");
 const shopProductRouter = require("./routes/shop/products-routes");
@@ -48,6 +49,10 @@ app.use('/api/common/feature', commonFeatureRouter);
 
 
 
+
+// ✅ Initialize Azure Blob Storage
+initializeBlobStorage();
+ensureContainerExists().catch(err => console.error('Container setup failed:', err));
 
 // ✅ Database connection after routes
 mongoose

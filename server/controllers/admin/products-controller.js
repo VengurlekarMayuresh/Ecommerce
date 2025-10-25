@@ -1,4 +1,4 @@
-const { imageUploadUtils } = require("../../helpers/cloudinary.js");
+const { uploadImage } = require("../../config/azure-storage.js");
 const Product = require("../../models/product.js");
 
 const handleImageUpload = async (req, res) => {
@@ -11,18 +11,13 @@ const handleImageUpload = async (req, res) => {
       });
     }
 
-    // Convert file buffer to Base64
-    const b64 = Buffer.from(req.file.buffer).toString("base64");
-    const dataUri = `data:${req.file.mimetype};base64,${b64}`;
-
-    // Upload to Cloudinary
-    const result = await imageUploadUtils(dataUri);
-    console.log("Cloudinary upload result:", result);
+    // Upload to Azure Blob Storage
+    const result = await uploadImage(req.file);
+    console.log("Azure Blob upload result:", result);
     return res.status(200).json({
       success: true,
-      imageUrl: result.secure_url,
-      publicId: result.public_id, // optional
-      format: result.format, // optional
+      imageUrl: result.url,
+      blobName: result.blobName,
       message: "Image uploaded successfully",
     });
   } catch (error) {
