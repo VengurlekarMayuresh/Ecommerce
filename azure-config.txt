@@ -1,0 +1,66 @@
+﻿=====================================
+AZURE E-COMMERCE - CONFIGURATION
+=====================================
+
+WEB APPLICATION:
+----------------
+Live URL: https://ecomm-app-4379.azurewebsites.net
+App Service: ecomm-app-4379
+
+AZURE SERVICES:
+---------------
+1. Cosmos DB (MongoDB):
+   Account: ecomm-cosmos-4379
+   Connection: Stored in Key Vault
+   
+2. Blob Storage:
+   Account: ecommstore4379
+   Base URL: https://ecommstore4379.blob.core.windows.net
+   Containers:
+   - product-images: https://ecommstore4379.blob.core.windows.net/product-images
+   - user-uploads: https://ecommstore4379.blob.core.windows.net/user-uploads
+
+3. Key Vault:
+   Name: ecomm-kv-4379
+   URL: https://ecomm-kv-4379.vault.azure.net
+   Secrets: All credentials stored securely
+
+4. Communication Services:
+   Name: ecomm-comm-4379
+   Status: Email domain needs provisioning
+
+CONFIGURATION:
+--------------
+PayPal Mode: 
+Admin Email: onlinemayuresh29@gmail.com
+Environment: Production
+
+NEXT STEPS:
+-----------
+1. Deploy your application:
+   Run: .\deploy-website.ps1
+
+2. Configure Email Domain (IMPORTANT):
+   - Go to: https://portal.azure.com
+   - Navigate to: Communication Services -> ecomm-comm-4379
+   - Click: Email -> Provision domains
+   - Select: Azure Managed Domain (FREE)
+   - Wait 5-10 minutes for provisioning
+   - Copy sender email address
+   - Update Key Vault secret:
+     az keyvault secret set --vault-name ecomm-kv-4379 --name "SENDER-EMAIL" --value "DoNotReply@..."
+
+3. Monitor Application:
+   az webapp log tail --name ecomm-app-4379 --resource-group ecommerce-full-rg
+
+4. View in Azure Portal:
+   Resource Group: https://portal.azure.com/#@/resource/subscriptions/266f9e55-2ba1-43eb-9cc4-bf2944999382/resourceGroups/ecommerce-full-rg
+
+IMPORTANT URLS:
+---------------
+Frontend: https://ecomm-app-4379.azurewebsites.net
+API Base: https://ecomm-app-4379.azurewebsites.net/api
+Storage: https://ecommstore4379.blob.core.windows.net
+Key Vault: https://ecomm-kv-4379.vault.azure.net
+Azure Portal: https://portal.azure.com
+

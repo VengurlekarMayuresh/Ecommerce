@@ -1,0 +1,73 @@
+﻿=====================================
+AZURE FULL DEPLOYMENT - COMPLETE!
+=====================================
+
+WEB APP URL: https://ecomm-app-4379.azurewebsites.net
+Resource Group: ecommerce-full-rg
+Location: eastasia
+
+AZURE SERVICES:
+---------------
+1. Cosmos DB (MongoDB): ecomm-cosmos-4379
+   Connection stored in Key Vault
+
+2. Blob Storage: ecommstore4379
+   Base URL: https://ecommstore4379.blob.core.windows.net
+   Containers: product-images, user-uploads
+
+3. Key Vault: ecomm-kv-4379
+   All secrets securely stored
+
+4. Communication Services: ecomm-comm-4379
+   NOTE: Configure email domain in Azure Portal:
+   portal.azure.com -> Communication Services -> Email -> Provision domains
+
+5. Application Insights: ecomm-insights-4379
+   Monitoring & Analytics enabled
+
+6. App Service: ecomm-app-4379
+   Runtime: Node.js 20 LTS
+   Managed Identity: Enabled
+
+CREDENTIALS:
+-----------
+Stored securely in Azure Key Vault: ecomm-kv-4379
+- MongoDB URI (Cosmos DB)
+- JWT Secret
+- Azure Storage credentials
+- Communication Services connection
+- PayPal credentials
+- Admin email
+
+NEXT STEPS:
+-----------
+1. Configure Email Domain:
+   - Go to Azure Portal
+   - Navigate to Communication Services -> ecomm-comm-4379
+   - Click Email -> Provision domains
+   - Use Azure Managed Domain (free)
+   - Copy sender email and update Key Vault secret
+
+2. Install Azure SDK in your backend:
+   cd server
+   npm install @azure/identity @azure/keyvault-secrets @azure/storage-blob @azure/communication-email applicationinsights
+
+3. Deploy your application:
+   .\deploy-full-app.ps1
+
+4. Monitor your app:
+   az webapp log tail --name ecomm-app-4379 --resource-group ecommerce-full-rg
+
+AZURE PORTAL:
+------------
+View all resources: https://portal.azure.com
+Resource Group: ecommerce-full-rg
+
+COSTS:
+------
+- Cosmos DB: Free tier (1000 RU/s)
+- Storage: Pay-as-you-go (~.02/GB)
+- Communication: Pay-per-email (~.0004/email)
+- App Service: Basic tier (~/month) or Free tier
+- Key Vault: ~.03/10k operations
+- App Insights: First 5GB free/month
