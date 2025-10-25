@@ -1,0 +1,917 @@
+2025-10-25T17:58:08.3081313Z Container start method called.
+2025-10-25T17:58:08.3122166Z Establishing network.
+2025-10-25T17:58:08.3126419Z Pulling image: appsvc/node:20-lts_20251016.4.tuxprod.
+2025-10-25T17:59:03.0982423Z Image appsvc/node:20-lts_20251016.4.tuxprod is pulled from registry 10.1.0.4:13209
+2025-10-25T17:59:03.0992718Z Container is starting.
+2025-10-25T17:59:03.1063326Z Establishing user namespace if not established already.
+2025-10-25T17:59:03.1071358Z Establishing network if not established already.
+2025-10-25T17:59:03.1075450Z Mounting volumes.
+2025-10-25T17:59:03.1164760Z Nested mountpoint 
+2025-10-25T17:59:03.1463047Z Nested mountpoint volatile/logs
+2025-10-25T17:59:03.1863765Z Nested mountpoint 
+2025-10-25T17:59:03.2695883Z Nested mountpoint 
+2025-10-25T17:59:03.3376080Z Nested mountpoint 
+2025-10-25T17:59:03.7067777Z Creating container.
+2025-10-25T17:59:03.7075626Z Creating pipes for streaming container io.
+2025-10-25T17:59:03.7077168Z Creating stdout named pipe at /podr/container/pipe/28ef414e14e8_ecomm-app-4379/stdout_aee10526c0404e489e09a926d31f34c2.
+2025-10-25T17:59:03.7088691Z Successfully created stdout named pipe at: /podr/container/pipe/28ef414e14e8_ecomm-app-4379/stdout_aee10526c0404e489e09a926d31f34c2.
+2025-10-25T17:59:03.7089864Z Opening named pipe /podr/container/pipe/28ef414e14e8_ecomm-app-4379/stdout_aee10526c0404e489e09a926d31f34c2 for reading in non-blocking mode.
+2025-10-25T17:59:03.7175159Z Successfully opened named pipe: /podr/container/pipe/28ef414e14e8_ecomm-app-4379/stdout_aee10526c0404e489e09a926d31f34c2.
+2025-10-25T17:59:03.7184411Z Successfully removed non-blocking flag from /podr/container/pipe/28ef414e14e8_ecomm-app-4379/stdout_aee10526c0404e489e09a926d31f34c2.
+2025-10-25T17:59:03.7251274Z Creating stderr named pipe at /podr/container/pipe/28ef414e14e8_ecomm-app-4379/stderr_863f2d5a72024361ad505065f22ea5a9.
+2025-10-25T17:59:03.7262461Z Successfully created stderr named pipe at: /podr/container/pipe/28ef414e14e8_ecomm-app-4379/stderr_863f2d5a72024361ad505065f22ea5a9.
+2025-10-25T17:59:03.7272197Z Opening named pipe /podr/container/pipe/28ef414e14e8_ecomm-app-4379/stderr_863f2d5a72024361ad505065f22ea5a9 for reading in non-blocking mode.
+2025-10-25T17:59:03.7281003Z Successfully opened named pipe: /podr/container/pipe/28ef414e14e8_ecomm-app-4379/stderr_863f2d5a72024361ad505065f22ea5a9.
+2025-10-25T17:59:03.7283118Z Successfully removed non-blocking flag from /podr/container/pipe/28ef414e14e8_ecomm-app-4379/stderr_863f2d5a72024361ad505065f22ea5a9.
+2025-10-25T17:59:03.7352910Z Creating container with image: appsvc/node:20-lts_20251016.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/node:20-lts_20251016.4.tuxprod
+2025-10-25T17:59:04.2513421Z Starting container: 28ef414e14e8_ecomm-app-4379.
+2025-10-25T17:59:04.3627181Z Starting watchers and probes.
+2025-10-25T17:59:04.3630948Z Starting metrics collection.
+2025-10-25T17:59:04.3638855Z Container is running.
+2025-10-25T17:59:04.6153407Z Container start method finished after 56307 ms.
+2025-10-25T17:59:41.8560466Z Site startup probe succeeded after 37.2282205 seconds.
+2025-10-25T17:59:42.3328621Z Site started.
+2025-10-25T17:59:42.5872158Z Site is running with patch version NODE 20.19.5
+2025-10-25T18:35:06.4012279Z Container start method called.
+2025-10-25T18:35:06.4168613Z Establishing network.
+2025-10-25T18:35:06.4170144Z Pulling image: appsvc/node:20-lts_20251016.4.tuxprod.
+2025-10-25T18:35:06.8892893Z Image appsvc/node:20-lts_20251016.4.tuxprod is pulled from registry 10.1.0.5:13209
+2025-10-25T18:35:06.8953946Z Container is starting.
+2025-10-25T18:35:06.8955929Z Establishing user namespace if not established already.
+2025-10-25T18:35:06.8957043Z Establishing network if not established already.
+2025-10-25T18:35:06.8958267Z Mounting volumes.
+2025-10-25T18:35:06.8974981Z Nested mountpoint 
+2025-10-25T18:35:06.9859215Z Nested mountpoint volatile/logs
+2025-10-25T18:35:07.0016604Z Nested mountpoint 
+2025-10-25T18:35:07.0229376Z Nested mountpoint 
+2025-10-25T18:35:07.2232381Z Nested mountpoint 
+2025-10-25T18:35:07.8945221Z Creating container.
+2025-10-25T18:35:07.9028437Z Creating pipes for streaming container io.
+2025-10-25T18:35:07.9104277Z Creating stdout named pipe at /podr/container/pipe/8846dd479cdf_ecomm-app-4379/stdout_95766da102e549c2a7b7011ad9ac2a88.
+2025-10-25T18:35:07.9109967Z Successfully created stdout named pipe at: /podr/container/pipe/8846dd479cdf_ecomm-app-4379/stdout_95766da102e549c2a7b7011ad9ac2a88.
+2025-10-25T18:35:07.9113523Z Opening named pipe /podr/container/pipe/8846dd479cdf_ecomm-app-4379/stdout_95766da102e549c2a7b7011ad9ac2a88 for reading in non-blocking mode.
+2025-10-25T18:35:07.9116581Z Successfully opened named pipe: /podr/container/pipe/8846dd479cdf_ecomm-app-4379/stdout_95766da102e549c2a7b7011ad9ac2a88.
+2025-10-25T18:35:07.9119970Z Successfully removed non-blocking flag from /podr/container/pipe/8846dd479cdf_ecomm-app-4379/stdout_95766da102e549c2a7b7011ad9ac2a88.
+2025-10-25T18:35:07.9122673Z Creating stderr named pipe at /podr/container/pipe/8846dd479cdf_ecomm-app-4379/stderr_94fdb3939e9d473a8a70a07b8be0ee93.
+2025-10-25T18:35:07.9126254Z Successfully created stderr named pipe at: /podr/container/pipe/8846dd479cdf_ecomm-app-4379/stderr_94fdb3939e9d473a8a70a07b8be0ee93.
+2025-10-25T18:35:07.9129273Z Opening named pipe /podr/container/pipe/8846dd479cdf_ecomm-app-4379/stderr_94fdb3939e9d473a8a70a07b8be0ee93 for reading in non-blocking mode.
+2025-10-25T18:35:07.9132474Z Successfully opened named pipe: /podr/container/pipe/8846dd479cdf_ecomm-app-4379/stderr_94fdb3939e9d473a8a70a07b8be0ee93.
+2025-10-25T18:35:07.9135550Z Successfully removed non-blocking flag from /podr/container/pipe/8846dd479cdf_ecomm-app-4379/stderr_94fdb3939e9d473a8a70a07b8be0ee93.
+2025-10-25T18:35:07.9202999Z Creating container with image: appsvc/node:20-lts_20251016.4.tuxprod from registry: 10.1.0.5:13209 and fully qualified image name: 10.1.0.5:13209/appsvc/node:20-lts_20251016.4.tuxprod
+2025-10-25T18:35:08.5564164Z Starting container: 8846dd479cdf_ecomm-app-4379.
+2025-10-25T18:35:08.6260931Z Starting watchers and probes.
+2025-10-25T18:35:08.6556913Z Starting metrics collection.
+2025-10-25T18:35:08.6646845Z Container is running.
+2025-10-25T18:35:08.9355963Z Container start method finished after 2534 ms.
+2025-10-25T18:35:58.0144739Z Container has finished running with exit code: 1.
+2025-10-25T18:35:58.1751775Z Container is terminating. Grace period: 5 seconds.
+2025-10-25T18:35:58.2153600Z Stop and delete container. Retry count = 0
+2025-10-25T18:35:58.2226835Z Stopping container: 8846dd479cdf_ecomm-app-4379.
+2025-10-25T18:35:58.6186374Z Deleting container: 8846dd479cdf_ecomm-app-4379. Retry count = 0
+2025-10-25T18:35:59.5913547Z Container spec TerminationMessagePolicy  path 
+2025-10-25T18:35:59.6300921Z Container is terminated. Total time elapsed: 1435 ms.
+2025-10-25T18:35:59.6402363Z Site container: ecomm-app-4379 terminated during site startup.
+2025-10-25T18:35:59.8928928Z Site startup probe failed after 50.8410719 seconds.
+2025-10-25T18:36:01.1423547Z Failed to start site. Revert by stopping site.
+2025-10-25T18:36:01.2083867Z Site: ecomm-app-4379 stopped.
+2025-10-25T18:36:30.9743856Z Container is terminating. Grace period: 5 seconds.
+2025-10-25T18:36:31.0130931Z Stop and delete container. Retry count = 0
+2025-10-25T18:36:31.0137524Z Stopping container: 28ef414e14e8_ecomm-app-4379.
+2025-10-25T18:36:36.1172089Z Deleting container: 28ef414e14e8_ecomm-app-4379. Retry count = 0
+2025-10-25T18:36:36.4284299Z Container spec TerminationMessagePolicy  path 
+2025-10-25T18:36:36.4287526Z Container is terminated. Total time elapsed: 5453 ms.
+2025-10-25T18:36:36.4294925Z Site: ecomm-app-4379 stopped.
+2025-10-25T18:36:06.8751567Z Site container: ecomm-app-4379_managedIdentity terminated during site startup.
+2025-10-25T18:39:48.1555340Z Container start method called.
+2025-10-25T18:39:48.1557519Z Establishing network.
+2025-10-25T18:39:48.1559183Z Pulling image: appsvc/node:20-lts_20251016.4.tuxprod.
+2025-10-25T18:39:48.4668191Z Container is starting.
+2025-10-25T18:39:48.4670663Z Establishing user namespace if not established already.
+2025-10-25T18:39:48.4671904Z Establishing network if not established already.
+2025-10-25T18:39:48.4673928Z Mounting volumes.
+2025-10-25T18:39:48.4758214Z Nested mountpoint 
+2025-10-25T18:39:48.5492758Z Nested mountpoint volatile/logs
+2025-10-25T18:39:48.5897678Z Nested mountpoint 
+2025-10-25T18:39:48.6083713Z Nested mountpoint 
+2025-10-25T18:39:48.6439494Z Nested mountpoint 
+2025-10-25T18:39:49.6875069Z Creating container.
+2025-10-25T18:39:49.7054652Z Creating pipes for streaming container io.
+2025-10-25T18:39:49.7058044Z Creating stdout named pipe at /podr/container/pipe/0124317ef23f_ecomm-app-4379/stdout_9251968b71854c87bc2fbe4caa3e9bfc.
+2025-10-25T18:39:49.7061325Z Successfully created stdout named pipe at: /podr/container/pipe/0124317ef23f_ecomm-app-4379/stdout_9251968b71854c87bc2fbe4caa3e9bfc.
+2025-10-25T18:39:49.7062728Z Opening named pipe /podr/container/pipe/0124317ef23f_ecomm-app-4379/stdout_9251968b71854c87bc2fbe4caa3e9bfc for reading in non-blocking mode.
+2025-10-25T18:39:49.7064278Z Successfully opened named pipe: /podr/container/pipe/0124317ef23f_ecomm-app-4379/stdout_9251968b71854c87bc2fbe4caa3e9bfc.
+2025-10-25T18:39:49.7065606Z Successfully removed non-blocking flag from /podr/container/pipe/0124317ef23f_ecomm-app-4379/stdout_9251968b71854c87bc2fbe4caa3e9bfc.
+2025-10-25T18:39:49.7067404Z Creating stderr named pipe at /podr/container/pipe/0124317ef23f_ecomm-app-4379/stderr_a14ad2327cdf4f4cbf39a03e22d17b92.
+2025-10-25T18:39:49.7158285Z Successfully created stderr named pipe at: /podr/container/pipe/0124317ef23f_ecomm-app-4379/stderr_a14ad2327cdf4f4cbf39a03e22d17b92.
+2025-10-25T18:39:49.7166652Z Opening named pipe /podr/container/pipe/0124317ef23f_ecomm-app-4379/stderr_a14ad2327cdf4f4cbf39a03e22d17b92 for reading in non-blocking mode.
+2025-10-25T18:39:49.7168703Z Successfully opened named pipe: /podr/container/pipe/0124317ef23f_ecomm-app-4379/stderr_a14ad2327cdf4f4cbf39a03e22d17b92.
+2025-10-25T18:39:49.7170243Z Successfully removed non-blocking flag from /podr/container/pipe/0124317ef23f_ecomm-app-4379/stderr_a14ad2327cdf4f4cbf39a03e22d17b92.
+2025-10-25T18:39:49.7174955Z Creating container with image: appsvc/node:20-lts_20251016.4.tuxprod from registry: 10.1.0.5:13209 and fully qualified image name: 10.1.0.5:13209/appsvc/node:20-lts_20251016.4.tuxprod
+2025-10-25T18:39:50.6464268Z Starting container: 0124317ef23f_ecomm-app-4379.
+2025-10-25T18:39:50.8603591Z Starting watchers and probes.
+2025-10-25T18:39:50.8762038Z Starting metrics collection.
+2025-10-25T18:39:50.8765084Z Container is running.
+2025-10-25T18:39:52.0450551Z Container start method finished after 3889 ms.
+2025-10-25T18:40:34.3001288Z Container has finished running with exit code: 1.
+2025-10-25T18:40:34.3076473Z Container is terminating. Grace period: 5 seconds.
+2025-10-25T18:40:34.3097254Z Stop and delete container. Retry count = 0
+2025-10-25T18:40:34.3136433Z Stopping container: 0124317ef23f_ecomm-app-4379.
+2025-10-25T18:40:34.3959969Z Deleting container: 0124317ef23f_ecomm-app-4379. Retry count = 0
+2025-10-25T18:40:34.7185853Z Container spec TerminationMessagePolicy  path 
+2025-10-25T18:40:34.7190398Z Container is terminated. Total time elapsed: 410 ms.
+2025-10-25T18:40:34.7208041Z Site container: ecomm-app-4379 terminated during site startup.
+2025-10-25T18:40:34.7588635Z Site startup probe failed after 42.627183 seconds.
+2025-10-25T18:40:35.0047274Z Failed to start site. Revert by stopping site.
+2025-10-25T18:40:35.0223886Z Site: ecomm-app-4379 stopped.
+2025-10-25T18:41:41.503Z INFO  - 20-lts_20251016.4.tuxprod Pulling from appsvc/node
+2025-10-25T18:41:41.568Z INFO  - c6b11972fd12 Pulling fs layer
+2025-10-25T18:41:41.572Z INFO  - e2de071b945f Pulling fs layer
+2025-10-25T18:41:41.588Z INFO  - ec95c0f17656 Pulling fs layer
+2025-10-25T18:41:41.591Z INFO  - 466dbb61272e Pulling fs layer
+2025-10-25T18:41:41.601Z INFO  - b90100a54c33 Pulling fs layer
+2025-10-25T18:41:41.628Z INFO  - db667eb6a215 Pulling fs layer
+2025-10-25T18:41:41.637Z INFO  - 1d68c959db08 Pulling fs layer
+2025-10-25T18:41:41.638Z INFO  - 4162a85e6a99 Pulling fs layer
+2025-10-25T18:41:41.656Z INFO  - 2035233ddd52 Pulling fs layer
+2025-10-25T18:41:41.666Z INFO  - a9571099cab5 Pulling fs layer
+2025-10-25T18:41:41.666Z INFO  - 662a633d5b17 Pulling fs layer
+2025-10-25T18:41:41.668Z INFO  - 7904759a99e2 Pulling fs layer
+2025-10-25T18:41:41.669Z INFO  - 26fd0ea5e193 Pulling fs layer
+2025-10-25T18:41:41.676Z INFO  - f3d6acb78f3e Pulling fs layer
+2025-10-25T18:41:41.676Z INFO  - 0c9422ccc7d4 Pulling fs layer
+2025-10-25T18:41:41.676Z INFO  - bff0b1a6107c Pulling fs layer
+2025-10-25T18:41:41.677Z INFO  - c10eb7f3ae42 Pulling fs layer
+2025-10-25T18:41:41.677Z INFO  - 1b0937ba9692 Pulling fs layer
+2025-10-25T18:41:41.678Z INFO  - 4f4fb700ef54 Pulling fs layer
+2025-10-25T18:41:41.685Z INFO  - ee5e2a61e93f Pulling fs layer
+2025-10-25T18:41:41.685Z INFO  - a299d250ab97 Pulling fs layer
+2025-10-25T18:41:41.687Z INFO  - 2e5f19d50c40 Pulling fs layer
+2025-10-25T18:41:41.688Z INFO  - 94d31f795579 Pulling fs layer
+2025-10-25T18:41:41.688Z INFO  - 18c70f6ed5b8 Pulling fs layer
+2025-10-25T18:41:41.694Z INFO  - fb49480510c1 Pulling fs layer
+2025-10-25T18:41:41.695Z INFO  - 5cb83091061e Pulling fs layer
+2025-10-25T18:41:41.695Z INFO  - 618cb520b534 Pulling fs layer
+2025-10-25T18:41:41.697Z INFO  - b387b0839a3c Pulling fs layer
+2025-10-25T18:41:41.697Z INFO  - befb3b667a4a Pulling fs layer
+2025-10-25T18:41:41.697Z INFO  - c98fb0ee9c52 Pulling fs layer
+2025-10-25T18:41:41.698Z INFO  - fed34a6cff95 Pulling fs layer
+2025-10-25T18:41:41.705Z INFO  - 52ac776e496e Pulling fs layer
+2025-10-25T18:41:41.705Z INFO  - ed277ae6cc1b Pulling fs layer
+2025-10-25T18:41:41.707Z INFO  - f00d066ab48f Pulling fs layer
+2025-10-25T18:41:41.708Z INFO  - 84db54845b1f Pulling fs layer
+2025-10-25T18:41:41.708Z INFO  - 209af07e1fed Pulling fs layer
+2025-10-25T18:41:41.725Z INFO  - f359ae97a578 Pulling fs layer
+2025-10-25T18:41:41.726Z INFO  - 12ae792aadc1 Pulling fs layer
+2025-10-25T18:41:41.726Z INFO  - 101f3a4877dc Pulling fs layer
+2025-10-25T18:41:41.727Z INFO  - 49304a106933 Pulling fs layer
+2025-10-25T18:41:41.727Z INFO  - c59bd29a4737 Pulling fs layer
+2025-10-25T18:41:41.727Z INFO  - 6f0a6c0887e0 Pulling fs layer
+2025-10-25T18:41:41.727Z INFO  - a299d250ab97 Waiting
+2025-10-25T18:41:41.734Z INFO  - 2e5f19d50c40 Waiting
+2025-10-25T18:41:41.734Z INFO  - 94d31f795579 Waiting
+2025-10-25T18:41:41.734Z INFO  - 18c70f6ed5b8 Waiting
+2025-10-25T18:41:41.735Z INFO  - fb49480510c1 Waiting
+2025-10-25T18:41:41.735Z INFO  - 5cb83091061e Waiting
+2025-10-25T18:41:41.737Z INFO  - 618cb520b534 Waiting
+2025-10-25T18:41:41.743Z INFO  - b387b0839a3c Waiting
+2025-10-25T18:41:41.744Z INFO  - befb3b667a4a Waiting
+2025-10-25T18:41:41.745Z INFO  - c98fb0ee9c52 Waiting
+2025-10-25T18:41:41.746Z INFO  - fed34a6cff95 Waiting
+2025-10-25T18:41:41.746Z INFO  - 52ac776e496e Waiting
+2025-10-25T18:41:41.753Z INFO  - ed277ae6cc1b Waiting
+2025-10-25T18:41:41.753Z INFO  - f00d066ab48f Waiting
+2025-10-25T18:41:41.753Z INFO  - 84db54845b1f Waiting
+2025-10-25T18:41:41.755Z INFO  - 209af07e1fed Waiting
+2025-10-25T18:41:41.755Z INFO  - f359ae97a578 Waiting
+2025-10-25T18:41:41.755Z INFO  - 12ae792aadc1 Waiting
+2025-10-25T18:41:41.755Z INFO  - 101f3a4877dc Waiting
+2025-10-25T18:41:41.757Z INFO  - 49304a106933 Waiting
+2025-10-25T18:41:41.757Z INFO  - c59bd29a4737 Waiting
+2025-10-25T18:41:41.782Z INFO  - 6f0a6c0887e0 Waiting
+2025-10-25T18:41:41.785Z INFO  - 7904759a99e2 Downloading 3KB / 12KB
+2025-10-25T18:41:41.792Z INFO  - a9571099cab5 Downloading 35KB / 1MB
+2025-10-25T18:41:41.801Z INFO  - bff0b1a6107c Downloading 35KB / 1MB
+2025-10-25T18:41:41.801Z INFO  - c10eb7f3ae42 Downloading 35KB / 1MB
+2025-10-25T18:41:41.801Z INFO  - 1d68c959db08 Downloading 2KB / 2KB
+2025-10-25T18:41:41.801Z INFO  - 7904759a99e2 Downloading 12KB / 12KB
+2025-10-25T18:41:41.801Z INFO  - 1d68c959db08 Verifying Checksum
+2025-10-25T18:41:41.801Z INFO  - 1d68c959db08 Download complete
+2025-10-25T18:41:41.801Z INFO  - 7904759a99e2 Verifying Checksum
+2025-10-25T18:41:41.801Z INFO  - 7904759a99e2 Download complete
+2025-10-25T18:41:41.801Z INFO  - 4162a85e6a99 Downloading 35KB / 420KB
+2025-10-25T18:41:41.801Z INFO  - 466dbb61272e Downloading 385B / 385B
+2025-10-25T18:41:41.801Z INFO  - b90100a54c33 Downloading 131B / 131B
+2025-10-25T18:41:41.801Z INFO  - 2035233ddd52 Downloading 187B / 187B
+2025-10-25T18:41:41.802Z INFO  - 0c9422ccc7d4 Downloading 10KB / 10KB
+2025-10-25T18:41:41.802Z INFO  - 662a633d5b17 Downloading 39KB / 39KB
+2025-10-25T18:41:41.802Z INFO  - 26fd0ea5e193 Downloading 14KB / 14KB
+2025-10-25T18:41:41.802Z INFO  - 466dbb61272e Verifying Checksum
+2025-10-25T18:41:41.803Z INFO  - 466dbb61272e Download complete
+2025-10-25T18:41:41.803Z INFO  - b90100a54c33 Verifying Checksum
+2025-10-25T18:41:41.803Z INFO  - b90100a54c33 Download complete
+2025-10-25T18:41:41.803Z INFO  - 2035233ddd52 Verifying Checksum
+2025-10-25T18:41:41.803Z INFO  - 2035233ddd52 Download complete
+2025-10-25T18:41:41.803Z INFO  - 0c9422ccc7d4 Verifying Checksum
+2025-10-25T18:41:41.804Z INFO  - 0c9422ccc7d4 Download complete
+2025-10-25T18:41:41.804Z INFO  - 662a633d5b17 Verifying Checksum
+2025-10-25T18:41:41.804Z INFO  - 662a633d5b17 Download complete
+2025-10-25T18:41:41.804Z INFO  - 26fd0ea5e193 Verifying Checksum
+2025-10-25T18:41:41.804Z INFO  - 26fd0ea5e193 Download complete
+2025-10-25T18:41:41.804Z INFO  - bff0b1a6107c Downloading 852KB / 1MB
+2025-10-25T18:41:41.823Z INFO  - c10eb7f3ae42 Downloading 147KB / 1MB
+2025-10-25T18:41:41.824Z INFO  - f3d6acb78f3e Downloading 124KB / 281KB
+2025-10-25T18:41:41.824Z INFO  - 1b0937ba9692 Downloading 3KB / 3KB
+2025-10-25T18:41:41.824Z INFO  - 4f4fb700ef54 Downloading 32B / 32B
+2025-10-25T18:41:41.824Z INFO  - f3d6acb78f3e Downloading 281KB / 281KB
+2025-10-25T18:41:41.830Z INFO  - db667eb6a215 Downloading 250KB / 250KB
+2025-10-25T18:41:41.830Z INFO  - c10eb7f3ae42 Downloading 1MB / 1MB
+2025-10-25T18:41:41.830Z INFO  - 1b0937ba9692 Verifying Checksum
+2025-10-25T18:41:41.830Z INFO  - 1b0937ba9692 Download complete
+2025-10-25T18:41:41.830Z INFO  - 4f4fb700ef54 Verifying Checksum
+2025-10-25T18:41:41.830Z INFO  - 4f4fb700ef54 Download complete
+2025-10-25T18:41:41.830Z INFO  - f3d6acb78f3e Verifying Checksum
+2025-10-25T18:41:41.830Z INFO  - f3d6acb78f3e Download complete
+2025-10-25T18:41:41.830Z INFO  - db667eb6a215 Verifying Checksum
+2025-10-25T18:41:41.830Z INFO  - db667eb6a215 Download complete
+2025-10-25T18:41:41.830Z INFO  - c10eb7f3ae42 Verifying Checksum
+2025-10-25T18:41:41.830Z INFO  - c10eb7f3ae42 Download complete
+2025-10-25T18:41:41.861Z INFO  - 4162a85e6a99 Downloading 244KB / 420KB
+2025-10-25T18:41:41.939Z INFO  - bff0b1a6107c Downloading 1MB / 1MB
+2025-10-25T18:41:41.940Z INFO  - bff0b1a6107c Downloading 1MB / 1MB
+2025-10-25T18:41:42.085Z INFO  - 2e5f19d50c40 Downloading 252KB / 11MB
+2025-10-25T18:41:42.085Z INFO  - 18c70f6ed5b8 Downloading 125B / 125B
+2025-10-25T18:41:42.085Z INFO  - 618cb520b534 Downloading 1KB / 1KB
+2025-10-25T18:41:42.085Z INFO  - b387b0839a3c Downloading 138B / 138B
+2025-10-25T18:41:42.085Z INFO  - bff0b1a6107c Verifying Checksum
+2025-10-25T18:41:42.085Z INFO  - bff0b1a6107c Download complete
+2025-10-25T18:41:42.085Z INFO  - 18c70f6ed5b8 Verifying Checksum
+2025-10-25T18:41:42.085Z INFO  - 18c70f6ed5b8 Download complete
+2025-10-25T18:41:42.085Z INFO  - 618cb520b534 Verifying Checksum
+2025-10-25T18:41:42.085Z INFO  - 618cb520b534 Download complete
+2025-10-25T18:41:42.085Z INFO  - b387b0839a3c Verifying Checksum
+2025-10-25T18:41:42.085Z INFO  - b387b0839a3c Download complete
+2025-10-25T18:41:42.085Z INFO  - a9571099cab5 Downloading 404KB / 1MB
+2025-10-25T18:41:42.102Z INFO  - c6b11972fd12 Downloading 980KB / 46MB
+2025-10-25T18:41:42.103Z INFO  - ec95c0f17656 Downloading 437KB / 3MB
+2025-10-25T18:41:42.104Z INFO  - 4162a85e6a99 Downloading 404KB / 420KB
+2025-10-25T18:41:42.122Z INFO  - 4162a85e6a99 Downloading 420KB / 420KB
+2025-10-25T18:41:42.142Z INFO  - ed277ae6cc1b Downloading 152B / 152B
+2025-10-25T18:41:42.144Z INFO  - 5cb83091061e Downloading 947B / 947B
+2025-10-25T18:41:42.144Z INFO  - 4162a85e6a99 Verifying Checksum
+2025-10-25T18:41:42.161Z INFO  - 4162a85e6a99 Download complete
+2025-10-25T18:41:42.161Z INFO  - ed277ae6cc1b Verifying Checksum
+2025-10-25T18:41:42.161Z INFO  - ed277ae6cc1b Download complete
+2025-10-25T18:41:42.163Z INFO  - 5cb83091061e Verifying Checksum
+2025-10-25T18:41:42.163Z INFO  - 5cb83091061e Download complete
+2025-10-25T18:41:42.180Z INFO  - c6b11972fd12 Downloading 1MB / 46MB
+2025-10-25T18:41:42.443Z INFO  - a9571099cab5 Downloading 532KB / 1MB
+2025-10-25T18:41:42.452Z INFO  - 2e5f19d50c40 Downloading 508KB / 11MB
+2025-10-25T18:41:42.455Z INFO  - ee5e2a61e93f Downloading 952KB / 44MB
+2025-10-25T18:41:42.461Z INFO  - 94d31f795579 Downloading 764KB / 16MB
+2025-10-25T18:41:42.462Z INFO  - c98fb0ee9c52 Downloading 1KB / 1KB
+2025-10-25T18:41:42.463Z INFO  - fed34a6cff95 Downloading 1KB / 1KB
+2025-10-25T18:41:42.473Z INFO  - f359ae97a578 Downloading 269B / 269B
+2025-10-25T18:41:42.474Z INFO  - 52ac776e496e Downloading 3KB / 3KB
+2025-10-25T18:41:42.474Z INFO  - c98fb0ee9c52 Verifying Checksum
+2025-10-25T18:41:42.493Z INFO  - c98fb0ee9c52 Download complete
+2025-10-25T18:41:42.493Z INFO  - fed34a6cff95 Verifying Checksum
+2025-10-25T18:41:42.500Z INFO  - fed34a6cff95 Download complete
+2025-10-25T18:41:42.502Z INFO  - f359ae97a578 Verifying Checksum
+2025-10-25T18:41:42.502Z INFO  - f359ae97a578 Download complete
+2025-10-25T18:41:42.503Z INFO  - 52ac776e496e Verifying Checksum
+2025-10-25T18:41:42.510Z INFO  - 52ac776e496e Download complete
+2025-10-25T18:41:42.510Z INFO  - befb3b667a4a Downloading 529KB / 67MB
+2025-10-25T18:41:42.558Z INFO  - a9571099cab5 Downloading 756KB / 1MB
+2025-10-25T18:41:42.568Z INFO  - ec95c0f17656 Downloading 1MB / 3MB
+2025-10-25T18:41:42.569Z INFO  - 94d31f795579 Downloading 1MB / 16MB
+2025-10-25T18:41:42.570Z INFO  - f00d066ab48f Downloading 3KB / 13KB
+2025-10-25T18:41:42.577Z INFO  - fb49480510c1 Downloading 1MB / 6MB
+2025-10-25T18:41:42.579Z INFO  - 2e5f19d50c40 Downloading 1MB / 11MB
+2025-10-25T18:41:42.581Z INFO  - 84db54845b1f Downloading 1KB / 1KB
+2025-10-25T18:41:42.589Z INFO  - 209af07e1fed Downloading 270B / 270B
+2025-10-25T18:41:42.589Z INFO  - 12ae792aadc1 Downloading 124B / 124B
+2025-10-25T18:41:42.589Z INFO  - a9571099cab5 Verifying Checksum
+2025-10-25T18:41:42.589Z INFO  - a9571099cab5 Download complete
+2025-10-25T18:41:42.589Z INFO  - f00d066ab48f Downloading 13KB / 13KB
+2025-10-25T18:41:42.589Z INFO  - 84db54845b1f Verifying Checksum
+2025-10-25T18:41:42.589Z INFO  - 84db54845b1f Download complete
+2025-10-25T18:41:42.589Z INFO  - 209af07e1fed Verifying Checksum
+2025-10-25T18:41:42.590Z INFO  - 209af07e1fed Download complete
+2025-10-25T18:41:42.590Z INFO  - 12ae792aadc1 Verifying Checksum
+2025-10-25T18:41:42.600Z INFO  - 12ae792aadc1 Download complete
+2025-10-25T18:41:42.609Z INFO  - f00d066ab48f Verifying Checksum
+2025-10-25T18:41:42.609Z INFO  - f00d066ab48f Download complete
+2025-10-25T18:41:42.938Z INFO  - ec95c0f17656 Downloading 2MB / 3MB
+2025-10-25T18:41:42.938Z INFO  - fb49480510c1 Downloading 1MB / 6MB
+2025-10-25T18:41:42.939Z INFO  - a299d250ab97 Downloading 1MB / 46MB
+2025-10-25T18:41:42.941Z INFO  - ec95c0f17656 Downloading 2MB / 3MB
+2025-10-25T18:41:42.941Z INFO  - 101f3a4877dc Downloading 418B / 418B
+2025-10-25T18:41:42.941Z INFO  - 49304a106933 Downloading 1KB / 1KB
+2025-10-25T18:41:42.941Z INFO  - 101f3a4877dc Verifying Checksum
+2025-10-25T18:41:42.941Z INFO  - 101f3a4877dc Download complete
+2025-10-25T18:41:42.941Z INFO  - 49304a106933 Verifying Checksum
+2025-10-25T18:41:42.941Z INFO  - 49304a106933 Download complete
+2025-10-25T18:41:42.941Z INFO  - e2de071b945f Downloading 4MB / 34MB
+2025-10-25T18:41:42.941Z INFO  - c6b11972fd12 Downloading 4MB / 46MB
+2025-10-25T18:41:42.959Z INFO  - a299d250ab97 Downloading 2MB / 46MB
+2025-10-25T18:41:42.959Z INFO  - 6f0a6c0887e0 Downloading 132B / 132B
+2025-10-25T18:41:42.959Z INFO  - 6f0a6c0887e0 Verifying Checksum
+2025-10-25T18:41:42.959Z INFO  - 6f0a6c0887e0 Download complete
+2025-10-25T18:41:42.959Z INFO  - c59bd29a4737 Downloading 124KB / 1MB
+2025-10-25T18:41:42.959Z INFO  - 2e5f19d50c40 Downloading 3MB / 11MB
+2025-10-25T18:41:42.967Z INFO  - c59bd29a4737 Downloading 476KB / 1MB
+2025-10-25T18:41:42.968Z INFO  - ee5e2a61e93f Downloading 2MB / 44MB
+2025-10-25T18:41:42.988Z INFO  - ec95c0f17656 Downloading 3MB / 3MB
+2025-10-25T18:41:43.006Z INFO  - 94d31f795579 Downloading 2MB / 16MB
+2025-10-25T18:41:43.006Z INFO  - fb49480510c1 Downloading 3MB / 6MB
+2025-10-25T18:41:43.006Z INFO  - c6b11972fd12 Downloading 5MB / 46MB
+2025-10-25T18:41:43.036Z INFO  - ec95c0f17656 Downloading 3MB / 3MB
+2025-10-25T18:41:43.057Z INFO  - ec95c0f17656 Verifying Checksum
+2025-10-25T18:41:43.057Z INFO  - ec95c0f17656 Download complete
+2025-10-25T18:41:43.213Z INFO  - ee5e2a61e93f Downloading 3MB / 44MB
+2025-10-25T18:41:43.223Z INFO  - 94d31f795579 Downloading 3MB / 16MB
+2025-10-25T18:41:43.229Z INFO  - c6b11972fd12 Downloading 6MB / 46MB
+2025-10-25T18:41:43.229Z INFO  - c59bd29a4737 Downloading 1MB / 1MB
+2025-10-25T18:41:43.229Z INFO  - c59bd29a4737 Downloading 1MB / 1MB
+2025-10-25T18:41:43.229Z INFO  - 2e5f19d50c40 Downloading 5MB / 11MB
+2025-10-25T18:41:43.239Z INFO  - c59bd29a4737 Verifying Checksum
+2025-10-25T18:41:43.240Z INFO  - c59bd29a4737 Download complete
+2025-10-25T18:41:43.369Z INFO  - ee5e2a61e93f Downloading 4MB / 44MB
+2025-10-25T18:41:43.580Z INFO  - ee5e2a61e93f Downloading 5MB / 44MB
+2025-10-25T18:41:43.580Z INFO  - fb49480510c1 Downloading 5MB / 6MB
+2025-10-25T18:41:43.580Z INFO  - befb3b667a4a Downloading 5MB / 67MB
+2025-10-25T18:41:43.580Z INFO  - e2de071b945f Downloading 8MB / 34MB
+2025-10-25T18:41:43.581Z INFO  - 94d31f795579 Downloading 4MB / 16MB
+2025-10-25T18:41:43.581Z INFO  - fb49480510c1 Verifying Checksum
+2025-10-25T18:41:43.581Z INFO  - fb49480510c1 Download complete
+2025-10-25T18:41:43.678Z INFO  - ee5e2a61e93f Downloading 6MB / 44MB
+2025-10-25T18:41:43.695Z INFO  - 2e5f19d50c40 Downloading 7MB / 11MB
+2025-10-25T18:41:43.695Z INFO  - e2de071b945f Downloading 8MB / 34MB
+2025-10-25T18:41:43.782Z INFO  - a299d250ab97 Downloading 7MB / 46MB
+2025-10-25T18:41:43.851Z INFO  - e2de071b945f Downloading 9MB / 34MB
+2025-10-25T18:41:43.940Z INFO  - ee5e2a61e93f Downloading 7MB / 44MB
+2025-10-25T18:41:43.941Z INFO  - c6b11972fd12 Downloading 9MB / 46MB
+2025-10-25T18:41:43.967Z INFO  - 94d31f795579 Downloading 6MB / 16MB
+2025-10-25T18:41:43.967Z INFO  - e2de071b945f Downloading 10MB / 34MB
+2025-10-25T18:41:44.064Z INFO  - ee5e2a61e93f Downloading 8MB / 44MB
+2025-10-25T18:41:44.093Z INFO  - befb3b667a4a Downloading 8MB / 67MB
+2025-10-25T18:41:44.207Z INFO  - 94d31f795579 Downloading 9MB / 16MB
+2025-10-25T18:41:44.216Z INFO  - 2e5f19d50c40 Verifying Checksum
+2025-10-25T18:41:44.217Z INFO  - 2e5f19d50c40 Download complete
+2025-10-25T18:41:44.318Z INFO  - 94d31f795579 Downloading 10MB / 16MB
+2025-10-25T18:41:44.318Z INFO  - e2de071b945f Downloading 13MB / 34MB
+2025-10-25T18:41:44.361Z INFO  - ee5e2a61e93f Downloading 10MB / 44MB
+2025-10-25T18:41:44.430Z INFO  - befb3b667a4a Downloading 9MB / 67MB
+2025-10-25T18:41:44.460Z INFO  - a299d250ab97 Downloading 12MB / 46MB
+2025-10-25T18:41:44.606Z INFO  - c6b11972fd12 Downloading 12MB / 46MB
+2025-10-25T18:41:44.607Z INFO  - befb3b667a4a Downloading 11MB / 67MB
+2025-10-25T18:41:44.607Z INFO  - ee5e2a61e93f Downloading 11MB / 44MB
+2025-10-25T18:41:44.633Z INFO  - 94d31f795579 Downloading 13MB / 16MB
+2025-10-25T18:41:44.704Z INFO  - e2de071b945f Downloading 15MB / 34MB
+2025-10-25T18:41:44.848Z INFO  - befb3b667a4a Downloading 12MB / 67MB
+2025-10-25T18:41:44.875Z INFO  - befb3b667a4a Downloading 12MB / 67MB
+2025-10-25T18:41:44.875Z INFO  - 94d31f795579 Verifying Checksum
+2025-10-25T18:41:44.875Z INFO  - 94d31f795579 Download complete
+2025-10-25T18:41:44.924Z INFO  - e2de071b945f Downloading 17MB / 34MB
+2025-10-25T18:41:44.925Z INFO  - ee5e2a61e93f Downloading 14MB / 44MB
+2025-10-25T18:41:45.085Z INFO  - befb3b667a4a Downloading 13MB / 67MB
+2025-10-25T18:41:45.174Z INFO  - c6b11972fd12 Downloading 15MB / 46MB
+2025-10-25T18:41:45.174Z INFO  - befb3b667a4a Downloading 15MB / 67MB
+2025-10-25T18:41:45.191Z INFO  - e2de071b945f Downloading 19MB / 34MB
+2025-10-25T18:41:45.191Z INFO  - a299d250ab97 Downloading 18MB / 46MB
+2025-10-25T18:41:45.286Z INFO  - e2de071b945f Downloading 20MB / 34MB
+2025-10-25T18:41:45.316Z INFO  - ee5e2a61e93f Downloading 17MB / 44MB
+2025-10-25T18:41:45.316Z INFO  - a299d250ab97 Downloading 19MB / 46MB
+2025-10-25T18:41:45.373Z INFO  - ee5e2a61e93f Downloading 19MB / 44MB
+2025-10-25T18:41:45.577Z INFO  - befb3b667a4a Downloading 17MB / 67MB
+2025-10-25T18:41:45.578Z INFO  - ee5e2a61e93f Downloading 21MB / 44MB
+2025-10-25T18:41:45.700Z INFO  - a299d250ab97 Downloading 22MB / 46MB
+2025-10-25T18:41:45.740Z INFO  - ee5e2a61e93f Downloading 22MB / 44MB
+2025-10-25T18:41:45.760Z INFO  - c6b11972fd12 Downloading 18MB / 46MB
+2025-10-25T18:41:45.809Z INFO  - a299d250ab97 Downloading 23MB / 46MB
+2025-10-25T18:41:45.810Z INFO  - e2de071b945f Downloading 24MB / 34MB
+2025-10-25T18:41:45.935Z INFO  - ee5e2a61e93f Downloading 24MB / 44MB
+2025-10-25T18:41:45.942Z INFO  - befb3b667a4a Downloading 20MB / 67MB
+2025-10-25T18:41:45.942Z INFO  - a299d250ab97 Downloading 24MB / 46MB
+2025-10-25T18:41:45.965Z INFO  - c6b11972fd12 Downloading 19MB / 46MB
+2025-10-25T18:41:46.080Z INFO  - ee5e2a61e93f Downloading 25MB / 44MB
+2025-10-25T18:41:46.080Z INFO  - a299d250ab97 Downloading 26MB / 46MB
+2025-10-25T18:41:46.199Z INFO  - befb3b667a4a Downloading 21MB / 67MB
+2025-10-25T18:41:46.267Z INFO  - c6b11972fd12 Downloading 20MB / 46MB
+2025-10-25T18:41:46.274Z INFO  - e2de071b945f Downloading 26MB / 34MB
+2025-10-25T18:41:46.314Z INFO  - befb3b667a4a Downloading 22MB / 67MB
+2025-10-25T18:41:46.332Z INFO  - a299d250ab97 Downloading 27MB / 46MB
+2025-10-25T18:41:46.362Z INFO  - a299d250ab97 Downloading 28MB / 46MB
+2025-10-25T18:41:46.402Z INFO  - c6b11972fd12 Downloading 22MB / 46MB
+2025-10-25T18:41:46.565Z INFO  - ee5e2a61e93f Downloading 29MB / 44MB
+2025-10-25T18:41:46.565Z INFO  - c6b11972fd12 Downloading 23MB / 46MB
+2025-10-25T18:41:46.568Z INFO  - a299d250ab97 Downloading 30MB / 46MB
+2025-10-25T18:41:46.730Z INFO  - befb3b667a4a Downloading 26MB / 67MB
+2025-10-25T18:41:46.731Z INFO  - c6b11972fd12 Downloading 25MB / 46MB
+2025-10-25T18:41:46.732Z INFO  - e2de071b945f Downloading 31MB / 34MB
+2025-10-25T18:41:46.732Z INFO  - a299d250ab97 Downloading 31MB / 46MB
+2025-10-25T18:41:46.884Z INFO  - e2de071b945f Verifying Checksum
+2025-10-25T18:41:46.924Z INFO  - e2de071b945f Download complete
+2025-10-25T18:41:46.924Z INFO  - befb3b667a4a Downloading 28MB / 67MB
+2025-10-25T18:41:47.069Z INFO  - a299d250ab97 Downloading 34MB / 46MB
+2025-10-25T18:41:47.193Z INFO  - ee5e2a61e93f Downloading 37MB / 44MB
+2025-10-25T18:41:47.290Z INFO  - a299d250ab97 Downloading 37MB / 46MB
+2025-10-25T18:41:47.291Z INFO  - c6b11972fd12 Downloading 30MB / 46MB
+2025-10-25T18:41:47.378Z INFO  - a299d250ab97 Downloading 37MB / 46MB
+2025-10-25T18:41:47.378Z INFO  - befb3b667a4a Downloading 33MB / 67MB
+2025-10-25T18:41:47.379Z INFO  - ee5e2a61e93f Downloading 37MB / 44MB
+2025-10-25T18:41:47.526Z INFO  - c6b11972fd12 Downloading 33MB / 46MB
+2025-10-25T18:41:47.621Z INFO  - a299d250ab97 Downloading 40MB / 46MB
+2025-10-25T18:41:47.621Z INFO  - c6b11972fd12 Downloading 36MB / 46MB
+2025-10-25T18:41:47.649Z INFO  - befb3b667a4a Downloading 38MB / 67MB
+2025-10-25T18:41:47.776Z INFO  - ee5e2a61e93f Downloading 43MB / 44MB
+2025-10-25T18:41:47.844Z INFO  - ee5e2a61e93f Downloading 44MB / 44MB
+2025-10-25T18:41:47.910Z INFO  - c6b11972fd12 Downloading 39MB / 46MB
+2025-10-25T18:41:47.968Z INFO  - ee5e2a61e93f Verifying Checksum
+2025-10-25T18:41:47.968Z INFO  - ee5e2a61e93f Download complete
+2025-10-25T18:41:47.968Z INFO  - a299d250ab97 Verifying Checksum
+2025-10-25T18:41:47.968Z INFO  - a299d250ab97 Download complete
+2025-10-25T18:41:48.055Z INFO  - befb3b667a4a Downloading 44MB / 67MB
+2025-10-25T18:41:48.132Z INFO  - c6b11972fd12 Downloading 43MB / 46MB
+2025-10-25T18:41:48.153Z INFO  - befb3b667a4a Downloading 47MB / 67MB
+2025-10-25T18:41:48.190Z INFO  - c6b11972fd12 Verifying Checksum
+2025-10-25T18:41:48.192Z INFO  - c6b11972fd12 Download complete
+2025-10-25T18:41:48.618Z INFO  - c6b11972fd12 Extracting 960KB / 46MB
+2025-10-25T18:41:48.686Z INFO  - befb3b667a4a Downloading 56MB / 67MB
+2025-10-25T18:41:48.844Z INFO  - c6b11972fd12 Extracting 1MB / 46MB
+2025-10-25T18:41:49.043Z INFO  - c6b11972fd12 Extracting 2MB / 46MB
+2025-10-25T18:41:49.213Z INFO  - c6b11972fd12 Extracting 3MB / 46MB
+2025-10-25T18:41:49.292Z INFO  - befb3b667a4a Downloading 61MB / 67MB
+2025-10-25T18:41:49.698Z INFO  - befb3b667a4a Downloading 63MB / 67MB
+2025-10-25T18:41:49.728Z INFO  - c6b11972fd12 Extracting 6MB / 46MB
+2025-10-25T18:41:49.813Z INFO  - befb3b667a4a Downloading 64MB / 67MB
+2025-10-25T18:41:49.871Z INFO  - c6b11972fd12 Extracting 7MB / 46MB
+2025-10-25T18:41:49.976Z INFO  - befb3b667a4a Downloading 66MB / 67MB
+2025-10-25T18:41:50.288Z INFO  - befb3b667a4a Verifying Checksum
+2025-10-25T18:41:50.304Z INFO  - befb3b667a4a Download complete
+2025-10-25T18:41:51.999Z INFO  - c6b11972fd12 Extracting 18MB / 46MB
+2025-10-25T18:41:52.435Z INFO  - c6b11972fd12 Extracting 20MB / 46MB
+2025-10-25T18:41:52.465Z INFO  - c6b11972fd12 Extracting 22MB / 46MB
+2025-10-25T18:41:53.628Z INFO  - c6b11972fd12 Extracting 25MB / 46MB
+2025-10-25T18:41:53.751Z INFO  - c6b11972fd12 Extracting 29MB / 46MB
+2025-10-25T18:41:53.927Z INFO  - c6b11972fd12 Extracting 30MB / 46MB
+2025-10-25T18:41:54.523Z INFO  - c6b11972fd12 Extracting 32MB / 46MB
+2025-10-25T18:41:54.758Z INFO  - c6b11972fd12 Extracting 34MB / 46MB
+2025-10-25T18:41:54.759Z INFO  - c6b11972fd12 Extracting 35MB / 46MB
+2025-10-25T18:41:55.502Z INFO  - c6b11972fd12 Extracting 37MB / 46MB
+2025-10-25T18:41:56.313Z INFO  - c6b11972fd12 Extracting 40MB / 46MB
+2025-10-25T18:41:58.978Z INFO  - c6b11972fd12 Extracting 46MB / 46MB
+2025-10-25T18:41:58.996Z INFO  - c6b11972fd12 Pull complete
+2025-10-25T18:41:59.554Z INFO  - e2de071b945f Extracting 2MB / 34MB
+2025-10-25T18:41:59.896Z INFO  - e2de071b945f Extracting 4MB / 34MB
+2025-10-25T18:42:00.176Z INFO  - e2de071b945f Extracting 6MB / 34MB
+2025-10-25T18:42:00.654Z INFO  - e2de071b945f Extracting 8MB / 34MB
+2025-10-25T18:42:00.831Z INFO  - e2de071b945f Extracting 9MB / 34MB
+2025-10-25T18:42:01.298Z INFO  - e2de071b945f Extracting 13MB / 34MB
+2025-10-25T18:42:01.539Z INFO  - e2de071b945f Extracting 15MB / 34MB
+2025-10-25T18:42:01.539Z INFO  - e2de071b945f Extracting 16MB / 34MB
+2025-10-25T18:42:02.179Z INFO  - e2de071b945f Extracting 17MB / 34MB
+2025-10-25T18:42:02.331Z INFO  - e2de071b945f Extracting 18MB / 34MB
+2025-10-25T18:42:03.103Z INFO  - e2de071b945f Extracting 19MB / 34MB
+2025-10-25T18:42:03.365Z INFO  - e2de071b945f Extracting 20MB / 34MB
+2025-10-25T18:42:03.730Z INFO  - e2de071b945f Extracting 22MB / 34MB
+2025-10-25T18:42:04.795Z INFO  - e2de071b945f Extracting 24MB / 34MB
+2025-10-25T18:42:04.795Z INFO  - e2de071b945f Extracting 25MB / 34MB
+2025-10-25T18:42:04.942Z INFO  - e2de071b945f Extracting 26MB / 34MB
+2025-10-25T18:42:05.671Z INFO  - e2de071b945f Extracting 28MB / 34MB
+2025-10-25T18:42:05.865Z INFO  - e2de071b945f Extracting 29MB / 34MB
+2025-10-25T18:42:06.445Z INFO  - e2de071b945f Extracting 30MB / 34MB
+2025-10-25T18:42:06.542Z INFO  - e2de071b945f Extracting 32MB / 34MB
+2025-10-25T18:42:06.766Z INFO  - e2de071b945f Extracting 33MB / 34MB
+2025-10-25T18:42:07.581Z INFO  - e2de071b945f Extracting 34MB / 34MB
+2025-10-25T18:42:07.729Z INFO  - e2de071b945f Pull complete
+2025-10-25T18:42:08.248Z INFO  - ec95c0f17656 Extracting 1MB / 3MB
+2025-10-25T18:42:08.413Z INFO  - ec95c0f17656 Extracting 3MB / 3MB
+2025-10-25T18:42:08.517Z INFO  - ec95c0f17656 Pull complete
+2025-10-25T18:42:08.585Z INFO  - 466dbb61272e Extracting 385B / 385B
+2025-10-25T18:42:08.662Z INFO  - 466dbb61272e Extracting 385B / 385B
+2025-10-25T18:42:08.779Z INFO  - 466dbb61272e Pull complete
+2025-10-25T18:42:08.791Z INFO  - b90100a54c33 Extracting 131B / 131B
+2025-10-25T18:42:08.856Z INFO  - b90100a54c33 Extracting 131B / 131B
+2025-10-25T18:42:08.992Z INFO  - b90100a54c33 Pull complete
+2025-10-25T18:42:08.994Z INFO  - db667eb6a215 Extracting 32KB / 250KB
+2025-10-25T18:42:09.137Z INFO  - db667eb6a215 Extracting 250KB / 250KB
+2025-10-25T18:42:09.218Z INFO  - db667eb6a215 Pull complete
+2025-10-25T18:42:09.236Z INFO  - 1d68c959db08 Extracting 2KB / 2KB
+2025-10-25T18:42:09.304Z INFO  - 1d68c959db08 Extracting 2KB / 2KB
+2025-10-25T18:42:09.370Z INFO  - 1d68c959db08 Pull complete
+2025-10-25T18:42:10.049Z INFO  - 4162a85e6a99 Extracting 420KB / 420KB
+2025-10-25T18:42:10.049Z INFO  - 4162a85e6a99 Extracting 420KB / 420KB
+2025-10-25T18:42:10.114Z INFO  - 4162a85e6a99 Pull complete
+2025-10-25T18:42:10.125Z INFO  - 2035233ddd52 Extracting 187B / 187B
+2025-10-25T18:42:10.254Z INFO  - 2035233ddd52 Extracting 187B / 187B
+2025-10-25T18:42:10.426Z INFO  - 2035233ddd52 Pull complete
+2025-10-25T18:42:10.447Z INFO  - a9571099cab5 Extracting 32KB / 1MB
+2025-10-25T18:42:10.917Z INFO  - a9571099cab5 Extracting 1MB / 1MB
+2025-10-25T18:42:11.023Z INFO  - a9571099cab5 Pull complete
+2025-10-25T18:42:11.034Z INFO  - 662a633d5b17 Extracting 32KB / 39KB
+2025-10-25T18:42:11.209Z INFO  - 662a633d5b17 Extracting 39KB / 39KB
+2025-10-25T18:42:11.380Z INFO  - 662a633d5b17 Pull complete
+2025-10-25T18:42:11.403Z INFO  - 7904759a99e2 Extracting 12KB / 12KB
+2025-10-25T18:42:11.508Z INFO  - 7904759a99e2 Extracting 12KB / 12KB
+2025-10-25T18:42:11.537Z INFO  - 7904759a99e2 Pull complete
+2025-10-25T18:42:11.546Z INFO  - 26fd0ea5e193 Extracting 14KB / 14KB
+2025-10-25T18:42:11.612Z INFO  - 26fd0ea5e193 Extracting 14KB / 14KB
+2025-10-25T18:42:11.672Z INFO  - 26fd0ea5e193 Pull complete
+2025-10-25T18:42:11.848Z INFO  - f3d6acb78f3e Extracting 281KB / 281KB
+2025-10-25T18:42:11.905Z INFO  - f3d6acb78f3e Pull complete
+2025-10-25T18:42:11.924Z INFO  - 0c9422ccc7d4 Extracting 10KB / 10KB
+2025-10-25T18:42:11.993Z INFO  - 0c9422ccc7d4 Extracting 10KB / 10KB
+2025-10-25T18:42:12.098Z INFO  - 0c9422ccc7d4 Pull complete
+2025-10-25T18:42:12.109Z INFO  - bff0b1a6107c Extracting 32KB / 1MB
+2025-10-25T18:42:12.310Z INFO  - bff0b1a6107c Extracting 1MB / 1MB
+2025-10-25T18:42:12.515Z INFO  - bff0b1a6107c Pull complete
+2025-10-25T18:42:12.554Z INFO  - c10eb7f3ae42 Extracting 32KB / 1MB
+2025-10-25T18:42:13.008Z INFO  - c10eb7f3ae42 Extracting 1MB / 1MB
+2025-10-25T18:42:13.076Z INFO  - c10eb7f3ae42 Extracting 1MB / 1MB
+2025-10-25T18:42:13.134Z INFO  - c10eb7f3ae42 Pull complete
+2025-10-25T18:42:13.152Z INFO  - 1b0937ba9692 Extracting 3KB / 3KB
+2025-10-25T18:42:13.250Z INFO  - 1b0937ba9692 Extracting 3KB / 3KB
+2025-10-25T18:42:13.384Z INFO  - 1b0937ba9692 Pull complete
+2025-10-25T18:42:13.440Z INFO  - 4f4fb700ef54 Extracting 32B / 32B
+2025-10-25T18:42:13.483Z INFO  - 4f4fb700ef54 Extracting 32B / 32B
+2025-10-25T18:42:13.559Z INFO  - 4f4fb700ef54 Pull complete
+2025-10-25T18:42:14.144Z INFO  - ee5e2a61e93f Extracting 5MB / 44MB
+2025-10-25T18:42:14.229Z INFO  - ee5e2a61e93f Extracting 6MB / 44MB
+2025-10-25T18:42:15.389Z INFO  - ee5e2a61e93f Extracting 12MB / 44MB
+2025-10-25T18:42:15.389Z INFO  - ee5e2a61e93f Extracting 22MB / 44MB
+2025-10-25T18:42:15.685Z INFO  - ee5e2a61e93f Extracting 30MB / 44MB
+2025-10-25T18:42:16.175Z INFO  - ee5e2a61e93f Extracting 37MB / 44MB
+2025-10-25T18:42:16.424Z INFO  - ee5e2a61e93f Extracting 39MB / 44MB
+2025-10-25T18:42:16.460Z INFO  - ee5e2a61e93f Extracting 40MB / 44MB
+2025-10-25T18:42:17.399Z INFO  - ee5e2a61e93f Extracting 44MB / 44MB
+2025-10-25T18:42:17.399Z INFO  - ee5e2a61e93f Pull complete
+2025-10-25T18:42:17.949Z INFO  - a299d250ab97 Extracting 2MB / 46MB
+2025-10-25T18:42:17.956Z INFO  - a299d250ab97 Extracting 3MB / 46MB
+2025-10-25T18:42:18.295Z INFO  - a299d250ab97 Extracting 5MB / 46MB
+2025-10-25T18:42:18.448Z INFO  - a299d250ab97 Extracting 6MB / 46MB
+2025-10-25T18:42:18.884Z INFO  - a299d250ab97 Extracting 8MB / 46MB
+2025-10-25T18:42:19.048Z INFO  - a299d250ab97 Extracting 10MB / 46MB
+2025-10-25T18:42:19.182Z INFO  - a299d250ab97 Extracting 11MB / 46MB
+2025-10-25T18:42:19.770Z INFO  - a299d250ab97 Extracting 14MB / 46MB
+2025-10-25T18:42:19.771Z INFO  - a299d250ab97 Extracting 15MB / 46MB
+2025-10-25T18:42:20.009Z INFO  - a299d250ab97 Extracting 15MB / 46MB
+2025-10-25T18:42:20.204Z INFO  - a299d250ab97 Extracting 16MB / 46MB
+2025-10-25T18:42:20.308Z INFO  - a299d250ab97 Extracting 17MB / 46MB
+2025-10-25T18:42:20.453Z INFO  - a299d250ab97 Extracting 18MB / 46MB
+2025-10-25T18:42:20.929Z INFO  - a299d250ab97 Extracting 20MB / 46MB
+2025-10-25T18:42:21.888Z INFO  - a299d250ab97 Extracting 25MB / 46MB
+2025-10-25T18:42:24.247Z INFO  - a299d250ab97 Extracting 34MB / 46MB
+2025-10-25T18:42:24.799Z INFO  - a299d250ab97 Extracting 35MB / 46MB
+2025-10-25T18:42:26.821Z INFO  - a299d250ab97 Extracting 36MB / 46MB
+2025-10-25T18:42:28.368Z INFO  - a299d250ab97 Extracting 37MB / 46MB
+2025-10-25T18:42:30.327Z INFO  - a299d250ab97 Extracting 38MB / 46MB
+2025-10-25T18:42:31.743Z INFO  - a299d250ab97 Extracting 39MB / 46MB
+2025-10-25T18:42:33.558Z INFO  - a299d250ab97 Extracting 40MB / 46MB
+2025-10-25T18:42:34.157Z INFO  - a299d250ab97 Extracting 41MB / 46MB
+2025-10-25T18:42:34.921Z INFO  - a299d250ab97 Extracting 42MB / 46MB
+2025-10-25T18:42:36.806Z INFO  - a299d250ab97 Extracting 43MB / 46MB
+2025-10-25T18:42:38.027Z INFO  - a299d250ab97 Extracting 44MB / 46MB
+2025-10-25T18:42:40.223Z INFO  - a299d250ab97 Extracting 45MB / 46MB
+2025-10-25T18:42:41.887Z INFO  - a299d250ab97 Extracting 46MB / 46MB
+2025-10-25T18:42:42.049Z INFO  - a299d250ab97 Pull complete
+2025-10-25T18:42:43.905Z INFO  - 2e5f19d50c40 Extracting 3MB / 11MB
+2025-10-25T18:42:43.905Z INFO  - 2e5f19d50c40 Extracting 7MB / 11MB
+2025-10-25T18:42:44.358Z INFO  - 2e5f19d50c40 Extracting 9MB / 11MB
+2025-10-25T18:42:44.724Z INFO  - 2e5f19d50c40 Extracting 9MB / 11MB
+2025-10-25T18:42:44.942Z INFO  - 2e5f19d50c40 Extracting 9MB / 11MB
+2025-10-25T18:42:45.172Z INFO  - 2e5f19d50c40 Extracting 9MB / 11MB
+2025-10-25T18:42:45.713Z INFO  - 2e5f19d50c40 Extracting 10MB / 11MB
+2025-10-25T18:42:45.819Z INFO  - 2e5f19d50c40 Extracting 10MB / 11MB
+2025-10-25T18:42:46.227Z INFO  - 2e5f19d50c40 Extracting 10MB / 11MB
+2025-10-25T18:42:46.597Z INFO  - 2e5f19d50c40 Extracting 11MB / 11MB
+2025-10-25T18:42:47.092Z INFO  - 2e5f19d50c40 Extracting 11MB / 11MB
+2025-10-25T18:42:47.355Z INFO  - 2e5f19d50c40 Pull complete
+2025-10-25T18:42:47.603Z INFO  - 94d31f795579 Extracting 1MB / 16MB
+2025-10-25T18:42:47.817Z INFO  - 94d31f795579 Extracting 3MB / 16MB
+2025-10-25T18:42:48.184Z INFO  - 94d31f795579 Extracting 5MB / 16MB
+2025-10-25T18:42:49.689Z INFO  - 94d31f795579 Extracting 8MB / 16MB
+2025-10-25T18:42:50.460Z INFO  - 94d31f795579 Extracting 9MB / 16MB
+2025-10-25T18:42:50.817Z INFO  - 94d31f795579 Extracting 9MB / 16MB
+2025-10-25T18:42:51.455Z INFO  - 94d31f795579 Extracting 10MB / 16MB
+2025-10-25T18:42:51.853Z INFO  - 94d31f795579 Extracting 11MB / 16MB
+2025-10-25T18:42:52.579Z INFO  - 94d31f795579 Extracting 11MB / 16MB
+2025-10-25T18:42:53.143Z INFO  - 94d31f795579 Extracting 11MB / 16MB
+2025-10-25T18:42:54.130Z INFO  - 94d31f795579 Extracting 13MB / 16MB
+2025-10-25T18:42:54.285Z INFO  - 94d31f795579 Extracting 13MB / 16MB
+2025-10-25T18:42:55.483Z INFO  - 94d31f795579 Extracting 14MB / 16MB
+2025-10-25T18:42:55.621Z INFO  - 94d31f795579 Extracting 14MB / 16MB
+2025-10-25T18:42:56.566Z INFO  - 94d31f795579 Extracting 15MB / 16MB
+2025-10-25T18:42:57.803Z INFO  - 94d31f795579 Extracting 16MB / 16MB
+2025-10-25T18:42:59.008Z INFO  - 94d31f795579 Pull complete
+2025-10-25T18:42:59.008Z INFO  - 18c70f6ed5b8 Extracting 125B / 125B
+2025-10-25T18:42:59.008Z INFO  - 18c70f6ed5b8 Extracting 125B / 125B
+2025-10-25T18:42:59.008Z INFO  - 18c70f6ed5b8 Pull complete
+2025-10-25T18:42:59.008Z INFO  - fb49480510c1 Extracting 1MB / 6MB
+2025-10-25T18:42:59.165Z INFO  - fb49480510c1 Extracting 6MB / 6MB
+2025-10-25T18:42:59.215Z INFO  - fb49480510c1 Pull complete
+2025-10-25T18:42:59.219Z INFO  - 5cb83091061e Extracting 947B / 947B
+2025-10-25T18:42:59.249Z INFO  - 5cb83091061e Extracting 947B / 947B
+2025-10-25T18:42:59.359Z INFO  - 5cb83091061e Pull complete
+2025-10-25T18:42:59.368Z INFO  - 618cb520b534 Extracting 1KB / 1KB
+2025-10-25T18:42:59.455Z INFO  - 618cb520b534 Extracting 1KB / 1KB
+2025-10-25T18:42:59.549Z INFO  - 618cb520b534 Pull complete
+2025-10-25T18:42:59.554Z INFO  - b387b0839a3c Extracting 138B / 138B
+2025-10-25T18:42:59.567Z INFO  - b387b0839a3c Extracting 138B / 138B
+2025-10-25T18:42:59.599Z INFO  - b387b0839a3c Pull complete
+2025-10-25T18:42:59.790Z INFO  - befb3b667a4a Extracting 544KB / 67MB
+2025-10-25T18:42:59.934Z INFO  - befb3b667a4a Extracting 1MB / 67MB
+2025-10-25T18:43:00.278Z INFO  - befb3b667a4a Extracting 3MB / 67MB
+2025-10-25T18:43:01.072Z INFO  - befb3b667a4a Extracting 6MB / 67MB
+2025-10-25T18:43:01.250Z INFO  - befb3b667a4a Extracting 8MB / 67MB
+2025-10-25T18:43:02.362Z INFO  - befb3b667a4a Extracting 11MB / 67MB
+2025-10-25T18:43:02.401Z INFO  - befb3b667a4a Extracting 12MB / 67MB
+2025-10-25T18:43:03.312Z INFO  - befb3b667a4a Extracting 14MB / 67MB
+2025-10-25T18:43:03.319Z INFO  - befb3b667a4a Extracting 15MB / 67MB
+2025-10-25T18:43:03.857Z INFO  - befb3b667a4a Extracting 17MB / 67MB
+2025-10-25T18:43:04.295Z INFO  - befb3b667a4a Extracting 20MB / 67MB
+2025-10-25T18:43:04.814Z INFO  - befb3b667a4a Extracting 24MB / 67MB
+2025-10-25T18:43:05.231Z INFO  - befb3b667a4a Extracting 27MB / 67MB
+2025-10-25T18:43:05.783Z INFO  - befb3b667a4a Extracting 28MB / 67MB
+2025-10-25T18:43:06.098Z INFO  - befb3b667a4a Extracting 31MB / 67MB
+2025-10-25T18:43:06.181Z INFO  - befb3b667a4a Extracting 32MB / 67MB
+2025-10-25T18:43:06.741Z INFO  - befb3b667a4a Extracting 34MB / 67MB
+2025-10-25T18:43:07.092Z INFO  - befb3b667a4a Extracting 36MB / 67MB
+2025-10-25T18:43:07.618Z INFO  - befb3b667a4a Extracting 38MB / 67MB
+2025-10-25T18:43:07.925Z INFO  - befb3b667a4a Extracting 39MB / 67MB
+2025-10-25T18:43:08.061Z INFO  - befb3b667a4a Extracting 40MB / 67MB
+2025-10-25T18:43:08.724Z INFO  - befb3b667a4a Extracting 41MB / 67MB
+2025-10-25T18:43:09.064Z INFO  - befb3b667a4a Extracting 43MB / 67MB
+2025-10-25T18:43:09.800Z INFO  - befb3b667a4a Extracting 44MB / 67MB
+2025-10-25T18:43:10.637Z INFO  - befb3b667a4a Extracting 46MB / 67MB
+2025-10-25T18:43:10.658Z INFO  - befb3b667a4a Extracting 48MB / 67MB
+2025-10-25T18:43:10.799Z INFO  - befb3b667a4a Extracting 49MB / 67MB
+2025-10-25T18:43:11.672Z INFO  - befb3b667a4a Extracting 51MB / 67MB
+2025-10-25T18:43:12.097Z INFO  - befb3b667a4a Extracting 54MB / 67MB
+2025-10-25T18:43:12.644Z INFO  - befb3b667a4a Extracting 60MB / 67MB
+2025-10-25T18:43:12.796Z INFO  - befb3b667a4a Extracting 62MB / 67MB
+2025-10-25T18:43:12.923Z INFO  - befb3b667a4a Extracting 63MB / 67MB
+2025-10-25T18:43:13.676Z INFO  - befb3b667a4a Extracting 67MB / 67MB
+2025-10-25T18:43:13.882Z INFO  - befb3b667a4a Pull complete
+2025-10-25T18:43:13.886Z INFO  - c98fb0ee9c52 Extracting 1KB / 1KB
+2025-10-25T18:43:13.919Z INFO  - c98fb0ee9c52 Extracting 1KB / 1KB
+2025-10-25T18:43:13.997Z INFO  - c98fb0ee9c52 Pull complete
+2025-10-25T18:43:14.006Z INFO  - fed34a6cff95 Extracting 1KB / 1KB
+2025-10-25T18:43:14.036Z INFO  - fed34a6cff95 Extracting 1KB / 1KB
+2025-10-25T18:43:14.122Z INFO  - fed34a6cff95 Pull complete
+2025-10-25T18:43:14.130Z INFO  - 52ac776e496e Extracting 3KB / 3KB
+2025-10-25T18:43:14.149Z INFO  - 52ac776e496e Extracting 3KB / 3KB
+2025-10-25T18:43:14.167Z INFO  - 52ac776e496e Pull complete
+2025-10-25T18:43:14.171Z INFO  - ed277ae6cc1b Extracting 152B / 152B
+2025-10-25T18:43:14.181Z INFO  - ed277ae6cc1b Extracting 152B / 152B
+2025-10-25T18:43:14.220Z INFO  - ed277ae6cc1b Pull complete
+2025-10-25T18:43:14.224Z INFO  - f00d066ab48f Extracting 13KB / 13KB
+2025-10-25T18:43:14.241Z INFO  - f00d066ab48f Extracting 13KB / 13KB
+2025-10-25T18:43:14.260Z INFO  - f00d066ab48f Pull complete
+2025-10-25T18:43:14.272Z INFO  - 84db54845b1f Extracting 1KB / 1KB
+2025-10-25T18:43:14.291Z INFO  - 84db54845b1f Extracting 1KB / 1KB
+2025-10-25T18:43:14.311Z INFO  - 84db54845b1f Pull complete
+2025-10-25T18:43:14.319Z INFO  - 209af07e1fed Extracting 270B / 270B
+2025-10-25T18:43:14.331Z INFO  - 209af07e1fed Extracting 270B / 270B
+2025-10-25T18:43:14.365Z INFO  - 209af07e1fed Pull complete
+2025-10-25T18:43:14.368Z INFO  - f359ae97a578 Extracting 269B / 269B
+2025-10-25T18:43:14.392Z INFO  - f359ae97a578 Extracting 269B / 269B
+2025-10-25T18:43:14.463Z INFO  - f359ae97a578 Pull complete
+2025-10-25T18:43:14.510Z INFO  - 12ae792aadc1 Extracting 124B / 124B
+2025-10-25T18:43:14.526Z INFO  - 12ae792aadc1 Extracting 124B / 124B
+2025-10-25T18:43:14.587Z INFO  - 12ae792aadc1 Pull complete
+2025-10-25T18:43:14.596Z INFO  - 101f3a4877dc Extracting 418B / 418B
+2025-10-25T18:43:14.674Z INFO  - 101f3a4877dc Extracting 418B / 418B
+2025-10-25T18:43:14.808Z INFO  - 101f3a4877dc Pull complete
+2025-10-25T18:43:14.817Z INFO  - 49304a106933 Extracting 1KB / 1KB
+2025-10-25T18:43:14.877Z INFO  - 49304a106933 Extracting 1KB / 1KB
+2025-10-25T18:43:14.942Z INFO  - 49304a106933 Pull complete
+2025-10-25T18:43:15.111Z INFO  - c59bd29a4737 Extracting 160KB / 1MB
+2025-10-25T18:43:15.350Z INFO  - c59bd29a4737 Extracting 288KB / 1MB
+2025-10-25T18:43:15.681Z INFO  - c59bd29a4737 Extracting 608KB / 1MB
+2025-10-25T18:43:16.044Z INFO  - c59bd29a4737 Extracting 992KB / 1MB
+2025-10-25T18:43:16.144Z INFO  - c59bd29a4737 Extracting 1MB / 1MB
+2025-10-25T18:43:16.276Z INFO  - c59bd29a4737 Extracting 1MB / 1MB
+2025-10-25T18:43:16.820Z INFO  - c59bd29a4737 Extracting 1MB / 1MB
+2025-10-25T18:43:16.864Z INFO  - c59bd29a4737 Extracting 1MB / 1MB
+2025-10-25T18:43:17.010Z INFO  - c59bd29a4737 Pull complete
+2025-10-25T18:43:17.032Z INFO  - 6f0a6c0887e0 Extracting 132B / 132B
+2025-10-25T18:43:17.095Z INFO  - 6f0a6c0887e0 Extracting 132B / 132B
+2025-10-25T18:43:17.214Z INFO  - 6f0a6c0887e0 Pull complete
+2025-10-25T18:43:17.308Z INFO  -  Digest: sha256:e0997c95f1dee01363c7fad47ae2355d088a5ce7ad3c46dc9f1f6cafbadc54a0
+2025-10-25T18:43:17.317Z INFO  -  Status: Downloaded newer image for 10.1.0.5:13209/appsvc/node:20-lts_20251016.4.tuxprod
+2025-10-25T18:43:17.411Z INFO  - Pull Image successful, Time taken: 96 Seconds
+2025-10-25T18:43:17.947Z INFO  - Starting container for site
+2025-10-25T18:43:17.947Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_df5ab6ff -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod 
+2025-10-25T18:43:22.097Z INFO  - Initiating warmup request to container ecomm-app-4379_0_df5ab6ff_msiProxy for site ecomm-app-4379
+2025-10-25T18:43:22.272Z INFO  - Container ecomm-app-4379_0_df5ab6ff_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T18:43:22.272Z INFO  - Initiating warmup request to container ecomm-app-4379_0_df5ab6ff for site ecomm-app-4379
+2025-10-25T18:43:39.002Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_df5ab6ff. Elapsed time = 16.9160155 sec
+2025-10-25T18:43:57.741Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_df5ab6ff. Elapsed time = 35.6546148 sec
+2025-10-25T18:44:07.190Z ERROR - Container ecomm-app-4379_0_df5ab6ff for site ecomm-app-4379 has exited, failing site start
+2025-10-25T18:44:07.249Z ERROR - Container ecomm-app-4379_0_df5ab6ff didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T18:44:07.600Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T18:44:33.757Z INFO  - Starting container for site
+2025-10-25T18:44:33.758Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_d99d3b67 -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod 
+2025-10-25T18:44:37.563Z INFO  - Initiating warmup request to container ecomm-app-4379_0_d99d3b67_msiProxy for site ecomm-app-4379
+2025-10-25T18:44:37.650Z INFO  - Container ecomm-app-4379_0_d99d3b67_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T18:44:37.651Z INFO  - Initiating warmup request to container ecomm-app-4379_0_d99d3b67 for site ecomm-app-4379
+2025-10-25T18:45:17.643Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_d99d3b67. Elapsed time = 40.0410519 sec
+2025-10-25T18:45:32.242Z ERROR - Container ecomm-app-4379_0_d99d3b67 for site ecomm-app-4379 has exited, failing site start
+2025-10-25T18:45:32.440Z ERROR - Container ecomm-app-4379_0_d99d3b67 didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T18:45:32.682Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T18:47:59.9129885Z Container start method called.
+2025-10-25T18:47:59.9230775Z Establishing network.
+2025-10-25T18:47:59.9232728Z Pulling image: appsvc/node:20-lts_20251016.4.tuxprod.
+2025-10-25T18:48:00.5245170Z Container is starting.
+2025-10-25T18:48:00.5502121Z Establishing user namespace if not established already.
+2025-10-25T18:48:00.5514516Z Establishing network if not established already.
+2025-10-25T18:48:00.5524330Z Mounting volumes.
+2025-10-25T18:48:00.5609696Z Nested mountpoint 
+2025-10-25T18:48:00.6314168Z Nested mountpoint volatile/logs
+2025-10-25T18:48:00.8338709Z Nested mountpoint 
+2025-10-25T18:48:00.8696321Z Nested mountpoint 
+2025-10-25T18:48:00.9672102Z Nested mountpoint 
+2025-10-25T18:48:01.7716291Z Creating container.
+2025-10-25T18:48:01.7810239Z Creating pipes for streaming container io.
+2025-10-25T18:48:01.8650412Z Creating stdout named pipe at /podr/container/pipe/bbde4834c135_ecomm-app-4379/stdout_8d8464824aac4b958eaccb4a475c3d57.
+2025-10-25T18:48:01.8656615Z Successfully created stdout named pipe at: /podr/container/pipe/bbde4834c135_ecomm-app-4379/stdout_8d8464824aac4b958eaccb4a475c3d57.
+2025-10-25T18:48:01.8659113Z Opening named pipe /podr/container/pipe/bbde4834c135_ecomm-app-4379/stdout_8d8464824aac4b958eaccb4a475c3d57 for reading in non-blocking mode.
+2025-10-25T18:48:01.8660531Z Successfully opened named pipe: /podr/container/pipe/bbde4834c135_ecomm-app-4379/stdout_8d8464824aac4b958eaccb4a475c3d57.
+2025-10-25T18:48:01.8662125Z Successfully removed non-blocking flag from /podr/container/pipe/bbde4834c135_ecomm-app-4379/stdout_8d8464824aac4b958eaccb4a475c3d57.
+2025-10-25T18:48:01.9037684Z Creating stderr named pipe at /podr/container/pipe/bbde4834c135_ecomm-app-4379/stderr_6357e40a2f214620ae8c29f83287b205.
+2025-10-25T18:48:01.9246278Z Successfully created stderr named pipe at: /podr/container/pipe/bbde4834c135_ecomm-app-4379/stderr_6357e40a2f214620ae8c29f83287b205.
+2025-10-25T18:48:01.9470195Z Opening named pipe /podr/container/pipe/bbde4834c135_ecomm-app-4379/stderr_6357e40a2f214620ae8c29f83287b205 for reading in non-blocking mode.
+2025-10-25T18:48:01.9789401Z Successfully opened named pipe: /podr/container/pipe/bbde4834c135_ecomm-app-4379/stderr_6357e40a2f214620ae8c29f83287b205.
+2025-10-25T18:48:01.9804901Z Successfully removed non-blocking flag from /podr/container/pipe/bbde4834c135_ecomm-app-4379/stderr_6357e40a2f214620ae8c29f83287b205.
+2025-10-25T18:48:01.9826604Z Creating container with image: appsvc/node:20-lts_20251016.4.tuxprod from registry: 10.1.0.5:13209 and fully qualified image name: 10.1.0.5:13209/appsvc/node:20-lts_20251016.4.tuxprod
+2025-10-25T18:48:03.5048865Z Starting container: bbde4834c135_ecomm-app-4379.
+2025-10-25T18:48:03.7377682Z Starting watchers and probes.
+2025-10-25T18:48:03.7397398Z Starting metrics collection.
+2025-10-25T18:48:03.7400438Z Container is running.
+2025-10-25T18:48:04.0002727Z Container start method finished after 4076 ms.
+2025-10-25T18:48:48.8142808Z Container has finished running with exit code: 1.
+2025-10-25T18:48:48.8164629Z Container is terminating. Grace period: 5 seconds.
+2025-10-25T18:48:48.8414348Z Stop and delete container. Retry count = 0
+2025-10-25T18:48:48.8427884Z Stopping container: bbde4834c135_ecomm-app-4379.
+2025-10-25T18:48:49.0577051Z Deleting container: bbde4834c135_ecomm-app-4379. Retry count = 0
+2025-10-25T18:48:49.8414032Z Container spec TerminationMessagePolicy  path 
+2025-10-25T18:48:49.8601316Z Container is terminated. Total time elapsed: 1033 ms.
+2025-10-25T18:48:49.8618900Z Site container: ecomm-app-4379 terminated during site startup.
+2025-10-25T18:48:49.9372248Z Site startup probe failed after 45.8021934 seconds.
+2025-10-25T18:48:50.4448475Z Failed to start site. Revert by stopping site.
+2025-10-25T18:48:50.4980548Z Site: ecomm-app-4379 stopped.
+2025-10-25T18:49:30.925Z INFO  - Starting container for site
+2025-10-25T18:49:30.963Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_cec34a33 -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T18:49:41.060Z INFO  - Initiating warmup request to container ecomm-app-4379_0_cec34a33_msiProxy for site ecomm-app-4379
+2025-10-25T18:49:41.327Z INFO  - Container ecomm-app-4379_0_cec34a33_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T18:49:41.344Z INFO  - Initiating warmup request to container ecomm-app-4379_0_cec34a33 for site ecomm-app-4379
+2025-10-25T18:50:02.602Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_cec34a33. Elapsed time = 21.5417614 sec
+2025-10-25T18:50:28.423Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_cec34a33. Elapsed time = 47.3628348 sec
+2025-10-25T18:50:33.263Z ERROR - Container ecomm-app-4379_0_cec34a33 for site ecomm-app-4379 is not running, failing site start
+2025-10-25T18:50:33.640Z ERROR - Container ecomm-app-4379_0_cec34a33 didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T18:50:33.774Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T18:54:48.376Z INFO  - Starting container for site
+2025-10-25T18:54:48.379Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_e2013d76 -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T18:54:51.364Z INFO  - Initiating warmup request to container ecomm-app-4379_0_e2013d76_msiProxy for site ecomm-app-4379
+2025-10-25T18:54:51.481Z INFO  - Container ecomm-app-4379_0_e2013d76_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T18:54:51.489Z INFO  - Initiating warmup request to container ecomm-app-4379_0_e2013d76 for site ecomm-app-4379
+2025-10-25T18:55:09.106Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_e2013d76. Elapsed time = 17.7420857 sec
+2025-10-25T18:55:24.248Z ERROR - Container ecomm-app-4379_0_e2013d76 for site ecomm-app-4379 has exited, failing site start
+2025-10-25T18:55:24.299Z ERROR - Container ecomm-app-4379_0_e2013d76 didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T18:55:24.458Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T19:03:25.388Z INFO  - Starting container for site
+2025-10-25T19:03:25.395Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_7f0deec7 -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T19:03:28.835Z INFO  - Initiating warmup request to container ecomm-app-4379_0_7f0deec7_msiProxy for site ecomm-app-4379
+2025-10-25T19:03:28.942Z INFO  - Container ecomm-app-4379_0_7f0deec7_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T19:03:28.943Z INFO  - Initiating warmup request to container ecomm-app-4379_0_7f0deec7 for site ecomm-app-4379
+2025-10-25T19:03:45.783Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7f0deec7. Elapsed time = 16.9481551 sec
+2025-10-25T19:04:05.110Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7f0deec7. Elapsed time = 36.2746564 sec
+2025-10-25T19:04:13.448Z ERROR - Container ecomm-app-4379_0_7f0deec7 for site ecomm-app-4379 has exited, failing site start
+2025-10-25T19:04:13.475Z ERROR - Container ecomm-app-4379_0_7f0deec7 didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T19:04:13.566Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T19:06:53.676Z INFO  - Starting container for site
+2025-10-25T19:06:53.685Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_b827085f -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T19:06:57.633Z INFO  - Initiating warmup request to container ecomm-app-4379_0_b827085f_msiProxy for site ecomm-app-4379
+2025-10-25T19:06:57.730Z INFO  - Container ecomm-app-4379_0_b827085f_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T19:06:57.736Z INFO  - Initiating warmup request to container ecomm-app-4379_0_b827085f for site ecomm-app-4379
+2025-10-25T19:07:18.488Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_b827085f. Elapsed time = 20.8548454 sec
+2025-10-25T19:07:38.584Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_b827085f. Elapsed time = 40.950713 sec
+2025-10-25T19:07:58.328Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_b827085f. Elapsed time = 60.6954758 sec
+2025-10-25T19:08:00.162Z ERROR - Container ecomm-app-4379_0_b827085f for site ecomm-app-4379 has exited, failing site start
+2025-10-25T19:08:00.204Z ERROR - Container ecomm-app-4379_0_b827085f didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T19:08:00.247Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T19:11:36.193Z INFO  - Starting container for site
+2025-10-25T19:11:36.194Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_9e879afd -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T19:11:38.806Z INFO  - Initiating warmup request to container ecomm-app-4379_0_9e879afd_msiProxy for site ecomm-app-4379
+2025-10-25T19:11:38.866Z INFO  - Container ecomm-app-4379_0_9e879afd_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T19:11:38.873Z INFO  - Initiating warmup request to container ecomm-app-4379_0_9e879afd for site ecomm-app-4379
+2025-10-25T19:11:55.586Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_9e879afd. Elapsed time = 16.7804026 sec
+2025-10-25T19:12:15.677Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_9e879afd. Elapsed time = 36.8704906 sec
+2025-10-25T19:12:33.677Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_9e879afd. Elapsed time = 54.8709573 sec
+2025-10-25T19:12:35.062Z ERROR - Container ecomm-app-4379_0_9e879afd for site ecomm-app-4379 has exited, failing site start
+2025-10-25T19:12:35.102Z ERROR - Container ecomm-app-4379_0_9e879afd didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T19:12:35.215Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T19:15:35.865Z INFO  - Starting container for site
+2025-10-25T19:15:35.873Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_7c7dbf10 -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T19:15:39.524Z INFO  - Initiating warmup request to container ecomm-app-4379_0_7c7dbf10_msiProxy for site ecomm-app-4379
+2025-10-25T19:15:39.636Z INFO  - Container ecomm-app-4379_0_7c7dbf10_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T19:15:39.637Z INFO  - Initiating warmup request to container ecomm-app-4379_0_7c7dbf10 for site ecomm-app-4379
+2025-10-25T19:15:59.290Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c7dbf10. Elapsed time = 19.7668208 sec
+2025-10-25T19:16:20.895Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c7dbf10. Elapsed time = 41.371018 sec
+2025-10-25T19:16:23.040Z ERROR - Container ecomm-app-4379_0_7c7dbf10 for site ecomm-app-4379 has exited, failing site start
+2025-10-25T19:16:23.063Z ERROR - Container ecomm-app-4379_0_7c7dbf10 didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T19:16:23.127Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T19:26:51.454Z INFO  - Starting container for site
+2025-10-25T19:26:51.471Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_58521d33 -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T19:26:55.655Z INFO  - Initiating warmup request to container ecomm-app-4379_0_58521d33_msiProxy for site ecomm-app-4379
+2025-10-25T19:26:55.881Z INFO  - Container ecomm-app-4379_0_58521d33_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T19:26:55.889Z INFO  - Initiating warmup request to container ecomm-app-4379_0_58521d33 for site ecomm-app-4379
+2025-10-25T19:27:13.540Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_58521d33. Elapsed time = 17.8843912 sec
+2025-10-25T19:27:37.058Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_58521d33. Elapsed time = 41.4028472 sec
+2025-10-25T19:27:57.520Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_58521d33. Elapsed time = 61.865026 sec
+2025-10-25T19:28:16.838Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_58521d33. Elapsed time = 81.1829446 sec
+2025-10-25T19:28:24.752Z ERROR - Container ecomm-app-4379_0_58521d33 for site ecomm-app-4379 has exited, failing site start
+2025-10-25T19:28:24.858Z ERROR - Container ecomm-app-4379_0_58521d33 didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T19:28:25.592Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T19:31:54.957Z INFO  - Starting container for site
+2025-10-25T19:31:54.966Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_7c653822 -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T19:31:58.981Z INFO  - Initiating warmup request to container ecomm-app-4379_0_7c653822_msiProxy for site ecomm-app-4379
+2025-10-25T19:31:59.089Z INFO  - Container ecomm-app-4379_0_7c653822_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T19:31:59.097Z INFO  - Initiating warmup request to container ecomm-app-4379_0_7c653822 for site ecomm-app-4379
+2025-10-25T19:32:18.000Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 19.0182035 sec
+2025-10-25T19:32:41.516Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 42.5345814 sec
+2025-10-25T19:32:59.743Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 60.7615511 sec
+2025-10-25T19:33:18.468Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 79.4866221 sec
+2025-10-25T19:33:35.506Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 96.5244796 sec
+2025-10-25T19:33:51.485Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 112.5040809 sec
+2025-10-25T19:34:07.272Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 128.2902917 sec
+2025-10-25T19:34:23.406Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 144.4242395 sec
+2025-10-25T19:34:39.414Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 160.4328699 sec
+2025-10-25T19:34:54.932Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 175.9501603 sec
+2025-10-25T19:35:10.730Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 191.7481285 sec
+2025-10-25T19:35:26.311Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 207.3292666 sec
+2025-10-25T19:35:41.788Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_7c653822. Elapsed time = 222.8061466 sec
+2025-10-25T19:35:49.429Z ERROR - Container ecomm-app-4379_0_7c653822 for site ecomm-app-4379 did not start within expected time limit. Elapsed time = 230.447868 sec
+2025-10-25T19:35:49.611Z ERROR - Container ecomm-app-4379_0_7c653822 didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T19:35:49.989Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T19:47:40.950Z INFO  - Starting container for site
+2025-10-25T19:47:40.952Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_23457527 -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T19:47:44.296Z INFO  - Initiating warmup request to container ecomm-app-4379_0_23457527_msiProxy for site ecomm-app-4379
+2025-10-25T19:47:44.491Z INFO  - Container ecomm-app-4379_0_23457527_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T19:47:44.493Z INFO  - Initiating warmup request to container ecomm-app-4379_0_23457527 for site ecomm-app-4379
+2025-10-25T19:48:01.077Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_23457527. Elapsed time = 16.7801867 sec
+2025-10-25T19:48:20.522Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_23457527. Elapsed time = 36.2252404 sec
+2025-10-25T19:48:30.661Z ERROR - Container ecomm-app-4379_0_23457527 for site ecomm-app-4379 has exited, failing site start
+2025-10-25T19:48:30.751Z ERROR - Container ecomm-app-4379_0_23457527 didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T19:48:31.412Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T20:48:05.868Z INFO  - Starting container for site
+2025-10-25T20:48:05.875Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_18e81b5f -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T20:48:10.041Z INFO  - Initiating warmup request to container ecomm-app-4379_0_18e81b5f_msiProxy for site ecomm-app-4379
+2025-10-25T20:48:10.127Z INFO  - Container ecomm-app-4379_0_18e81b5f_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T20:48:10.130Z INFO  - Initiating warmup request to container ecomm-app-4379_0_18e81b5f for site ecomm-app-4379
+2025-10-25T20:48:27.176Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_18e81b5f. Elapsed time = 17.1355792 sec
+2025-10-25T20:48:45.732Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_18e81b5f. Elapsed time = 35.6907139 sec
+2025-10-25T20:48:53.187Z ERROR - Container ecomm-app-4379_0_18e81b5f for site ecomm-app-4379 has exited, failing site start
+2025-10-25T20:48:53.220Z ERROR - Container ecomm-app-4379_0_18e81b5f didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T20:48:53.361Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T20:54:01.080Z INFO  - Starting container for site
+2025-10-25T20:54:01.083Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_c6559083 -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T20:54:07.862Z INFO  - Initiating warmup request to container ecomm-app-4379_0_c6559083_msiProxy for site ecomm-app-4379
+2025-10-25T20:54:08.026Z INFO  - Container ecomm-app-4379_0_c6559083_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T20:54:08.027Z INFO  - Initiating warmup request to container ecomm-app-4379_0_c6559083 for site ecomm-app-4379
+2025-10-25T20:54:25.377Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_c6559083. Elapsed time = 17.5149241 sec
+2025-10-25T20:54:43.846Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_c6559083. Elapsed time = 35.9837228 sec
+2025-10-25T20:54:43.992Z ERROR - Container ecomm-app-4379_0_c6559083 for site ecomm-app-4379 has exited, failing site start
+2025-10-25T20:54:44.009Z ERROR - Container ecomm-app-4379_0_c6559083 didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T20:54:44.189Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T21:02:39.686Z INFO  - Starting container for site
+2025-10-25T21:02:39.689Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_096755d2 -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T21:02:42.941Z INFO  - Initiating warmup request to container ecomm-app-4379_0_096755d2_msiProxy for site ecomm-app-4379
+2025-10-25T21:02:43.116Z INFO  - Container ecomm-app-4379_0_096755d2_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T21:02:43.124Z INFO  - Initiating warmup request to container ecomm-app-4379_0_096755d2 for site ecomm-app-4379
+2025-10-25T21:02:59.871Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 16.9292517 sec
+2025-10-25T21:03:19.815Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 36.8740543 sec
+2025-10-25T21:03:40.080Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 57.1391222 sec
+2025-10-25T21:04:01.233Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 78.291913 sec
+2025-10-25T21:04:22.583Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 99.6418513 sec
+2025-10-25T21:04:41.683Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 118.7412407 sec
+2025-10-25T21:04:58.470Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 135.5282808 sec
+2025-10-25T21:05:15.605Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 152.6634768 sec
+2025-10-25T21:05:34.465Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 171.5237375 sec
+2025-10-25T21:05:52.013Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 189.071526 sec
+2025-10-25T21:06:08.696Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 205.754235 sec
+2025-10-25T21:06:24.705Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_096755d2. Elapsed time = 221.7634145 sec
+2025-10-25T21:06:33.304Z ERROR - Container ecomm-app-4379_0_096755d2 for site ecomm-app-4379 did not start within expected time limit. Elapsed time = 230.362924 sec
+2025-10-25T21:06:33.493Z ERROR - Container ecomm-app-4379_0_096755d2 didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T21:06:34.026Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.
+2025-10-25T21:31:09.044Z INFO  - Starting container for site
+2025-10-25T21:31:09.047Z INFO  - docker run -d --expose=8080 --name ecomm-app-4379_0_953e0fae -e WEBSITE_USE_DIAGNOSTIC_SERVER=true -e PORT=8080 -e WEBSITE_SITE_NAME=ecomm-app-4379 -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=ecomm-app-4379.azurewebsites.net -e WEBSITE_INSTANCE_ID=504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c -e HTTP_LOGGING_ENABLED=1 appsvc/node:20-lts_20251016.4.tuxprod REDACTED
+2025-10-25T21:31:12.891Z INFO  - Initiating warmup request to container ecomm-app-4379_0_953e0fae_msiProxy for site ecomm-app-4379
+2025-10-25T21:31:13.007Z INFO  - Container ecomm-app-4379_0_953e0fae_msiProxy for site ecomm-app-4379 initialized successfully and is ready to serve requests.
+2025-10-25T21:31:13.014Z INFO  - Initiating warmup request to container ecomm-app-4379_0_953e0fae for site ecomm-app-4379
+2025-10-25T21:31:30.746Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_953e0fae. Elapsed time = 17.8559883 sec
+2025-10-25T21:31:49.128Z INFO  - Waiting for response to warmup request for container ecomm-app-4379_0_953e0fae. Elapsed time = 36.2380793 sec
+2025-10-25T21:31:53.892Z ERROR - Container ecomm-app-4379_0_953e0fae for site ecomm-app-4379 has exited, failing site start
+2025-10-25T21:31:53.964Z ERROR - Container ecomm-app-4379_0_953e0fae didn't respond to HTTP pings on port: 8080. Failing site start. See container logs for debugging.
+2025-10-25T21:31:54.224Z INFO  - Stopping site ecomm-app-4379 because it failed during startup.

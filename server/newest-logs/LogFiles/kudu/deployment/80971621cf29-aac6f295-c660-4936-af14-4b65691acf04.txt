@@ -1,0 +1,191 @@
+2025-10-25T18:27:00  Fetching changes.
+2025-10-25T18:27:00    Starting  LocalZipHandler
+2025-10-25T18:27:00    Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/1fd5fb74-7e79-4f27-bfe3-e5e7830d7c50.zip (0.05 MB) to /tmp/zipdeploy/extracted
+2025-10-25T18:27:04  Updating submodules.
+2025-10-25T18:27:04  Preparing deployment for commit id '122344ab-e'.
+2025-10-25T18:27:04  PreDeployment: context.CleanOutputPath False
+2025-10-25T18:27:05  PreDeployment: context.OutputPath /home/site/wwwroot
+2025-10-25T18:27:05  Repository path is /tmp/zipdeploy/extracted
+2025-10-25T18:27:05  Running oryx build...
+2025-10-25T18:27:05    Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 20 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8de13f41917871e -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log
+2025-10-25T18:27:08    Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+2025-10-25T18:27:08    You can report issues at https://github.com/Microsoft/Oryx/issues
+2025-10-25T18:27:08    
+2025-10-25T18:27:08    Oryx Version: 0.2.20251022.1+bef98bc7139feefaa74be16de9d835e2c85385d4, Commit: bef98bc7139feefaa74be16de9d835e2c85385d4, ReleaseTagName: 20251022.1
+2025-10-25T18:27:08    
+2025-10-25T18:27:08    Build Operation ID: d5dad5199038c01c
+2025-10-25T18:27:08    Repository Commit : 122344ab-eb53-4d64-8481-5484e9baf4d2
+2025-10-25T18:27:09    OS Type           : bookworm
+2025-10-25T18:27:09    Image Type        : githubactions
+2025-10-25T18:27:09    
+2025-10-25T18:27:09    Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+2025-10-25T18:27:09    Backup SDK Storage URL: 
+2025-10-25T18:27:09    Detecting platforms...
+2025-10-25T18:27:09    External SDK provider is enabled.
+2025-10-25T18:27:09    Requesting metadata for platform nodejs from external SDK provider
+2025-10-25T18:27:16    Requesting metadata for platform nodejs from external SDK provider
+2025-10-25T18:27:18    Detected following platforms:
+2025-10-25T18:27:18      nodejs: 20.19.5
+2025-10-25T18:27:19    Detected the following frameworks: Express
+2025-10-25T18:27:21    
+2025-10-25T18:27:21    Using intermediate directory '/tmp/8de13f41917871e'.
+2025-10-25T18:27:21    
+2025-10-25T18:27:21    Copying files to the intermediate directory...
+2025-10-25T18:27:21    Done in 0 sec(s).
+2025-10-25T18:27:21    
+2025-10-25T18:27:22    Source directory     : /tmp/8de13f41917871e
+2025-10-25T18:27:22    Destination directory: /home/site/wwwroot
+2025-10-25T18:27:22    
+2025-10-25T18:27:22    Removing existing manifest file
+2025-10-25T18:27:23    Creating directory for command manifest file if it does not exist
+2025-10-25T18:27:23    Creating a manifest file...
+2025-10-25T18:27:23    Node Build Command Manifest file created.
+2025-10-25T18:27:23    
+2025-10-25T18:27:23    Using Node version:
+2025-10-25T18:27:24    v20.19.5
+2025-10-25T18:27:24    
+2025-10-25T18:27:24    Using Npm version:
+2025-10-25T18:27:27    10.8.2
+2025-10-25T18:27:27    
+2025-10-25T18:27:27    Running 'npm install'...
+2025-10-25T18:27:27    
+2025-10-25T18:28:36    npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2025-10-25T18:28:37    npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+2025-10-25T18:28:37    npm warn deprecated
+2025-10-25T18:28:38    npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+2025-10-25T18:28:39    npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2025-10-25T18:28:39    npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2025-10-25T18:28:40    npm warn deprecated paypal-rest-sdk@1.8.1: Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead: https://www.npmjs.com/package/@paypal/paypal-server-sdk. Contact Support at https://www.npmjs.com/support for more info.
+2025-10-25T18:28:41    npm warn deprecated azure-sb@0.10.6: Please note, a newer package @azure/service-bus for Azure Service Bus is available as of May 2019 and [@azure/notification-hubs] for Azure Notification Hubs as of March 2023. We strongly encourage you to upgrade to the new package for your Service Bus and Notification Hubs needs. Migration guide can be found at:
+2025-10-25T18:28:41    npm warn deprecated  
+2025-10-25T18:28:41    npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/servicebus/service-bus/migrationguide.md
+2025-10-25T18:28:41    npm warn deprecated  
+2025-10-25T18:28:42    npm warn deprecated and
+2025-10-25T18:28:42    npm warn deprecated  
+2025-10-25T18:28:42    npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/notificationhubs/notification-hubs/migrationguide.md
+2025-10-25T18:28:42    npm warn deprecated
+2025-10-25T18:29:14    
+2025-10-25T18:29:14    added 304 packages, and audited 305 packages in 2m
+2025-10-25T18:29:14    
+2025-10-25T18:29:14    39 packages are looking for funding
+2025-10-25T18:29:14      run `npm fund` for details
+2025-10-25T18:29:14    
+2025-10-25T18:29:14    7 vulnerabilities (5 moderate, 2 critical)
+2025-10-25T18:29:14    
+2025-10-25T18:29:14    To address issues that do not require attention, run:
+2025-10-25T18:29:14      npm audit fix
+2025-10-25T18:29:14    
+2025-10-25T18:29:14    Some issues need review, and may require choosing
+2025-10-25T18:29:15    a different dependency.
+2025-10-25T18:29:15    
+2025-10-25T18:29:15    Run `npm audit` for details.
+2025-10-25T18:29:15    
+2025-10-25T18:29:15    Zipping existing node_modules folder...
+2025-10-25T18:29:36    Done in 22 sec(s).
+2025-10-25T18:29:36    Preparing output...
+2025-10-25T18:29:36    
+2025-10-25T18:29:36    Copying files to destination directory '/home/site/wwwroot'...
+2025-10-25T18:29:36    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\app-insights.js": Invalid argument (22)
+2025-10-25T18:29:36    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-ad-b2c.js": Invalid argument (22)
+2025-10-25T18:29:36    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-communication.js": Invalid argument (22)
+2025-10-25T18:29:36    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-keyvault.js": Invalid argument (22)
+2025-10-25T18:29:36    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-notification-hub.js": Invalid argument (22)
+2025-10-25T18:29:36    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-storage.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\order-controller.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\products-controller.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\auth-controller.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\common\feature-controller.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\address-controller.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\cart-controller.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\order-controller.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\productreview-controller.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\products-controller.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\search-controller.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\cloudinary.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\paypal.js": Invalid argument (22)
+2025-10-25T18:29:37    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/middleware\notification-middleware.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Address.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Cart.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Order.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Review.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\features.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\product.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\user.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\order-routes.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\products-routes.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\auth\auth-routes.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\common\feature-routes.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\order-routes-with-iam.example.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\address-routes.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\cart-routes.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\order-routes.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\products-routes.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\review-routes.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\search-routes.js": Invalid argument (22)
+2025-10-25T18:29:38    rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+2025-10-25T18:29:39    npm warn deprecated har-validator@5.1.5: this library is no longer supported
+npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+npm warn deprecated
+npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm warn deprecated paypal-rest-sdk@1.8.1: Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead: https://www.npmjs.com/package/@paypal/paypal-server-sdk. Contact Support at https://www.npmjs.com/support for more info.
+npm warn deprecated azure-sb@0.10.6: Please note, a newer package @azure/service-bus for Azure Service Bus is available as of May 2019 and [@azure/notification-hubs] for Azure Notification Hubs as of March 2023. We strongly encourage you to upgrade to the new package for your Service Bus and Notification Hubs needs. Migration guide can be found at:
+npm warn deprecated  
+npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/servicebus/service-bus/migrationguide.md
+npm warn deprecated  
+npm warn deprecated and
+npm warn deprecated  
+npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/notificationhubs/notification-hubs/migrationguide.md
+npm warn deprecated
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\app-insights.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-ad-b2c.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-communication.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-keyvault.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-notification-hub.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-storage.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\order-controller.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\products-controller.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\auth-controller.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\common\feature-controller.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\address-controller.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\cart-controller.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\order-controller.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\productreview-controller.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\products-controller.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\search-controller.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\cloudinary.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\paypal.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/middleware\notification-middleware.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Address.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Cart.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Order.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Review.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\features.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\product.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\user.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\order-routes.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\products-routes.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\auth\auth-routes.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\common\feature-routes.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\order-routes-with-iam.example.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\address-routes.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\cart-routes.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\order-routes.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\products-routes.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\review-routes.js": Invalid argument (22)
+rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\search-routes.js": Invalid argument (22)
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+/bin/bash -c "oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 20 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8de13f41917871e -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS "
+2025-10-25T18:29:39  
+2025-10-25T18:29:40  
+2025-10-25T18:29:40  Generating summary of Oryx build
+2025-10-25T18:29:40  Parsing the build logs
+2025-10-25T18:29:40  Found 0 issue(s)
+2025-10-25T18:29:40  
+2025-10-25T18:29:41  Build Summary :
+2025-10-25T18:29:41  ===============
+2025-10-25T18:29:41  Errors (0)
+2025-10-25T18:29:41  Warnings (0)
+2025-10-25T18:29:41  
+2025-10-25T18:29:42  Deployment Failed. deployer = OneDeploy deploymentPath = OneDeploy
