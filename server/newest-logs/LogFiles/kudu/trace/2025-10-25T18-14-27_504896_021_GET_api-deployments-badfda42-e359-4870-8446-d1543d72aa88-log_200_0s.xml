@@ -1,6 +1,0 @@
-<step title="Incoming Request" date="2025-10-25T18:14:27.720" instance="504896" url="/api/deployments/badfda42-e359-4870-8446-d1543d72aa88/log" method="GET" type="request" pid="833,1,5" Accept="*/*" Host="ecomm-app-4379.scm.azurewebsites.net" User-Agent="AZURECLI/2.78.0 (MSI)" Accept-Encoding="gzip, deflate" Authorization="Bea..." x-ms-client-request-id="680ece5b-b1ce-11f0-8943-00e04f06f700" X-ARR-LOG-ID="680ece5b-b1ce-11f0-8943-00e04f06f700" CLIENT-IP="182.48.210.98:33102" X-SITE-DEPLOYMENT-ID="ecomm-app-4379" WAS-DEFAULT-HOSTNAME="ecomm-app-4379.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/deployments/badfda42-e359-4870-8446-d1543d72aa88/log" X-Client-IP="182.48.210.98" X-Client-Port="33102" >
-  <step title="DeploymentService.GetLogEntry" date="2025-10-25T18:14:27.760" >
-    <step title="DeploymentManager.GetLogEntries(id:badfda42-e359-4870-8446-d1543d72aa88)" date="2025-10-25T18:14:27.770" /><!-- duration: 51ms -->
-  </step><!-- duration: 68ms -->
-  <step title="Outgoing response" date="2025-10-25T18:14:27.840" type="response" statusCode="200" statusText="OK" /><!-- duration: 6ms -->
-</step><!-- duration: 131ms -->

@@ -1,8 +1,0 @@
-node_modules/
-.env
-.git/
-.gitignore
-.vscode/
-*.log
-*.zip
-webapp_logs/

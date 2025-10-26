@@ -1,5 +1,5 @@
 const Product = require("../../models/product");
-const filterOptions = require('../../../client/src/config').filterOptions;
+const { filterOptions } = require("../../config/filter-options");
 
 const getFilteredProducts = async (req, res) => {
   try {
