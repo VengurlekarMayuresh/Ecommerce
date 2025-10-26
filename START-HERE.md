@@ -131,6 +131,8 @@ git push -u origin main
 4. **CHECKLIST.md** - Complete deployment checklist
 5. **START-HERE.md** - This file (quick start)
 
+add it to trigger the github actions
+
 ---
 
 ## 🎯 Architecture Overview
