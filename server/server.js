@@ -47,8 +47,15 @@ app.use('/api/shop/search', shopSearchRouter);
 app.use('/api/shop/review', reviewRouter);
 app.use('/api/common/feature', commonFeatureRouter);
 
-
-
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    status: 'healthy', 
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV,
+    database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected'
+  });
+});
 
 // ✅ Initialize Azure Blob Storage
 initializeBlobStorage();

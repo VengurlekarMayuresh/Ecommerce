@@ -1,0 +1,626 @@
+2025-10-25T18:08:20.7609089Z     __ __          __      __    _ __     
+2025-10-25T18:08:20.7623618Z    / //_/_  _ ____/ /_  __/ /   (_) /____ 
+2025-10-25T18:08:20.7623790Z   / ,< / / / / __  / / / / /   / / __/ _  
+2025-10-25T18:08:20.7623888Z  / /| / /_/ / /_/ / /_/ / /___/ / /_/  __/
+2025-10-25T18:08:20.7623916Z /_/ |_\__,_/\__,_/\__,_/_____/_/\__/\___/ 
+2025-10-25T18:08:20.7623959Z 
+2025-10-25T18:08:20.7623989Z                                           
+2025-10-25T18:08:20.7624014Z DEBUG CONSOLE | AZURE APP SERVICE ON LINUX
+2025-10-25T18:08:20.7624038Z 
+2025-10-25T18:08:20.7624067Z Documentation: http://aka.ms/webapp-linux
+2025-10-25T18:08:20.7624091Z Kudu Version : 20251023.4
+2025-10-25T18:08:20.7624292Z Commit       : a44ac6b61760b3c2e5996d5e6ddb2a908ab5733e
+2025-10-25T18:08:20.7624319Z Instance Name: lw0sdlwk0000NB
+2025-10-25T18:08:20.7624355Z Instance Id  : 504896c031d2fcb93e96c5b802e958a974f760ea45aef3813e22443ccf4d3a0c
+2025-10-25T18:08:20.7624378Z 
+2025-10-25T18:08:21.1436871Z chown: changing ownership of '/temp': Operation not permitted
+2025-10-25T18:08:21.1481314Z chmod: changing permissions of '/temp': Operation not permitted
+2025-10-25T18:08:26.1891037Z Restarting OpenBSD Secure Shell server: sshd.
+2025-10-25T18:08:26.4249520Z node not running, starting node /opt/webssh/index.js
+2025-10-25T18:08:37.3340228Z Sat Oct 25 18:08:37 UTC 2025 running .net core
+2025-10-25T18:08:38.6479826Z Startup : 06.08.38.622163
+2025-10-25T18:08:38.7221940Z Configure Services : 06.08.38.721985
+2025-10-25T18:08:39.3509165Z Configure : 06.08.39.350487
+2025-10-25T18:08:40.0876534Z Setting Up Routes : 06.08.40.087439
+2025-10-25T18:08:40.4139716Z Exiting Configure : 06.08.40.413808
+2025-10-25T18:08:40.6201133Z warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+2025-10-25T18:08:40.6201920Z       No XML encryptor configured. Key {f1a393fd-bfda-410c-b5d5-5e465639bbe6} may be persisted to storage in unencrypted form.
+2025-10-25T18:08:40.9765928Z Hosting environment: Production
+2025-10-25T18:08:40.9952026Z Content root path: /opt/Kudu
+2025-10-25T18:08:40.9952351Z Now listening on: http://0.0.0.0:8181
+2025-10-25T18:08:40.9952469Z Application started. Press Ctrl+C to shut down.
+2025-10-25T18:08:47.0657468Z Deploy Async
+2025-10-25T18:08:52.7130452Z Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+2025-10-25T18:08:52.7607491Z You can report issues at https://github.com/Microsoft/Oryx/issues
+2025-10-25T18:08:52.8006950Z 
+2025-10-25T18:08:52.8278832Z Oryx Version: 0.2.20251022.1+bef98bc7139feefaa74be16de9d835e2c85385d4, Commit: bef98bc7139feefaa74be16de9d835e2c85385d4, ReleaseTagName: 20251022.1
+2025-10-25T18:08:52.8425312Z 
+2025-10-25T18:08:52.8763641Z Build Operation ID: 122fff6e7e52cef7
+2025-10-25T18:08:52.9041230Z Repository Commit : badfda42-e359-4870-8446-d1543d72aa88
+2025-10-25T18:08:52.9341623Z OS Type           : bookworm
+2025-10-25T18:08:52.9821598Z Image Type        : githubactions
+2025-10-25T18:08:53.0195181Z 
+2025-10-25T18:08:53.0380186Z Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+2025-10-25T18:08:53.0582834Z Backup SDK Storage URL: 
+2025-10-25T18:08:53.0892185Z Detecting platforms...
+2025-10-25T18:08:53.1362919Z External SDK provider is enabled.
+2025-10-25T18:08:53.5434145Z Requesting metadata for platform nodejs from external SDK provider
+2025-10-25T18:08:56.0948618Z Requesting metadata for platform nodejs from external SDK provider
+2025-10-25T18:08:56.5564822Z Successfully requested blob for platform nodejs, blobName defaultVersion.bookworm.txt, available at /var/OryxSdks/nodejs/defaultVersion.bookworm.txt
+2025-10-25T18:08:56.7832281Z Detected following platforms:
+2025-10-25T18:08:56.8117207Z   nodejs: 20.19.5
+2025-10-25T18:08:56.8339049Z Requesting metadata for platform nodejs from external SDK provider
+2025-10-25T18:09:02.4466797Z .
+2025-10-25T18:09:02.4467411Z Successfully requested blob for platform nodejs, blobName nodejs-bookworm-20.19.5.tar.gz, available at /var/OryxSdks/nodejs/nodejs-bookworm-20.19.5.tar.gz
+2025-10-25T18:09:02.8551304Z Version '20.19.5' of platform 'nodejs' is not installed. Generating script to install it...
+2025-10-25T18:09:03.1352149Z Detected the following frameworks: Express
+2025-10-25T18:09:03.6057066Z 
+2025-10-25T18:09:03.6868137Z Using intermediate directory '/tmp/8de13f18bd94921'.
+2025-10-25T18:09:03.7166514Z 
+2025-10-25T18:09:03.7620122Z Copying files to the intermediate directory...
+2025-10-25T18:09:03.8678446Z Done in 0 sec(s).
+2025-10-25T18:09:03.8968031Z 
+2025-10-25T18:09:03.9374948Z Source directory     : /tmp/8de13f18bd94921
+2025-10-25T18:09:04.0327306Z Destination directory: /home/site/wwwroot
+2025-10-25T18:09:04.0709055Z 
+2025-10-25T18:09:04.0831363Z 
+2025-10-25T18:09:04.1041598Z Downloading and extracting 'nodejs' version '20.19.5' to '/tmp/oryx/platforms/nodejs/20.19.5'...
+2025-10-25T18:09:04.1192040Z Detected image debian flavor: bookworm.
+2025-10-25T18:09:04.1443326Z Skipping download of nodejs version 20.19.5 as it is available in external sdk provider cache...
+2025-10-25T18:09:04.1680784Z Extracting contents...
+2025-10-25T18:09:15.6290384Z .......
+2025-10-25T18:09:15.6370015Z Successfully extracted nodejs version 20.19.5 from external sdk provider cache...
+2025-10-25T18:09:15.6757231Z Done in 12 sec(s).
+2025-10-25T18:09:15.7512972Z 
+2025-10-25T18:09:16.0134112Z Removing existing manifest file
+2025-10-25T18:09:16.0419511Z Creating directory for command manifest file if it does not exist
+2025-10-25T18:09:16.1034649Z Creating a manifest file...
+2025-10-25T18:09:16.1395500Z Node Build Command Manifest file created.
+2025-10-25T18:09:16.1613688Z 
+2025-10-25T18:09:16.2001627Z Using Node version:
+2025-10-25T18:09:16.2194297Z v20.19.5
+2025-10-25T18:09:16.2578331Z 
+2025-10-25T18:09:16.3066125Z Using Npm version:
+2025-10-25T18:09:16.9770728Z 10.8.2
+2025-10-25T18:09:17.0273273Z 
+2025-10-25T18:09:17.0674904Z Running 'npm install'...
+2025-10-25T18:09:17.0889135Z 
+2025-10-25T18:10:56.3211533Z ..............................................................................................
+2025-10-25T18:10:56.3471345Z npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2025-10-25T18:11:08.9375403Z ........
+2025-10-25T18:11:08.9384067Z npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+2025-10-25T18:11:09.1483021Z npm warn deprecated
+2025-10-25T18:11:09.1798191Z npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+2025-10-25T18:11:10.0336971Z npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2025-10-25T18:11:11.5021582Z npm warn deprecated paypal-rest-sdk@1.8.1: Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead: https://www.npmjs.com/package/@paypal/paypal-server-sdk. Contact Support at https://www.npmjs.com/support for more info.
+2025-10-25T18:11:11.8477116Z npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2025-10-25T18:11:12.3483330Z npm warn deprecated azure-sb@0.10.6: Please note, a newer package @azure/service-bus for Azure Service Bus is available as of May 2019 and [@azure/notification-hubs] for Azure Notification Hubs as of March 2023. We strongly encourage you to upgrade to the new package for your Service Bus and Notification Hubs needs. Migration guide can be found at:
+2025-10-25T18:11:12.3859486Z npm warn deprecated  
+2025-10-25T18:11:12.4917845Z npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/servicebus/service-bus/migrationguide.md
+2025-10-25T18:11:12.5127449Z npm warn deprecated  
+2025-10-25T18:11:12.5807625Z npm warn deprecated and
+2025-10-25T18:11:12.6375176Z npm warn deprecated  
+2025-10-25T18:11:12.6856498Z npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/notificationhubs/notification-hubs/migrationguide.md
+2025-10-25T18:11:12.7439857Z npm warn deprecated
+2025-10-25T18:11:50.6887809Z .................................
+2025-10-25T18:11:50.7655082Z npm notice
+2025-10-25T18:11:51.5504353Z 
+2025-10-25T18:11:51.5504544Z added 304 packages, and audited 305 packages in 3m
+2025-10-25T18:11:51.5504757Z 
+2025-10-25T18:11:51.5504776Z 39 packages are looking for funding
+2025-10-25T18:11:51.5504794Z   run `npm fund` for details
+2025-10-25T18:11:51.5504809Z 
+2025-10-25T18:11:51.5504826Z 7 vulnerabilities (5 moderate, 2 critical)
+2025-10-25T18:11:51.5504841Z 
+2025-10-25T18:11:51.5504860Z To address issues that do not require attention, run:
+2025-10-25T18:11:51.5504877Z   npm audit fix
+2025-10-25T18:11:51.5504891Z 
+2025-10-25T18:11:51.5504911Z Some issues need review, and may require choosing
+2025-10-25T18:11:51.5504928Z a different dependency.
+2025-10-25T18:11:51.5504943Z 
+2025-10-25T18:11:51.5504960Z Run `npm audit` for details.
+2025-10-25T18:11:51.5504975Z 
+2025-10-25T18:11:51.5504993Z Zipping existing node_modules folder...
+2025-10-25T18:11:52.5420455Z npm notice New major version of npm available! 10.8.2 -> 11.6.2
+2025-10-25T18:11:52.5420681Z npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.2
+2025-10-25T18:11:52.5420713Z npm notice To update run: npm install -g npm@11.6.2
+2025-10-25T18:11:52.5420739Z npm notice
+2025-10-25T18:12:28.4932803Z .................................
+2025-10-25T18:12:28.4933273Z Done in 37 sec(s).
+2025-10-25T18:12:28.5947819Z Preparing output...
+2025-10-25T18:12:28.6626278Z 
+2025-10-25T18:12:28.7244789Z Copying files to destination directory '/home/site/wwwroot'...
+2025-10-25T18:12:28.8878879Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\app-insights.js": Invalid argument (22)
+2025-10-25T18:12:28.9666946Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-ad-b2c.js": Invalid argument (22)
+2025-10-25T18:12:29.0411174Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-communication.js": Invalid argument (22)
+2025-10-25T18:12:29.1119768Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-keyvault.js": Invalid argument (22)
+2025-10-25T18:12:29.2168374Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-notification-hub.js": Invalid argument (22)
+2025-10-25T18:12:29.2846059Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-storage.js": Invalid argument (22)
+2025-10-25T18:12:29.3713665Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\order-controller.js": Invalid argument (22)
+2025-10-25T18:12:29.4471668Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\products-controller.js": Invalid argument (22)
+2025-10-25T18:12:29.5665577Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\auth-controller.js": Invalid argument (22)
+2025-10-25T18:12:29.6611918Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\common\feature-controller.js": Invalid argument (22)
+2025-10-25T18:12:29.7361431Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\address-controller.js": Invalid argument (22)
+2025-10-25T18:12:29.8460751Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\cart-controller.js": Invalid argument (22)
+2025-10-25T18:12:30.3025874Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\order-controller.js": Invalid argument (22)
+2025-10-25T18:12:30.4072497Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\productreview-controller.js": Invalid argument (22)
+2025-10-25T18:12:30.4929202Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\products-controller.js": Invalid argument (22)
+2025-10-25T18:12:30.5542833Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\search-controller.js": Invalid argument (22)
+2025-10-25T18:12:30.6109463Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\cloudinary.js": Invalid argument (22)
+2025-10-25T18:12:30.6987846Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\paypal.js": Invalid argument (22)
+2025-10-25T18:12:30.7206525Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/middleware\notification-middleware.js": Invalid argument (22)
+2025-10-25T18:12:30.7590872Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Address.js": Invalid argument (22)
+2025-10-25T18:12:30.8823100Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Cart.js": Invalid argument (22)
+2025-10-25T18:12:30.9873763Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Order.js": Invalid argument (22)
+2025-10-25T18:12:31.0179071Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Review.js": Invalid argument (22)
+2025-10-25T18:12:31.0862624Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\features.js": Invalid argument (22)
+2025-10-25T18:12:31.1849740Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\product.js": Invalid argument (22)
+2025-10-25T18:12:31.2682715Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\user.js": Invalid argument (22)
+2025-10-25T18:12:31.3097165Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\order-routes.js": Invalid argument (22)
+2025-10-25T18:12:31.4065775Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\products-routes.js": Invalid argument (22)
+2025-10-25T18:12:31.4846773Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\auth\auth-routes.js": Invalid argument (22)
+2025-10-25T18:12:31.5396485Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\common\feature-routes.js": Invalid argument (22)
+2025-10-25T18:12:31.5904463Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\order-routes-with-iam.example.js": Invalid argument (22)
+2025-10-25T18:12:31.6467065Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\address-routes.js": Invalid argument (22)
+2025-10-25T18:12:31.7136416Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\cart-routes.js": Invalid argument (22)
+2025-10-25T18:12:31.7752184Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\order-routes.js": Invalid argument (22)
+2025-10-25T18:12:31.8316555Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\products-routes.js": Invalid argument (22)
+2025-10-25T18:12:31.9081433Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\review-routes.js": Invalid argument (22)
+2025-10-25T18:12:31.9498810Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\search-routes.js": Invalid argument (22)
+2025-10-25T18:12:32.0840879Z rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+2025-10-25T18:27:02.7140447Z Deploy Async
+2025-10-25T18:27:08.4461694Z Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+2025-10-25T18:27:08.5800374Z You can report issues at https://github.com/Microsoft/Oryx/issues
+2025-10-25T18:27:08.6246101Z 
+2025-10-25T18:27:08.6706856Z Oryx Version: 0.2.20251022.1+bef98bc7139feefaa74be16de9d835e2c85385d4, Commit: bef98bc7139feefaa74be16de9d835e2c85385d4, ReleaseTagName: 20251022.1
+2025-10-25T18:27:08.7440093Z 
+2025-10-25T18:27:08.7932686Z Build Operation ID: d5dad5199038c01c
+2025-10-25T18:27:08.8633413Z Repository Commit : 122344ab-eb53-4d64-8481-5484e9baf4d2
+2025-10-25T18:27:08.9119401Z OS Type           : bookworm
+2025-10-25T18:27:09.0837423Z Image Type        : githubactions
+2025-10-25T18:27:09.1427241Z 
+2025-10-25T18:27:09.2113988Z Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+2025-10-25T18:27:09.2780168Z Backup SDK Storage URL: 
+2025-10-25T18:27:09.3667704Z Detecting platforms...
+2025-10-25T18:27:09.5317382Z External SDK provider is enabled.
+2025-10-25T18:27:09.7197500Z Requesting metadata for platform nodejs from external SDK provider
+2025-10-25T18:27:16.4053432Z ..
+2025-10-25T18:27:16.4054040Z Requesting metadata for platform nodejs from external SDK provider
+2025-10-25T18:27:18.5462707Z Detected following platforms:
+2025-10-25T18:27:18.6878259Z   nodejs: 20.19.5
+2025-10-25T18:27:19.7304561Z Detected the following frameworks: Express
+2025-10-25T18:27:21.1315065Z 
+2025-10-25T18:27:21.3915051Z Using intermediate directory '/tmp/8de13f41917871e'.
+2025-10-25T18:27:21.5448370Z 
+2025-10-25T18:27:21.6247538Z Copying files to the intermediate directory...
+2025-10-25T18:27:21.7618808Z Done in 0 sec(s).
+2025-10-25T18:27:21.8959945Z 
+2025-10-25T18:27:21.9716462Z Source directory     : /tmp/8de13f41917871e
+2025-10-25T18:27:22.1654511Z Destination directory: /home/site/wwwroot
+2025-10-25T18:27:22.2414646Z 
+2025-10-25T18:27:22.6409451Z Removing existing manifest file
+2025-10-25T18:27:22.8065044Z Creating directory for command manifest file if it does not exist
+2025-10-25T18:27:23.0604771Z Creating a manifest file...
+2025-10-25T18:27:23.1286943Z Node Build Command Manifest file created.
+2025-10-25T18:27:23.2254254Z 
+2025-10-25T18:27:23.4098860Z Using Node version:
+2025-10-25T18:27:23.9461986Z v20.19.5
+2025-10-25T18:27:24.0436690Z 
+2025-10-25T18:27:24.1207915Z Using Npm version:
+2025-10-25T18:27:26.9471160Z 10.8.2
+2025-10-25T18:27:27.2179743Z 
+2025-10-25T18:27:27.4206013Z Running 'npm install'...
+2025-10-25T18:27:27.5469462Z 
+2025-10-25T18:28:36.7550971Z ...............................................................
+2025-10-25T18:28:36.8038956Z npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2025-10-25T18:28:37.8131414Z npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+2025-10-25T18:28:37.9198667Z npm warn deprecated
+2025-10-25T18:28:38.0066077Z npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+2025-10-25T18:28:39.5041369Z npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2025-10-25T18:28:39.8505231Z npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2025-10-25T18:28:40.7646683Z npm warn deprecated paypal-rest-sdk@1.8.1: Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead: https://www.npmjs.com/package/@paypal/paypal-server-sdk. Contact Support at https://www.npmjs.com/support for more info.
+2025-10-25T18:28:41.2480128Z npm warn deprecated azure-sb@0.10.6: Please note, a newer package @azure/service-bus for Azure Service Bus is available as of May 2019 and [@azure/notification-hubs] for Azure Notification Hubs as of March 2023. We strongly encourage you to upgrade to the new package for your Service Bus and Notification Hubs needs. Migration guide can be found at:
+2025-10-25T18:28:41.5068025Z npm warn deprecated  
+2025-10-25T18:28:41.6527102Z npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/servicebus/service-bus/migrationguide.md
+2025-10-25T18:28:41.8078991Z npm warn deprecated  
+2025-10-25T18:28:41.9963280Z npm warn deprecated and
+2025-10-25T18:28:42.0672748Z npm warn deprecated  
+2025-10-25T18:28:42.1244906Z npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/notificationhubs/notification-hubs/migrationguide.md
+2025-10-25T18:28:42.1915410Z npm warn deprecated
+2025-10-25T18:29:14.1181829Z ...........................
+2025-10-25T18:29:14.1189630Z 
+2025-10-25T18:29:14.2353427Z added 304 packages, and audited 305 packages in 2m
+2025-10-25T18:29:14.3217610Z 
+2025-10-25T18:29:14.4073816Z 39 packages are looking for funding
+2025-10-25T18:29:14.4586391Z   run `npm fund` for details
+2025-10-25T18:29:14.5261226Z 
+2025-10-25T18:29:14.5731641Z 7 vulnerabilities (5 moderate, 2 critical)
+2025-10-25T18:29:14.6763001Z 
+2025-10-25T18:29:14.7165031Z To address issues that do not require attention, run:
+2025-10-25T18:29:14.8027733Z   npm audit fix
+2025-10-25T18:29:14.8409733Z 
+2025-10-25T18:29:14.8807160Z Some issues need review, and may require choosing
+2025-10-25T18:29:14.9837227Z a different dependency.
+2025-10-25T18:29:15.0948185Z 
+2025-10-25T18:29:15.1320688Z Run `npm audit` for details.
+2025-10-25T18:29:15.2230638Z 
+2025-10-25T18:29:15.3206244Z Zipping existing node_modules folder...
+2025-10-25T18:29:36.4293673Z .................
+2025-10-25T18:29:36.4303521Z Done in 22 sec(s).
+2025-10-25T18:29:36.5062176Z Preparing output...
+2025-10-25T18:29:36.5547487Z 
+2025-10-25T18:29:36.5866183Z Copying files to destination directory '/home/site/wwwroot'...
+2025-10-25T18:29:36.6280119Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\app-insights.js": Invalid argument (22)
+2025-10-25T18:29:36.6749380Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-ad-b2c.js": Invalid argument (22)
+2025-10-25T18:29:36.7210591Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-communication.js": Invalid argument (22)
+2025-10-25T18:29:36.7690870Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-keyvault.js": Invalid argument (22)
+2025-10-25T18:29:36.8351500Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-notification-hub.js": Invalid argument (22)
+2025-10-25T18:29:36.9053069Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-storage.js": Invalid argument (22)
+2025-10-25T18:29:37.3598107Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\order-controller.js": Invalid argument (22)
+2025-10-25T18:29:37.4239091Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\products-controller.js": Invalid argument (22)
+2025-10-25T18:29:37.4503032Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\auth-controller.js": Invalid argument (22)
+2025-10-25T18:29:37.5465998Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\common\feature-controller.js": Invalid argument (22)
+2025-10-25T18:29:37.6191681Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\address-controller.js": Invalid argument (22)
+2025-10-25T18:29:37.6688742Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\cart-controller.js": Invalid argument (22)
+2025-10-25T18:29:37.7046227Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\order-controller.js": Invalid argument (22)
+2025-10-25T18:29:37.7429796Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\productreview-controller.js": Invalid argument (22)
+2025-10-25T18:29:37.7727476Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\products-controller.js": Invalid argument (22)
+2025-10-25T18:29:37.8185993Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\search-controller.js": Invalid argument (22)
+2025-10-25T18:29:37.8972008Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\cloudinary.js": Invalid argument (22)
+2025-10-25T18:29:37.9331486Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\paypal.js": Invalid argument (22)
+2025-10-25T18:29:37.9635116Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/middleware\notification-middleware.js": Invalid argument (22)
+2025-10-25T18:29:37.9970499Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Address.js": Invalid argument (22)
+2025-10-25T18:29:38.0214864Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Cart.js": Invalid argument (22)
+2025-10-25T18:29:38.0604825Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Order.js": Invalid argument (22)
+2025-10-25T18:29:38.0880693Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Review.js": Invalid argument (22)
+2025-10-25T18:29:38.1179102Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\features.js": Invalid argument (22)
+2025-10-25T18:29:38.1446492Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\product.js": Invalid argument (22)
+2025-10-25T18:29:38.1725042Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\user.js": Invalid argument (22)
+2025-10-25T18:29:38.2117644Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\order-routes.js": Invalid argument (22)
+2025-10-25T18:29:38.2413435Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\products-routes.js": Invalid argument (22)
+2025-10-25T18:29:38.2683755Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\auth\auth-routes.js": Invalid argument (22)
+2025-10-25T18:29:38.3091867Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\common\feature-routes.js": Invalid argument (22)
+2025-10-25T18:29:38.3463495Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\order-routes-with-iam.example.js": Invalid argument (22)
+2025-10-25T18:29:38.3716204Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\address-routes.js": Invalid argument (22)
+2025-10-25T18:29:38.4467780Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\cart-routes.js": Invalid argument (22)
+2025-10-25T18:29:38.4912497Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\order-routes.js": Invalid argument (22)
+2025-10-25T18:29:38.5208650Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\products-routes.js": Invalid argument (22)
+2025-10-25T18:29:38.5543322Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\review-routes.js": Invalid argument (22)
+2025-10-25T18:29:38.5809071Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\search-routes.js": Invalid argument (22)
+2025-10-25T18:29:38.6126942Z rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+2025-10-25T18:29:48.3614448Z Exception Message : Deployment failed
+2025-10-25T18:29:48.3737388Z Exception StackTrace :    at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 307
+2025-10-25T18:29:48.3744032Z    at Kudu.Core.Deployment.FetchDeploymentManager.PerformDeployment(DeploymentInfoBase deploymentInfo, IDisposable tempDeployment, ChangeSet tempChangeSet, DeployStatusApiResult updateStatusObj) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 230
+2025-10-25T18:29:48.3744106Z    at Kudu.Core.Deployment.FetchDeploymentManager.<>c__DisplayClass17_0.<<FetchDeploy>b__0>d.MoveNext() in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 131
+2025-10-25T18:29:48.3744128Z --- End of stack trace from previous location ---
+2025-10-25T18:29:48.3744155Z    at Kudu.Core.Deployment.FetchDeploymentManager.FetchDeploy(DeploymentInfoBase deployInfo, Boolean asyncRequested, Uri requestUri, String targetBranch) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 124
+2025-10-25T18:29:48.3744184Z    at Kudu.Services.Deployment.PushDeploymentController.PushDeployAsync(ArtifactDeploymentInfo deploymentInfo, Boolean isAsync, HttpContext context, JObject requestJson) in /tmp/KuduLite/Kudu.Services/Deployment/PushDeploymentController.cs:line 802
+2025-10-25T18:29:48.3744216Z    at Kudu.Services.Deployment.PushDeploymentController.OneDeploy(String type, Boolean async, String path, Nullable`1 restart, Nullable`1 clean, Boolean ignoreStack, Boolean trackDeploymentProgress, Boolean trackStatus, Boolean reset) in /tmp/KuduLite/Kudu.Services/Deployment/PushDeploymentController.cs:line 624
+2025-10-25T18:29:48.3744243Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+2025-10-25T18:29:48.3744268Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+2025-10-25T18:29:48.3744324Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-10-25T18:29:48.3744346Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+2025-10-25T18:29:48.3744369Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+2025-10-25T18:29:48.3744396Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-10-25T18:29:48.3744421Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-10-25T18:29:48.3744443Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+2025-10-25T18:29:48.3744465Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+2025-10-25T18:29:48.3744490Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2025-10-25T18:29:48.3744513Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+2025-10-25T18:29:48.3752031Z    at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+2025-10-25T18:29:48.3752259Z    at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+2025-10-25T18:29:48.3761849Z    at Kudu.Services.Web.Tracing.TraceMiddleware.Invoke(HttpContext context) in /tmp/KuduLite/Kudu.Services.Web/Tracing/TraceMiddleware.cs:line 101
+2025-10-25T18:29:48.5105446Z fail: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware[1]
+2025-10-25T18:29:48.5106092Z       An unhandled exception has occurred while executing the request.
+2025-10-25T18:29:48.5106132Z       ExitCode: 23, Output: Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+2025-10-25T18:29:48.5111541Z       You can report issues at https://github.com/Microsoft/Oryx/issues
+2025-10-25T18:29:48.5111622Z       
+2025-10-25T18:29:48.5111651Z       Oryx Version: 0.2.20251022.1+bef98bc7139feefaa74be16de9d835e2c85385d4, Commit: bef98bc7139feefaa74be16de9d835e2c85385d4, ReleaseTagName: 20251022.1
+2025-10-25T18:29:48.5111666Z       
+2025-10-25T18:29:48.5111683Z       Build Operation ID: d5dad5199038c01c
+2025-10-25T18:29:48.5111701Z       Repository Commit : 122344ab-eb53-4d64-8481-5484e9baf4d2
+2025-10-25T18:29:48.5111718Z       OS Type           : bookworm
+2025-10-25T18:29:48.5111775Z       Image Type        : githubactions
+2025-10-25T18:29:48.5111790Z       
+2025-10-25T18:29:48.5111807Z       Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+2025-10-25T18:29:48.5111824Z       Backup SDK Storage URL: 
+2025-10-25T18:29:48.5122644Z       Detecting platforms...
+2025-10-25T18:29:48.5122737Z       External SDK provider is enabled.
+2025-10-25T18:29:48.5122759Z       Requesting metadata for platform nodejs from external SDK provider
+2025-10-25T18:29:48.5122780Z       Requesting metadata for platform nodejs from external SDK provider
+2025-10-25T18:29:48.5122797Z       Detected following platforms:
+2025-10-25T18:29:48.5122813Z         nodejs: 20.19.5
+2025-10-25T18:29:48.5122830Z       Detected the following frameworks: Express
+2025-10-25T18:29:48.5122845Z       
+2025-10-25T18:29:48.5122864Z       Using intermediate directory '/tmp/8de13f41917871e'.
+2025-10-25T18:29:48.5122878Z       
+2025-10-25T18:29:48.5122896Z       Copying files to the intermediate directory...
+2025-10-25T18:29:48.5122950Z       Done in 0 sec(s).
+2025-10-25T18:29:48.5122965Z       
+2025-10-25T18:29:48.5122982Z       Source directory     : /tmp/8de13f41917871e
+2025-10-25T18:29:48.5122999Z       Destination directory: /home/site/wwwroot
+2025-10-25T18:29:48.5123013Z       
+2025-10-25T18:29:48.5123030Z       Removing existing manifest file
+2025-10-25T18:29:48.5123048Z       Creating directory for command manifest file if it does not exist
+2025-10-25T18:29:48.5123065Z       Creating a manifest file...
+2025-10-25T18:29:48.5123083Z       Node Build Command Manifest file created.
+2025-10-25T18:29:48.5123097Z       
+2025-10-25T18:29:48.5123113Z       Using Node version:
+2025-10-25T18:29:48.5123128Z       v20.19.5
+2025-10-25T18:29:48.5123143Z       
+2025-10-25T18:29:48.5123159Z       Using Npm version:
+2025-10-25T18:29:48.5123175Z       10.8.2
+2025-10-25T18:29:48.5123189Z       
+2025-10-25T18:29:48.5123226Z       Running 'npm install'...
+2025-10-25T18:29:48.5123241Z       
+2025-10-25T18:29:48.5123256Z       
+2025-10-25T18:29:48.5123274Z       added 304 packages, and audited 305 packages in 2m
+2025-10-25T18:29:48.5123288Z       
+2025-10-25T18:29:48.5123305Z       39 packages are looking for funding
+2025-10-25T18:29:48.5123323Z         run `npm fund` for details
+2025-10-25T18:29:48.5123337Z       
+2025-10-25T18:29:48.5123355Z       7 vulnerabilities (5 moderate, 2 critical)
+2025-10-25T18:29:48.5123370Z       
+2025-10-25T18:29:48.5123387Z       To address issues that do not require attention, run:
+2025-10-25T18:29:48.5123403Z         npm audit fix
+2025-10-25T18:29:48.5123592Z       
+2025-10-25T18:29:48.5123611Z       Some issues need review, and may require choosing
+2025-10-25T18:29:48.5123627Z       a different dependency.
+2025-10-25T18:29:48.5123642Z       
+2025-10-25T18:29:48.5123660Z       Run `npm audit` for details.
+2025-10-25T18:29:48.5123694Z       
+2025-10-25T18:29:48.5123711Z       Zipping existing node_modules folder...
+2025-10-25T18:29:48.5123727Z       Done in 22 sec(s).
+2025-10-25T18:29:48.5123743Z       Preparing output...
+2025-10-25T18:29:48.5123757Z       
+2025-10-25T18:29:48.5123780Z       Copying files to destination directory '/home/site/wwwroot'..., Error: npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2025-10-25T18:29:48.5123813Z       npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+2025-10-25T18:29:48.5406364Z       npm warn deprecated
+2025-10-25T18:29:48.5412392Z       npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+2025-10-25T18:29:48.5420982Z       npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2025-10-25T18:29:48.5429065Z       npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2025-10-25T18:29:48.5483061Z       npm warn deprecated paypal-rest-sdk@1.8.1: Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead: https://www.npmjs.com/package/@paypal/paypal-server-sdk. Contact Support at https://www.npmjs.com/support for more info.
+2025-10-25T18:29:48.5483161Z       npm warn deprecated azure-sb@0.10.6: Please note, a newer package @azure/service-bus for Azure Service Bus is available as of May 2019 and [@azure/notification-hubs] for Azure Notification Hubs as of March 2023. We strongly encourage you to upgrade to the new package for your Service Bus and Notification Hubs needs. Migration guide can be found at:
+2025-10-25T18:29:48.5483184Z       npm warn deprecated  
+2025-10-25T18:29:48.5483208Z       npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/servicebus/service-bus/migrationguide.md
+2025-10-25T18:29:48.5483226Z       npm warn deprecated  
+2025-10-25T18:29:48.5483244Z       npm warn deprecated and
+2025-10-25T18:29:48.5483261Z       npm warn deprecated  
+2025-10-25T18:29:48.5483286Z       npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/notificationhubs/notification-hubs/migrationguide.md
+2025-10-25T18:29:48.5483304Z       npm warn deprecated
+2025-10-25T18:29:48.5483327Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\app-insights.js": Invalid argument (22)
+2025-10-25T18:29:48.5485177Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-ad-b2c.js": Invalid argument (22)
+2025-10-25T18:29:48.5485482Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-communication.js": Invalid argument (22)
+2025-10-25T18:29:48.5485554Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-keyvault.js": Invalid argument (22)
+2025-10-25T18:29:48.5485579Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-notification-hub.js": Invalid argument (22)
+2025-10-25T18:29:48.5485975Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-storage.js": Invalid argument (22)
+2025-10-25T18:29:48.5486008Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\order-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5486033Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\products-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5486057Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\auth-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5486081Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\common\feature-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5486105Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\address-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5486129Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\cart-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5486152Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\order-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5486176Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\productreview-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5486223Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\products-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5486249Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\search-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5486273Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\cloudinary.js": Invalid argument (22)
+2025-10-25T18:29:48.5486296Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\paypal.js": Invalid argument (22)
+2025-10-25T18:29:48.5486319Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/middleware\notification-middleware.js": Invalid argument (22)
+2025-10-25T18:29:48.5486341Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Address.js": Invalid argument (22)
+2025-10-25T18:29:48.5486363Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Cart.js": Invalid argument (22)
+2025-10-25T18:29:48.5486386Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Order.js": Invalid argument (22)
+2025-10-25T18:29:48.5486408Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Review.js": Invalid argument (22)
+2025-10-25T18:29:48.5486432Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\features.js": Invalid argument (22)
+2025-10-25T18:29:48.5486455Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\product.js": Invalid argument (22)
+2025-10-25T18:29:48.5486477Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\user.js": Invalid argument (22)
+2025-10-25T18:29:48.5503961Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\order-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5504068Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\products-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5504098Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\auth\auth-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5504122Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\common\feature-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5504146Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\order-routes-with-iam.example.js": Invalid argument (22)
+2025-10-25T18:29:48.5504171Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\address-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5504194Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\cart-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5504217Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\order-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5504241Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\products-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5504265Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\review-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5504376Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\search-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5504443Z       rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7], Kudu.Core.Infrastructure.CommandLineException: npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2025-10-25T18:29:48.5504479Z       npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+2025-10-25T18:29:48.5504499Z       npm warn deprecated
+2025-10-25T18:29:48.5504522Z       npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+2025-10-25T18:29:48.5504551Z       npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2025-10-25T18:29:48.5504575Z       npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2025-10-25T18:29:48.5504606Z       npm warn deprecated paypal-rest-sdk@1.8.1: Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead: https://www.npmjs.com/package/@paypal/paypal-server-sdk. Contact Support at https://www.npmjs.com/support for more info.
+2025-10-25T18:29:48.5504641Z       npm warn deprecated azure-sb@0.10.6: Please note, a newer package @azure/service-bus for Azure Service Bus is available as of May 2019 and [@azure/notification-hubs] for Azure Notification Hubs as of March 2023. We strongly encourage you to upgrade to the new package for your Service Bus and Notification Hubs needs. Migration guide can be found at:
+2025-10-25T18:29:48.5504659Z       npm warn deprecated  
+2025-10-25T18:29:48.5504683Z       npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/servicebus/service-bus/migrationguide.md
+2025-10-25T18:29:48.5504722Z       npm warn deprecated  
+2025-10-25T18:29:48.5504741Z       npm warn deprecated and
+2025-10-25T18:29:48.5504760Z       npm warn deprecated  
+2025-10-25T18:29:48.5504784Z       npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/notificationhubs/notification-hubs/migrationguide.md
+2025-10-25T18:29:48.5504803Z       npm warn deprecated
+2025-10-25T18:29:48.5504826Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\app-insights.js": Invalid argument (22)
+2025-10-25T18:29:48.5504848Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-ad-b2c.js": Invalid argument (22)
+2025-10-25T18:29:48.5504872Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-communication.js": Invalid argument (22)
+2025-10-25T18:29:48.5504895Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-keyvault.js": Invalid argument (22)
+2025-10-25T18:29:48.5504919Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-notification-hub.js": Invalid argument (22)
+2025-10-25T18:29:48.5505060Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-storage.js": Invalid argument (22)
+2025-10-25T18:29:48.5505090Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\order-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5505137Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\products-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5505162Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\auth-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5505186Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\common\feature-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5505210Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\address-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5505233Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\cart-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5505257Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\order-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5505281Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\productreview-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5505305Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\products-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5505328Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\search-controller.js": Invalid argument (22)
+2025-10-25T18:29:48.5505351Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\cloudinary.js": Invalid argument (22)
+2025-10-25T18:29:48.5505374Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\paypal.js": Invalid argument (22)
+2025-10-25T18:29:48.5505397Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/middleware\notification-middleware.js": Invalid argument (22)
+2025-10-25T18:29:48.5505439Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Address.js": Invalid argument (22)
+2025-10-25T18:29:48.5505462Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Cart.js": Invalid argument (22)
+2025-10-25T18:29:48.5505485Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Order.js": Invalid argument (22)
+2025-10-25T18:29:48.5505508Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Review.js": Invalid argument (22)
+2025-10-25T18:29:48.5505531Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\features.js": Invalid argument (22)
+2025-10-25T18:29:48.5505553Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\product.js": Invalid argument (22)
+2025-10-25T18:29:48.5505576Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\user.js": Invalid argument (22)
+2025-10-25T18:29:48.5505599Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\order-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5505622Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\products-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5505645Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\auth\auth-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5505669Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\common\feature-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5505712Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\order-routes-with-iam.example.js": Invalid argument (22)
+2025-10-25T18:29:48.5505735Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\address-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5505758Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\cart-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5505781Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\order-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5505804Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\products-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5505827Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\review-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5505850Z       rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\search-routes.js": Invalid argument (22)
+2025-10-25T18:29:48.5505918Z       rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+2025-10-25T18:29:48.5505951Z       /bin/bash -c "oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 20 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8de13f41917871e -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS "
+2025-10-25T18:29:48.5513661Z          at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+2025-10-25T18:29:48.5513727Z          at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+2025-10-25T18:29:48.5513756Z          at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+2025-10-25T18:29:48.5513782Z          at Kudu.Core.Deployment.Generator.OryxBuilder.RunBuildCommand(IOryxArguments args, DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 295
+2025-10-25T18:29:48.5513807Z          at Kudu.Core.Deployment.Generator.OryxBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 136
+2025-10-25T18:29:48.5513838Z          at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+2025-10-25T18:29:48.5513869Z          at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+2025-10-25T18:29:48.5513899Z          at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266
+2025-10-25T18:29:48.5513939Z          at Kudu.Services.Web.Tracing.TraceMiddleware.Invoke(HttpContext context) in /tmp/KuduLite/Kudu.Services.Web/Tracing/TraceMiddleware.cs:line 107
+2025-10-25T18:29:48.5513960Z          at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+2025-10-25T18:29:48.5513984Z          at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-10-25T18:30:09.7248090Z Deploy Async
+2025-10-25T18:30:23.6494022Z ......
+2025-10-25T18:30:23.6500100Z Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+2025-10-25T18:30:23.6982995Z You can report issues at https://github.com/Microsoft/Oryx/issues
+2025-10-25T18:30:23.7424863Z 
+2025-10-25T18:30:23.7737006Z Oryx Version: 0.2.20251022.1+bef98bc7139feefaa74be16de9d835e2c85385d4, Commit: bef98bc7139feefaa74be16de9d835e2c85385d4, ReleaseTagName: 20251022.1
+2025-10-25T18:30:23.8013907Z 
+2025-10-25T18:30:23.8650510Z Build Operation ID: 96b47a4a76215df1
+2025-10-25T18:30:23.8927957Z Repository Commit : d0d50002-7010-480d-9e6f-2107d2d9e33a
+2025-10-25T18:30:23.9311860Z OS Type           : bookworm
+2025-10-25T18:30:23.9784808Z Image Type        : githubactions
+2025-10-25T18:30:24.0602136Z 
+2025-10-25T18:30:24.0918931Z Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+2025-10-25T18:30:24.1505657Z Backup SDK Storage URL: 
+2025-10-25T18:30:24.1972364Z Detecting platforms...
+2025-10-25T18:30:24.2524055Z External SDK provider is enabled.
+2025-10-25T18:30:25.0629586Z Requesting metadata for platform nodejs from external SDK provider
+2025-10-25T18:30:27.5004857Z Requesting metadata for platform nodejs from external SDK provider
+2025-10-25T18:30:28.1753495Z Detected following platforms:
+2025-10-25T18:30:28.2031269Z   nodejs: 20.19.5
+2025-10-25T18:30:28.4770307Z Detected the following frameworks: Express
+2025-10-25T18:30:29.1152815Z 
+2025-10-25T18:30:29.1462256Z Using intermediate directory '/tmp/8de13f4887496bd'.
+2025-10-25T18:30:29.1599725Z 
+2025-10-25T18:30:29.1730640Z Copying files to the intermediate directory...
+2025-10-25T18:30:29.1939809Z Done in 0 sec(s).
+2025-10-25T18:30:29.2241014Z 
+2025-10-25T18:30:29.2527524Z Source directory     : /tmp/8de13f4887496bd
+2025-10-25T18:30:29.3287330Z Destination directory: /home/site/wwwroot
+2025-10-25T18:30:29.3396427Z 
+2025-10-25T18:30:29.8254960Z Removing existing manifest file
+2025-10-25T18:30:29.9134511Z Creating directory for command manifest file if it does not exist
+2025-10-25T18:30:30.0118267Z Creating a manifest file...
+2025-10-25T18:30:30.1257361Z Node Build Command Manifest file created.
+2025-10-25T18:30:30.8076955Z 
+2025-10-25T18:30:30.8371096Z Using Node version:
+2025-10-25T18:30:30.8374848Z v20.19.5
+2025-10-25T18:30:30.8768747Z 
+2025-10-25T18:30:30.8768842Z Using Npm version:
+2025-10-25T18:30:31.5022462Z 10.8.2
+2025-10-25T18:30:31.5490904Z 
+2025-10-25T18:30:31.5901118Z Running 'npm install'...
+2025-10-25T18:30:31.6641997Z 
+2025-10-25T18:31:09.0876668Z ................................
+2025-10-25T18:31:09.0957260Z npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2025-10-25T18:31:10.3438361Z npm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+2025-10-25T18:31:10.4074772Z npm warn deprecated
+2025-10-25T18:31:10.4861834Z npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+2025-10-25T18:31:11.7461052Z npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2025-10-25T18:31:12.5132468Z npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2025-10-25T18:31:13.1033499Z npm warn deprecated paypal-rest-sdk@1.8.1: Package no longer supported. The author suggests using the @paypal/paypal-server-sdk package instead: https://www.npmjs.com/package/@paypal/paypal-server-sdk. Contact Support at https://www.npmjs.com/support for more info.
+2025-10-25T18:31:13.5269130Z npm warn deprecated azure-sb@0.10.6: Please note, a newer package @azure/service-bus for Azure Service Bus is available as of May 2019 and [@azure/notification-hubs] for Azure Notification Hubs as of March 2023. We strongly encourage you to upgrade to the new package for your Service Bus and Notification Hubs needs. Migration guide can be found at:
+2025-10-25T18:31:13.5557906Z npm warn deprecated  
+2025-10-25T18:31:13.5957111Z npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/servicebus/service-bus/migrationguide.md
+2025-10-25T18:31:13.6262705Z npm warn deprecated  
+2025-10-25T18:31:13.6649100Z npm warn deprecated and
+2025-10-25T18:31:13.6932884Z npm warn deprecated  
+2025-10-25T18:31:13.7510057Z npm warn deprecated https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/notificationhubs/notification-hubs/migrationguide.md
+2025-10-25T18:31:13.8688469Z npm warn deprecated
+2025-10-25T18:31:45.9160127Z ...........................
+2025-10-25T18:31:45.9166858Z 
+2025-10-25T18:31:46.0233283Z added 304 packages, and audited 305 packages in 1m
+2025-10-25T18:31:46.0800714Z 
+2025-10-25T18:31:46.1367626Z 39 packages are looking for funding
+2025-10-25T18:31:46.2133166Z   run `npm fund` for details
+2025-10-25T18:31:46.2877634Z 
+2025-10-25T18:31:46.3452810Z 7 vulnerabilities (5 moderate, 2 critical)
+2025-10-25T18:31:46.3957202Z 
+2025-10-25T18:31:46.4251045Z To address issues that do not require attention, run:
+2025-10-25T18:31:46.4707348Z   npm audit fix
+2025-10-25T18:31:46.5012962Z 
+2025-10-25T18:31:46.5391867Z Some issues need review, and may require choosing
+2025-10-25T18:31:46.5766903Z a different dependency.
+2025-10-25T18:31:46.6381003Z 
+2025-10-25T18:31:46.6763342Z Run `npm audit` for details.
+2025-10-25T18:31:46.7247124Z 
+2025-10-25T18:31:46.7528810Z Zipping existing node_modules folder...
+2025-10-25T18:32:11.0440400Z ....................
+2025-10-25T18:32:11.0441790Z Done in 25 sec(s).
+2025-10-25T18:32:11.1781693Z Preparing output...
+2025-10-25T18:32:11.2277828Z 
+2025-10-25T18:32:11.2783221Z Copying files to destination directory '/home/site/wwwroot'...
+2025-10-25T18:32:11.5291237Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\app-insights.js": Invalid argument (22)
+2025-10-25T18:32:11.5745487Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-ad-b2c.js": Invalid argument (22)
+2025-10-25T18:32:11.6045952Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-communication.js": Invalid argument (22)
+2025-10-25T18:32:11.6354931Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-keyvault.js": Invalid argument (22)
+2025-10-25T18:32:11.6657140Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-notification-hub.js": Invalid argument (22)
+2025-10-25T18:32:11.6946794Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/config\azure-storage.js": Invalid argument (22)
+2025-10-25T18:32:11.7317654Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\order-controller.js": Invalid argument (22)
+2025-10-25T18:32:11.7927599Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\admin\products-controller.js": Invalid argument (22)
+2025-10-25T18:32:11.8306094Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\auth-controller.js": Invalid argument (22)
+2025-10-25T18:32:11.8698946Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\common\feature-controller.js": Invalid argument (22)
+2025-10-25T18:32:11.9190386Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\address-controller.js": Invalid argument (22)
+2025-10-25T18:32:12.3412598Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\cart-controller.js": Invalid argument (22)
+2025-10-25T18:32:12.3631920Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\order-controller.js": Invalid argument (22)
+2025-10-25T18:32:12.3821997Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\productreview-controller.js": Invalid argument (22)
+2025-10-25T18:32:12.4013890Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\products-controller.js": Invalid argument (22)
+2025-10-25T18:32:12.4269772Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/controllers\shop\search-controller.js": Invalid argument (22)
+2025-10-25T18:32:12.4740727Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\cloudinary.js": Invalid argument (22)
+2025-10-25T18:32:12.5067179Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/helpers\paypal.js": Invalid argument (22)
+2025-10-25T18:32:12.5461429Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/middleware\notification-middleware.js": Invalid argument (22)
+2025-10-25T18:32:12.6006643Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Address.js": Invalid argument (22)
+2025-10-25T18:32:12.6485957Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Cart.js": Invalid argument (22)
+2025-10-25T18:32:12.6862943Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Order.js": Invalid argument (22)
+2025-10-25T18:32:12.7151800Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\Review.js": Invalid argument (22)
+2025-10-25T18:32:12.7551432Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\features.js": Invalid argument (22)
+2025-10-25T18:32:12.7939952Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\product.js": Invalid argument (22)
+2025-10-25T18:32:12.8322627Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/models\user.js": Invalid argument (22)
+2025-10-25T18:32:12.8696134Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\order-routes.js": Invalid argument (22)
+2025-10-25T18:32:12.9094842Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\admin\products-routes.js": Invalid argument (22)
+2025-10-25T18:32:12.9480767Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\auth\auth-routes.js": Invalid argument (22)
+2025-10-25T18:32:13.0247416Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\common\feature-routes.js": Invalid argument (22)
+2025-10-25T18:32:13.0646069Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\order-routes-with-iam.example.js": Invalid argument (22)
+2025-10-25T18:32:13.1853200Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\address-routes.js": Invalid argument (22)
+2025-10-25T18:32:13.2341871Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\cart-routes.js": Invalid argument (22)
+2025-10-25T18:32:13.3138290Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\order-routes.js": Invalid argument (22)
+2025-10-25T18:32:13.3599628Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\products-routes.js": Invalid argument (22)
+2025-10-25T18:32:13.4460101Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\review-routes.js": Invalid argument (22)
+2025-10-25T18:32:13.4843619Z rsync: [generator] recv_generator: failed to stat "/home/site/wwwroot/routes\shop\search-routes.js": Invalid argument (22)
+2025-10-25T18:32:13.5232541Z rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1338) [sender=3.2.7]
+2025-10-25T18:34:39.3761149Z Deploy Async
+2025-10-25T18:34:42.3050292Z Run rsync from: /tmp/zipdeploy/extracted/ to: /home/site/wwwroot/ in 8 parallel threads
+2025-10-25T18:34:42.3164611Z Delete options: clean=False, use manifest=True, directory to ignore=
+2025-10-25T18:34:42.3425481Z Prev manifest = /opt/Kudu/Scripts/firstDeploymentManifest and next /home/site/deployments/985fc973-d2f8-4cbf-91cf-ede0cc116c03/manifest
+2025-10-25T18:34:42.3575142Z Cleaning up /tmp//filelist.txt and /tmp//splits
+2025-10-25T18:34:42.3751055Z Creating a list of all files at /tmp//filelist.txt
+2025-10-25T18:34:42.3968118Z No directory to exclude.
+2025-10-25T18:34:42.4166703Z Created /tmp//filelist.txt. Total number of files to be synced = 0.
+2025-10-25T18:34:42.4312516Z Created batches from the list of files. Processing 1 files in each thread
+2025-10-25T18:34:42.4504097Z Deleting files not present in /tmp/zipdeploy/extracted/ from /home/site/wwwroot/ based on manifest file /opt/Kudu/Scripts/firstDeploymentManifest
+2025-10-25T18:34:42.4660010Z Number of files deleted: 1. See /tmp//rsync_deletion_logs.txt for more details.
+2025-10-25T18:34:42.5192923Z create new manifest file at /home/site/deployments/985fc973-d2f8-4cbf-91cf-ede0cc116c03/manifest
+2025-10-25T18:34:42.5370778Z Completed successfully in 0 seconds
+2025-10-25T18:34:42.5692041Z ls: cannot access '/tmp//splits/split.*': No such file or directory
