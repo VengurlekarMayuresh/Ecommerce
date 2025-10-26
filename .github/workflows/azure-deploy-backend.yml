@@ -1,0 +1,76 @@
+name: Deploy Backend to Azure App Service
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - external
+    paths:
+      - 'server/**'
+      - '.github/workflows/azure-deploy-backend.yml'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: server/package-lock.json
+
+    - name: Install dependencies
+      run: |
+        cd server
+        npm ci --production
+
+    - name: Create deployment package
+      run: |
+        cd server
+        zip -r deploy.zip . \
+          -x "*.git*" \
+          -x "*.log" \
+          -x "node_modules/.cache/*" \
+          -x ".env" \
+          -x "app-logs.zip" \
+          -x ".azure/*"
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'ecomm-app-4379'
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: server/deploy.zip
+
+    - name: Wait for deployment
+      run: sleep 30
+
+    - name: Health Check
+      run: |
+        max_attempts=10
+        attempt=1
+        
+        while [ $attempt -le $max_attempts ]; do
+          echo "Health check attempt $attempt of $max_attempts"
+          
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://ecomm-app-4379.azurewebsites.net/api/health || echo "000")
+          
+          if [ "$response" = "200" ]; then
+            echo "✅ Deployment successful! Health check passed."
+            exit 0
+          fi
+          
+          echo "⏳ Health check returned $response, waiting..."
+          sleep 10
+          attempt=$((attempt + 1))
+        done
+        
+        echo "❌ Health check failed after $max_attempts attempts"
+        exit 1
