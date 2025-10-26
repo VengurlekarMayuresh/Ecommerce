@@ -108,8 +108,8 @@ $publishProfile | Out-File -FilePath "publish-profile.xml" -Encoding UTF8
 Write-Host "✅ Publish profile saved to: publish-profile.xml" -ForegroundColor Green
 
 # Create Static Web App
-Write-Host "🎨 Creating Static Web App: $StaticAppName" -ForegroundColor Yellow
-Write-Host "⚠️  You'll need to connect this to GitHub manually or provide GitHub token" -ForegroundColor Yellow
+Write-Host "Creating Static Web App: $StaticAppName" -ForegroundColor Yellow
+Write-Host "Note: You'll need to connect this to GitHub manually or provide GitHub token" -ForegroundColor Yellow
 
 # Summary
 Write-Host "`n✅ Deployment resources created successfully!" -ForegroundColor Green
