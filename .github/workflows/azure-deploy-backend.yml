@@ -34,13 +34,7 @@ jobs:
     - name: Create deployment package
       run: |
         cd server
-        zip -r deploy.zip . \
-          -x "*.git*" \
-          -x "*.log" \
-          -x "node_modules/.cache/*" \
-          -x ".env" \
-          -x "app-logs.zip" \
-          -x ".azure/*"
+        zip -r deploy.zip . -x "*.git*" -x "*.log" -x ".env" -x "app-logs.zip"
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
